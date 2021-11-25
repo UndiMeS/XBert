@@ -13,6 +13,8 @@ public class aXelNumber : MonoBehaviour
     public float variable;
 
     float result;
+
+    public bool Subtract;
     
 
     // Start is called before the first frame update
@@ -57,7 +59,6 @@ public class aXelNumber : MonoBehaviour
 
 
         
-        //Debug.Log(GetComponent<TMP_Text>().text);
     }
 
     // Update is called once per frame
@@ -76,7 +77,7 @@ public class aXelNumber : MonoBehaviour
             
             if(this.gameObject.tag == "Numbers")
             {
-                GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += value;
+                
                 //GameObject.Find("Solution").GetComponent<SolutionNumbers>().VariableSolution -= variable;
 
                 if(GameObject.Find("Zero_Left") != null)
@@ -85,36 +86,41 @@ public class aXelNumber : MonoBehaviour
                     GameObject.Find("Zero_Left").SetActive(false);
                 }
 
-                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += this.gameObject.GetComponent<TMP_Text>().text;
+                if(Subtract == true)
+                {
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-( " + this.gameObject.GetComponent<TMP_Text>().text + ")";
+                    GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += -value;
+                }
+                else
+                {
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "+( " + this.gameObject.GetComponent<TMP_Text>().text + ")";
+                    GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += +value;
+                }
 
                 
-                //this.gameObject.SetActive(false);
+
+                
+
+                
             }
 
 
-        //     if(this.gameObject.tag == "aXelNumberRight")
-        //     {
-        //         GameObject.Find("NumbersSolution").GetComponent<SolutionNumbers>().NumbersSolution -= value;
-        //         GameObject.Find("NumbersSolution").GetComponent<SolutionNumbers>().VariableSolution += variable;
 
-        //         if(GameObject.Find("Zero_Right") != null)
-        //         {
-                    
-        //             GameObject.Find("Zero_Right").SetActive(false);
-        //         }
-
-        //         GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += this.gameObject.GetComponent<TMP_Text>().text;
-
-                
-        //         //this.gameObject.SetActive(false);
-
-
-        //     }
-            
-        
-        // }
 
 
     }
+
+    
+
+    
 }
+void OnTriggerStay2D(Collider2D col)
+{
+    if(col.gameObject.tag == "SubtractZone")
+    {
+        Subtract = true;
+    }
+}
+
+
 }
