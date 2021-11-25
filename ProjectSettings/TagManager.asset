@@ -12,6 +12,7 @@ TagManager:
   - Numbers
   - BlueWall
   - RedWall
+  - SubtractZone
   layers:
   - Default
   - TransparentFX

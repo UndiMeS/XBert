@@ -179,6 +179,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &856223488732760497
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +754,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &3077874996212544332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +1042,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &3719917714978494605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1384,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &4020553805016596788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1564,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &4232291937257019697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1744,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &4553234754695405691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1924,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &5237533469632346552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2104,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &5278772920051024674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2284,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &5371232061043712120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,6 +2464,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &5638206261891318424
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,6 +6093,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.000030517578}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &5834042712073647699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5580840609305753723}
+  m_Layer: 0
+  m_Name: LevelOneBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5580840609305753723
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834042712073647699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8968911165930518915}
+  - {fileID: 4366692457944806299}
+  m_Father: {fileID: 7569831894563663662}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6247847884536187685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,6 +6309,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &6270794697152363130
 GameObject:
   m_ObjectHideFlags: 0
@@ -6476,6 +6524,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &7461470684171293338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6655,6 +6704,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &7631659096508041564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,6 +6778,87 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 9c08fadd99a3a2542b362f746e752615, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 18.34, y: 10.62}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &7966486160814813328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4366692457944806299}
+  - component: {fileID: 297182110383019949}
+  m_Layer: 0
+  m_Name: LevelOneLines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4366692457944806299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966486160814813328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11, y: -24, z: 0.008643652}
+  m_LocalScale: {x: 109.92676, y: 109.92676, z: 1.0408816}
+  m_Children: []
+  m_Father: {fileID: 5580840609305753723}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &297182110383019949
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966486160814813328}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: cacbb14b3cdad5344875b463fe09a2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6917,6 +7048,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165399716272
 GameObject:
   m_ObjectHideFlags: 0
@@ -7521,6 +7653,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165507464290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,6 +7914,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165533413911
 GameObject:
   m_ObjectHideFlags: 0
@@ -7960,6 +8094,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165538943775
 GameObject:
   m_ObjectHideFlags: 0
@@ -8522,6 +8657,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165589032998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9155,6 +9291,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165701677394
 GameObject:
   m_ObjectHideFlags: 0
@@ -9334,6 +9471,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165730020068
 GameObject:
   m_ObjectHideFlags: 0
@@ -9513,6 +9651,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165741273082
 GameObject:
   m_ObjectHideFlags: 0
@@ -9692,6 +9831,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165744198586
 GameObject:
   m_ObjectHideFlags: 0
@@ -9992,6 +10132,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165776568840
 GameObject:
   m_ObjectHideFlags: 0
@@ -10171,6 +10312,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165787507583
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,6 +10592,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165812196424
 GameObject:
   m_ObjectHideFlags: 0
@@ -10629,6 +10772,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165836295182
 GameObject:
   m_ObjectHideFlags: 0
@@ -10937,6 +11081,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165856584905
 GameObject:
   m_ObjectHideFlags: 0
@@ -11154,6 +11299,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165924042176
 GameObject:
   m_ObjectHideFlags: 0
@@ -11333,6 +11479,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911165930518914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11359,9 +11506,9 @@ Transform:
   m_GameObject: {fileID: 8968911165930518914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11, y: -24, z: 0.008643652}
-  m_LocalScale: {x: 109.926765, y: 109.926765, z: 1.0408816}
+  m_LocalScale: {x: 109.92676, y: 109.92676, z: 1.0408816}
   m_Children: []
-  m_Father: {fileID: 7569831894563663662}
+  m_Father: {fileID: 5580840609305753723}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8968911165930518912
@@ -11403,7 +11550,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 33f6734bffa6a4541ac14ff65beaa175, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4dbbf00ba8973e4d9cf4ed6fbaa00a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12458,6 +12605,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166138224057
 GameObject:
   m_ObjectHideFlags: 0
@@ -12736,6 +12884,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166170432571
 GameObject:
   m_ObjectHideFlags: 0
@@ -13049,6 +13198,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166211526874
 GameObject:
   m_ObjectHideFlags: 0
@@ -13341,6 +13491,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166255876897
 GameObject:
   m_ObjectHideFlags: 0
@@ -13700,6 +13851,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166360911875
 GameObject:
   m_ObjectHideFlags: 0
@@ -14376,6 +14528,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166439564620
 GameObject:
   m_ObjectHideFlags: 0
@@ -14684,6 +14837,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166449352490
 GameObject:
   m_ObjectHideFlags: 0
@@ -15015,7 +15169,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8968911165930518915}
+  - {fileID: 5580840609305753723}
   - {fileID: 8968911166863025858}
   - {fileID: 8968911166543840452}
   - {fileID: 8968911165591442954}
@@ -15501,6 +15655,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166569021153
 GameObject:
   m_ObjectHideFlags: 0
@@ -15680,6 +15835,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166571114988
 GameObject:
   m_ObjectHideFlags: 0
@@ -16172,6 +16328,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166647875579
 GameObject:
   m_ObjectHideFlags: 0
@@ -16351,6 +16508,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166654968685
 GameObject:
   m_ObjectHideFlags: 0
@@ -17527,6 +17685,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166802209413
 GameObject:
   m_ObjectHideFlags: 0
@@ -17706,6 +17865,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166803559248
 GameObject:
   m_ObjectHideFlags: 0
@@ -18119,6 +18279,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166863025861
 GameObject:
   m_ObjectHideFlags: 0
@@ -18480,6 +18641,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166893164460
 GameObject:
   m_ObjectHideFlags: 0
@@ -18821,6 +18983,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911166969813660
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,6 +19244,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167008559920
 GameObject:
   m_ObjectHideFlags: 0
@@ -19329,6 +19493,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167068625229
 GameObject:
   m_ObjectHideFlags: 0
@@ -19508,6 +19673,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167069191469
 GameObject:
   m_ObjectHideFlags: 0
@@ -19657,6 +19823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NumbersSolution: 0
   EatenNumberCounter: 0
+  ZeroLeft: {fileID: 0}
+  ZeroRight: {fileID: 0}
 --- !u!1 &8968911167080874903
 GameObject:
   m_ObjectHideFlags: 0
@@ -19952,6 +20120,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167114773585
 GameObject:
   m_ObjectHideFlags: 0
@@ -20265,6 +20434,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167205152294
 GameObject:
   m_ObjectHideFlags: 0
@@ -20444,6 +20614,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167211560304
 GameObject:
   m_ObjectHideFlags: 0
@@ -20623,6 +20794,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167218491129
 GameObject:
   m_ObjectHideFlags: 0
@@ -20802,6 +20974,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167219962139
 GameObject:
   m_ObjectHideFlags: 0
@@ -21062,6 +21235,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167265404182
 GameObject:
   m_ObjectHideFlags: 0
@@ -21559,6 +21733,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167310047028
 GameObject:
   m_ObjectHideFlags: 0
@@ -26570,6 +26745,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167319823691
 GameObject:
   m_ObjectHideFlags: 0
@@ -26866,6 +27042,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167386990664
 GameObject:
   m_ObjectHideFlags: 0
@@ -27045,6 +27222,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167425889790
 GameObject:
   m_ObjectHideFlags: 0
@@ -27224,6 +27402,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167444616548
 GameObject:
   m_ObjectHideFlags: 0
@@ -27522,6 +27701,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &8968911167479744466
 GameObject:
   m_ObjectHideFlags: 0
@@ -27701,6 +27881,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &9085446037431725089
 GameObject:
   m_ObjectHideFlags: 0
@@ -27880,6 +28061,7 @@ MonoBehaviour:
   NumberPlace: {fileID: 0}
   value: 0
   variable: 0
+  Subtract: 0
 --- !u!1 &9116767269089277130
 GameObject:
   m_ObjectHideFlags: 0
