@@ -8,6 +8,7 @@ public class SubAddZone : MonoBehaviour
 public Color SubtractColor;
 public UnityEngine.U2D.SpriteShapeRenderer ZoneRenderer;
 public Color AdditionColor;
+public GameObject[] Numbers;
     public bool Subtract;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public Color AdditionColor;
             Subtract = false;
             ZoneRenderer.color = AdditionColor;
         }
+
+        
     }
 
     // Update is called once per frame
@@ -32,12 +35,15 @@ public Color AdditionColor;
         {
             //col.gameObject.GetComponent<aXelNumber>().Subtract = true;
             ZoneRenderer.color = SubtractColor;
+            
         //Debug.Log("enter");
         }
         if(Subtract == false)
         {
             //col.gameObject.GetComponent<aXelNumber>().Subtract = false;
             ZoneRenderer.color = AdditionColor;
+
+            
         //Debug.Log("enter");
         }
     }

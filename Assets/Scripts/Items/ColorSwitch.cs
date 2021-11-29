@@ -5,11 +5,14 @@ using UnityEngine;
 public class ColorSwitch : MonoBehaviour
 {
     public GameObject[] SubAddZones;
+    public GameObject[] Numbers;
     // Start is called before the first frame update
     void Start()
     {
         
             SubAddZones = GameObject.FindGameObjectsWithTag("SubAddZone");
+
+            Numbers = GameObject.FindGameObjectsWithTag("Numbers");
         
     }
 
@@ -27,6 +30,11 @@ public class ColorSwitch : MonoBehaviour
             foreach(GameObject SubAddZone in SubAddZones)
             {
                 SubAddZone.GetComponent<SubAddZone>().Subtract = !SubAddZone.GetComponent<SubAddZone>().Subtract;
+            }
+
+            foreach (GameObject Number in Numbers)
+            {
+                Number.GetComponent<aXelNumber>().Subtract = !Number.GetComponent<aXelNumber>().Subtract;
             }
             Destroy(this.gameObject);
         }
