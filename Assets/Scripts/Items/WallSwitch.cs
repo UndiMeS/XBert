@@ -15,6 +15,7 @@ public class WallSwitch : MonoBehaviour
     public SpriteRenderer ButtonRenderer;
     public GameObject[] blueWalls;
     public GameObject[] redWalls;
+    public bool SingleSwitch;
 
     public bool pressed;
     // Start is called before the first frame update
@@ -39,37 +40,60 @@ public class WallSwitch : MonoBehaviour
         if(col.tag == "Axel")
         {
             ButtonRenderer.sprite = ButtonPressen;
-            pressed = !pressed;
+
+            if(SingleSwitch == true)
+            {
+                pressed = true;
+            }
+            else if (SingleSwitch == false)
+            {
+                pressed = !pressed;
+            }
+            
 
 
             if(pressed == true)
             {
-                foreach (GameObject BlueWall in blueWalls)
+                if(blueWalls != null)
                 {
-                    BlueWall.GetComponent<SpriteRenderer>().sprite = BlueWallOff;
-                    BlueWall.GetComponent<BoxCollider2D>().enabled = false;
+                    foreach (GameObject BlueWall in blueWalls)
+                    {
+                        BlueWall.GetComponent<SpriteRenderer>().sprite = BlueWallOff;
+                        BlueWall.GetComponent<BoxCollider2D>().enabled = false;
+                    }
                 }
-
-                foreach (GameObject RedWall in redWalls)
+                
+                if(redWalls != null)
                 {
-                    RedWall.GetComponent<SpriteRenderer>().sprite = RedWallOn;
-                    RedWall.GetComponent<BoxCollider2D>().enabled = true;
+                    foreach (GameObject RedWall in redWalls)
+                    {
+                        RedWall.GetComponent<SpriteRenderer>().sprite = RedWallOn;
+                        RedWall.GetComponent<BoxCollider2D>().enabled = true;
+                    }
                 }
+                
             }
 
             if(pressed == false)
             {
-                foreach (GameObject BlueWall in blueWalls)
+                if(blueWalls != null)
                 {
-                    BlueWall.GetComponent<SpriteRenderer>().sprite = BlueWallOn;
-                    BlueWall.GetComponent<BoxCollider2D>().enabled = true;
+                    foreach (GameObject BlueWall in blueWalls)
+                    {
+                        BlueWall.GetComponent<SpriteRenderer>().sprite = BlueWallOn;
+                        BlueWall.GetComponent<BoxCollider2D>().enabled = true;
+                    }
                 }
-
-                foreach (GameObject RedWall in redWalls)
+                
+                if(redWalls != null)
                 {
-                    RedWall.GetComponent<SpriteRenderer>().sprite = RedWallOff;
-                    RedWall.GetComponent<BoxCollider2D>().enabled = false;
+                    foreach (GameObject RedWall in redWalls)
+                    {
+                        RedWall.GetComponent<SpriteRenderer>().sprite = RedWallOff;
+                        RedWall.GetComponent<BoxCollider2D>().enabled = false;
+                    }
                 }
+                
             }
             
 
@@ -80,7 +104,11 @@ public class WallSwitch : MonoBehaviour
     {
         if(col.tag == "Axel")
         {
-            ButtonRenderer.sprite = ButtonNotPressen;
+            if(SingleSwitch == false)
+            {
+                ButtonRenderer.sprite = ButtonNotPressen;
+            }
+            
         }
     }
 }
