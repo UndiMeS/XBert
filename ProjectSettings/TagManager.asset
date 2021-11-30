@@ -13,6 +13,7 @@ TagManager:
   - BlueWall
   - RedWall
   - SubAddZone
+  - Multiply
   layers:
   - Default
   - TransparentFX

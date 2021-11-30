@@ -39,11 +39,26 @@ public class aXelNumber : MonoBehaviour
         if(this.gameObject.GetComponent<TMP_Text>().text != "+x" && this.gameObject.GetComponent<TMP_Text>().text != "-x")
         {
 
-             if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text, out result))
+            if(this.gameObject.tag == "Multiply")
             {
-                value = result;
-                
+                //this.gameObject.GetComponent<TMP_Text>().text.Substring(1);
+
+                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(1), out result))
+                {
+                    value = result;
+                    
+                }
             }
+
+            else if (this.gameObject.tag == "Numbers")
+            {
+                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text, out result))
+                {
+                    value = result;
+                    
+                }
+            }
+             
             
         
         }
@@ -102,6 +117,20 @@ public class aXelNumber : MonoBehaviour
                 
 
                 
+            }
+
+            if(this.gameObject.tag == "Multiply")
+            {
+
+                if(GameObject.Find("Zero_Right") != null)
+                {
+                    
+                    GameObject.Find("Zero_Right").SetActive(false);
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
+                }
+
+                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "( " + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
+                GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution *= value;
             }
 
 
