@@ -39,7 +39,7 @@ public class aXelNumber : MonoBehaviour
         if(this.gameObject.GetComponent<TMP_Text>().text != "+x" && this.gameObject.GetComponent<TMP_Text>().text != "-x")
         {
 
-            if(this.gameObject.tag == "Multiply")
+            if(this.gameObject.tag == "Multiply" || this.gameObject.tag == "Divide")
             {
                 //this.gameObject.GetComponent<TMP_Text>().text.Substring(1);
 
@@ -103,12 +103,12 @@ public class aXelNumber : MonoBehaviour
 
                 if(Subtract == true)
                 {
-                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-( " + this.gameObject.GetComponent<TMP_Text>().text + ")";
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += -value;
                 }
                 else
                 {
-                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "+( " + this.gameObject.GetComponent<TMP_Text>().text + ")";
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "+(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += +value;
                 }
 
@@ -129,8 +129,51 @@ public class aXelNumber : MonoBehaviour
                     GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
                 }
 
-                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "( " + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
+                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
                 GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution *= value;
+            }
+
+            if(this.gameObject.tag == "Divide")
+            {
+                if(GameObject.Find("Zero_Right") != null)
+                {
+                    
+                    GameObject.Find("Zero_Right").SetActive(false);
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
+                }
+
+
+                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
+                GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution /= value;
+            }
+
+
+            if(this.gameObject.tag == "Amount")
+            {
+                if(GameObject.Find("Zero_Right") != null)
+                {
+                    
+                    GameObject.Find("Zero_Right").SetActive(false);
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
+                }
+
+
+                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "|" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + "| ";
+                GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution = Mathf.Abs(GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution);
+            }
+
+            if(this.gameObject.tag == "Square")
+            {
+                if(GameObject.Find("Zero_Right") != null)
+                {
+                    
+                    GameObject.Find("Zero_Right").SetActive(false);
+                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
+                }
+
+
+                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ")<sup>2</sup> ";
+                GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution = Mathf.Pow(GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution, 2.0f);
             }
 
 

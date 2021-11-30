@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -105,7 +106,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-        NumbersEaten = GameObject.FindGameObjectsWithTag("Numbers");
+        NumbersEaten = FindGameObjectsWithTags(new string[] {"Numbers","Multiply","Divide","Amount","Square"});
 
         foreach(GameObject NumberEaten in NumbersEaten)
         {
@@ -299,5 +300,17 @@ public class PlayerMovement : MonoBehaviour {
             Drill = false;
         }
     }
+
+    GameObject[] FindGameObjectsWithTags(params string[] tags)
+{
+    var all = new List<GameObject>();
+
+    foreach (string tag in tags)
+    {
+        all.AddRange(GameObject.FindGameObjectsWithTag(tag).ToList());
+    }
+
+    return all.ToArray();
+}
 
 }
