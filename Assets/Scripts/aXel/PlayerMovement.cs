@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool smash;
 
     public WallDestroy DestroyWall;
+    public Collider2D Wall;
 
     public static bool moving = true;
 
@@ -176,11 +177,12 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    void move () {
+    public void move () {
 
         if (UpPress == true) {
 
             rb.transform.rotation = Quaternion.Euler (0, 0, 90.0f);
+
 
             //startPosition = new Vector3 (rb.transform.localPosition.x, rb.transform.localPosition.y, rb.transform.localPosition.z);
 
@@ -196,6 +198,8 @@ public class PlayerMovement : MonoBehaviour {
                 animator.SetBool("drill", false);
             Drill = false;
 
+            //Wall.DestroyWall.DestroyUp = true;
+
 
                
             //smash = true;
@@ -207,7 +211,7 @@ public class PlayerMovement : MonoBehaviour {
             
             
 
-             UpPress = false;
+             //UpPress = false;
              Up.GetComponent<ControllerClick> ().selected = false;
 
         }
@@ -229,7 +233,7 @@ public class PlayerMovement : MonoBehaviour {
             }
             
 
-            RightPress = false;
+            //RightPress = false;
 
             Right.GetComponent<ControllerClick> ().selected = false;
         }
@@ -251,7 +255,7 @@ public class PlayerMovement : MonoBehaviour {
             }
             
 
-            LeftPress = false;
+            //LeftPress = false;
             Left.GetComponent<ControllerClick> ().selected = false;
         }
         if (DownPress == true) {
@@ -272,7 +276,7 @@ public class PlayerMovement : MonoBehaviour {
 
             
         }
-        DownPress = false;
+        //DownPress = false;
             Down.GetComponent<ControllerClick> ().selected = false;
 
     }
@@ -296,8 +300,8 @@ public class PlayerMovement : MonoBehaviour {
 
             //Destroy (col.gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + 0.0f); 
 
-            animator.SetBool("drill", false);
-            Drill = false;
+            // animator.SetBool("drill", false);
+            // Drill = false;
         }
     }
 
