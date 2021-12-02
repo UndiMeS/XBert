@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PauseScript : MonoBehaviour
@@ -214,7 +215,7 @@ public class PauseScript : MonoBehaviour
             SpaceBool = true;
         }
 
-        if(OneFinished == true && CompleteTwo == false)
+        if(OneFinished == true)
         {
             LevelTwo.SetActive(true);
             PauseMenu.SetActive(false);
@@ -223,14 +224,14 @@ public class PauseScript : MonoBehaviour
             SpaceBool = true;
         }
 
-        if(OneFinished == true && CompleteTwo == true)
-        {
-            LevelThree.SetActive(true);
-            PauseMenu.SetActive(false);
-            Controler.SetActive(true);
-            Axel.SetActive(true);
-            SpaceBool = true;
-        }
+        // if(OneFinished == true && CompleteTwo == true)
+        // {
+        //     LevelThree.SetActive(true);
+        //     PauseMenu.SetActive(false);
+        //     Controler.SetActive(true);
+        //     Axel.SetActive(true);
+        //     SpaceBool = true;
+        // }
 
 
 
@@ -246,7 +247,7 @@ public class PauseScript : MonoBehaviour
     public void RestartOne()
     {
 
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         if(OneFinished == false)
         {
