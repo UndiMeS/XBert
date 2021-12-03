@@ -897,6 +897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -1596,6 +1601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Cube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
@@ -3477,6 +3487,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -248
       objectReference: {fileID: 0}
+    - target: {fileID: 4915062683244327614, guid: 2158bab5a0f8290438442e510885502c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1936ea23a576c40edb71d18a98cc8f44,
+        type: 3}
     - target: {fileID: 5191595058464435431, guid: 2158bab5a0f8290438442e510885502c,
         type: 3}
       propertyPath: m_SortingOrder
@@ -5479,6 +5495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -7214,6 +7235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -8156,6 +8182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -8295,6 +8326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Cube (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
@@ -8664,6 +8700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -8961,6 +9002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Cube (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
@@ -9464,6 +9510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Cube (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
       propertyPath: axel
@@ -9650,6 +9701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Cube (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}
@@ -9913,6 +9969,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall_Cube (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666979601041148490, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
         type: 3}

@@ -3332,6 +3332,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -46
       objectReference: {fileID: 0}
+    - target: {fileID: 4915062683244327614, guid: 2158bab5a0f8290438442e510885502c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 56a1511de536a46a9bb5ff0bba2aba98,
+        type: 3}
     - target: {fileID: 5191595058464435431, guid: 2158bab5a0f8290438442e510885502c,
         type: 3}
       propertyPath: m_SortingOrder
