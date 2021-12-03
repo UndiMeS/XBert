@@ -6,8 +6,8 @@ public class WallSwitch : MonoBehaviour
 {
 
 
-    public Sprite ButtonPressen;
-    public Sprite ButtonNotPressen;
+    public Sprite ButtonPressed;
+    public Sprite ButtonNotPressed;
     public Sprite RedWallOn;
     public Sprite RedWallOff;
     public Sprite BlueWallOn;
@@ -21,8 +21,8 @@ public class WallSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        blueWalls = GameObject.FindGameObjectsWithTag("BlueWall");
-        redWalls = GameObject.FindGameObjectsWithTag("RedWall");
+        // blueWalls = GameObject.FindGameObjectsWithTag("BlueWall");
+        // redWalls = GameObject.FindGameObjectsWithTag("RedWall");
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class WallSwitch : MonoBehaviour
     {
         if(col.tag == "Axel")
         {
-            ButtonRenderer.sprite = ButtonPressen;
+            ButtonRenderer.sprite = ButtonPressed;
 
             if(SingleSwitch == true)
             {
@@ -106,7 +106,7 @@ public class WallSwitch : MonoBehaviour
         {
             if(SingleSwitch == false)
             {
-                ButtonRenderer.sprite = ButtonNotPressen;
+                ButtonRenderer.sprite = ButtonNotPressed;
             }
             
         }

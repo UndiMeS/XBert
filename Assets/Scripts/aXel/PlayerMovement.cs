@@ -101,8 +101,6 @@ public class PlayerMovement : MonoBehaviour {
     void Update () {
 
         OneFinished = Solution.GetComponent<SolutionNumbers>().spinOne;
-        TwoFinished = Solution.GetComponent<SolutionNumbers>().spinTwo;
-        ThreeFinished = Solution.GetComponent<SolutionNumbers>().spinThree;
         solution = Solution.GetComponent<SolutionNumbers>().Solution;
 
 
