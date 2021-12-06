@@ -9,7 +9,7 @@ public class Portal : MonoBehaviour
 
     public GameObject Axel;
     public GameObject AxelMovement;
-    public bool teleport;
+    public bool teleport = false;
 
     Vector3 maxScale;
     public Vector3 minScale;
@@ -22,7 +22,7 @@ public class Portal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        teleport = false;
     }
 
     // Update is called once per frame
