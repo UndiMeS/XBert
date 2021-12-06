@@ -112,7 +112,7 @@ public class SolutionNumbers : MonoBehaviour {
 
 
 
-            Pause.GetComponent<PauseScript> ().CompleteOne = true;
+            Pause.GetComponent<PauseScript> ().Complete = true;
 
             yield return new WaitForSeconds (1.0f);
 
