@@ -12,26 +12,15 @@ public class PauseScript : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Controler;
     public GameObject Axel;
-    public GameObject NumberSolution;
     public GameObject SubmitMenu;
     public GameObject StartMenu;
     public GameObject LevelComplete;
-    public GameObject Solution;
-
-    public GameObject Particle;
-
-    public GameObject _TermLeft;
-    public GameObject _TermRight;
-    public Transform _MovePosition;
     public bool Complete;
-    public GameObject AxelGame;
 
     public GameObject SolutionScript;
 
     public bool Finished;
 
-    public GameObject GameText;
-    public GameObject EqualSign;
     public GameObject StartScreen;
 
     public Button PauseButton;
@@ -61,9 +50,6 @@ public class PauseScript : MonoBehaviour
         SubmitMenu.SetActive(false);
         LevelComplete.SetActive(false);
         Level.SetActive(true);
-
-        //StartCoroutine(IntroScreen());
-        //StartMenu.SetActive(true);
     }
 
     // Update is called once per frame
@@ -152,9 +138,6 @@ public class PauseScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-             
-        
     }
 
     public void Quit()
@@ -163,12 +146,6 @@ public class PauseScript : MonoBehaviour
         LevelComplete.SetActive(false);
         SubmitMenu.SetActive(true);
         SpaceBool = false;
-    }
-
-    public void ReallyQuit()
-    {
-        
-
     }
 
     public void ReturnToPause()

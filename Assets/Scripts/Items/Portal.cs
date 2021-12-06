@@ -28,8 +28,12 @@ public class Portal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //If this Portal is teleporting
         if(teleport == true)
         {
+
+            //if Axel is Originial Size and telportation is starting start Coroutine
             if(Axel.transform.localScale == maxScale && TeleportStart == true)
             {
                 
@@ -38,6 +42,8 @@ public class Portal : MonoBehaviour
                 
             }
             
+
+            //if Axel is minScale change Position to other Portal and make it big again
             if(Axel.transform.localScale == minScale && TeleportStart == true)
             {
                 TeleportStart = false;
@@ -45,27 +51,15 @@ public class Portal : MonoBehaviour
                 Axel.transform.position = OtherPortal.transform.position;
                 AxelMovement.transform.position = OtherPortal.transform.position;
                 teleport = false;
-                //Axel.transform.Rotate(new Vector3(0f,0f, -100f)* Time.deltaTime);
                 StartCoroutine(DownScale(minScale, maxScale, duration));
-                Debug.Log("Arrived");
-                
-                
-            }
-
-            
-            
-
-            
+                Debug.Log("Arrived");    
+            }            
         }
-
-        
-
-            
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-
+        //if Axel ist on portal start teleporting
         if(col.tag == "Axel" && TeleportStart == true)
         {
             
@@ -81,6 +75,7 @@ public class Portal : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
+        //if Axel left portal change the teleport bools
         if(col.tag == "Axel")
         {
             TeleportStart = true;
@@ -89,6 +84,7 @@ public class Portal : MonoBehaviour
         }
     }
 
+// Coroutne to change Axel Scale and Rotation -> teleport Animation
     public IEnumerator DownScale(Vector3 a, Vector3 b, float time)
     {
         float i = 0.0f;
