@@ -5,43 +5,23 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SolutionNumbers : MonoBehaviour {
-    public float NumbersSolution;
-
-    public float VariableSolution;
 
     public float Solution;
 
     public GameObject Level;
     public GameObject LevelComplete;
     public int EatenNumberCounter;
-
     public bool spinOne = false;
-
     public GameObject Xbert;
-    public float speed = 50.0f;
-
     public bool LevelFinished;
-
     public GameObject Particles;
     public bool PlayParticle = true;
-
-    public float rotationSpeed = 10.0f;
-
-
     public GameObject Pause;
-
-    public SpriteRenderer SolutionSprite;
-    public Sprite SolutionQ;
-    public Sprite SolutionEmpty;
-
     public GameObject[] Buttons;
     public GameObject PauseButton;
-
     public AudioSource XBertTeleport;
-
     bool BoolSpace;
 
-    Vector3 destination = new Vector3 (0, 0, 359);
     // Start is called before the first frame update
     void Start () {
 
@@ -50,31 +30,6 @@ public class SolutionNumbers : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
-        // if (VariableSolution != 0) {
-        //     Solution = NumbersSolution / VariableSolution;
-        // }
-
-        // if (VariableSolution == 0 && NumbersSolution == 0) {
-        //     GetComponent<TMP_Text> ().text = "";
-        //     SolutionSprite.sprite = SolutionQ;
-        // }
-        // if (VariableSolution == 0 && NumbersSolution != 0) {
-        //     GetComponent<TMP_Text> ().text = "";
-        //     SolutionSprite.sprite = SolutionEmpty;
-        // }
-        // if (VariableSolution != 0 && NumbersSolution != 0) {
-        //     GetComponent<TMP_Text> ().text = "x = " + Solution.ToString ();
-        //     SolutionSprite.sprite = null;
-        // }
-        // if (VariableSolution != 0 && NumbersSolution == 0) {
-        //     GetComponent<TMP_Text> ().text = "x = " + Solution.ToString ();
-        //     SolutionSprite.sprite = null;
-        // }
-        
-
-        
-
 
         StartCoroutine (WinningTime ());
 

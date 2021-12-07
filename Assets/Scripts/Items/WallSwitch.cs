@@ -21,18 +21,13 @@ public class WallSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // blueWalls = GameObject.FindGameObjectsWithTag("BlueWall");
-        // redWalls = GameObject.FindGameObjectsWithTag("RedWall");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pressed == true)
-        {
-            
-
-        }
+        
     }
 
     void OnTriggerEnter2D (Collider2D col)
