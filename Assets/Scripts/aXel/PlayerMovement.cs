@@ -55,8 +55,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update () {
 
-        Finished = Solution.GetComponent<SolutionNumbers>().spinOne;
-        solution = Solution.GetComponent<SolutionNumbers>().Solution;
+        Finished = Solution.GetComponent<Solution>().LevelFinished;
 
 
 
@@ -91,7 +90,7 @@ public class PlayerMovement : MonoBehaviour {
             move();
         }
 
-        if(solution >= 10.0f)
+        if(Finished == true)
         {
 
             transform.Rotate(Vector3.forward * speed * Time.deltaTime);

@@ -47,7 +47,6 @@ public class PauseScript : MonoBehaviour
 
 
         PauseMenu.SetActive(false);
-        SubmitMenu.SetActive(false);
         LevelComplete.SetActive(false);
         Level.SetActive(true);
     }
@@ -55,7 +54,7 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Finished = SolutionScript.GetComponent<SolutionNumbers>().LevelFinished;
+         Finished = SolutionScript.GetComponent<Solution>().LevelFinished;
 
         if(SpaceBool == true && LevelComplete.activeSelf == false){
                 if (Input.GetKeyDown("space"))
@@ -144,7 +143,6 @@ public class PauseScript : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         LevelComplete.SetActive(false);
-        SubmitMenu.SetActive(true);
         SpaceBool = false;
     }
 
