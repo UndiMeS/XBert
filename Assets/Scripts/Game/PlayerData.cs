@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int[][][] WorldLevelScore;
+    public int[,,] WorldLevelScore;
 
 
     public PlayerData (Solution player)

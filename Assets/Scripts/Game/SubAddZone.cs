@@ -6,14 +6,14 @@ public class SubAddZone : MonoBehaviour
 {
 
 public Color SubtractColor;
-public UnityEngine.U2D.SpriteShapeRenderer ZoneRenderer;
+public SpriteRenderer ZoneRenderer;
 public Color AdditionColor;
 public GameObject[] Numbers;
     public bool Subtract;
     // Start is called before the first frame update
     void Start()
     {
-        ZoneRenderer = this.gameObject.GetComponent<UnityEngine.U2D.SpriteShapeRenderer>();
+        ZoneRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         if(this.gameObject.name == "SubtractZone")
         {
             Subtract = true;

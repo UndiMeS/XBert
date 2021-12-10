@@ -9,7 +9,7 @@ public class Solution : MonoBehaviour
 
     public int world;
     public int level;
-    public int[][][] WorldLevelScore;
+    public int[,,] WorldLevelScore;
     public float NumbersSolution;
     public int EatenNumberCounter;
     public GameObject ZeroLeft;
@@ -161,7 +161,7 @@ public class Solution : MonoBehaviour
          if(EatenNumberCounter <= FirstStar)
         {
             StarOne.sprite = YellowStar;
-            //new int [world][level][StarScore];
+            StarScore = 1;
         }
 
         
@@ -175,7 +175,10 @@ public class Solution : MonoBehaviour
 
         if (LevelFinished == false) {
 
+            Xbert.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
             Stars();
+            int[,,] WorldLevelScore = new int [world, level, StarScore];
 
             Pause.GetComponent<PauseScript>().SpaceBool = false;
             LevelFinished = true;
