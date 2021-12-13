@@ -9,6 +9,8 @@ public class Solution : MonoBehaviour
 
     public int world;
     public int level;
+    public int shadow;
+    public int complete = 0;
     //public int[,,] WorldLevelScore;
     public float NumbersSolution;
     public int EatenNumberCounter;
@@ -76,6 +78,8 @@ public class Solution : MonoBehaviour
             PlayerData.current.world = world;
             PlayerData.current.level = level;
             PlayerData.current.score = StarScore;
+            PlayerData.current.shadow = shadow;
+            PlayerData.current.complete = complete;
 
             SaveSystem.SavePlayer(PlayerData.current.profile);
 
@@ -190,6 +194,7 @@ public class Solution : MonoBehaviour
         if (LevelFinished == false) {
 
             Xbert.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            complete = 1;
 
             Stars();
             //int[,,] WorldLevelScore = new int [world, level, StarScore];

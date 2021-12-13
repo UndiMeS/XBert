@@ -24,6 +24,8 @@ public class PlayerData
     public PlayerProfile profile;
     public int world;
     public int level;
+    public int shadow;
+    public int complete;
     public int score;
 
 
