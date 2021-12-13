@@ -1456,7 +1456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 04a63c7e488d2b844bc959d1a6bc5da7, type: 3}
   m_Color: {r: 0.15294118, g: 1, b: 0, a: 0.3529412}
   m_FlipX: 0
@@ -2595,7 +2595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &983731556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4702,7 +4702,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
-        m_MethodName: Restart
+        m_MethodName: ToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5111,7 +5111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 04a63c7e488d2b844bc959d1a6bc5da7, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.3529412}
   m_FlipX: 0
@@ -6508,8 +6508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45404b225e9d884e838cd62e441419d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  world: 0
-  level: 0
+  world: 1
+  level: 1
   NumbersSolution: 0
   EatenNumberCounter: 0
   ZeroLeft: {fileID: 0}
@@ -6546,6 +6546,7 @@ MonoBehaviour:
   Level: {fileID: 8968911167192804045}
   LevelComplete: {fileID: 827265256}
   Spin: 0
+  save: 1
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 618442966}
   - component: {fileID: 618442968}
   - component: {fileID: 618442967}
+  - component: {fileID: 618442969}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -638,6 +639,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &618442969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618442965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1521c62386ccb244abd4c03fc8083228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarScore: 0
+  World: 1
+  Level: 2
+  StarOne: {fileID: 2111608466}
+  StarTwo: {fileID: 1590761370}
+  StarThree: {fileID: 951116402}
+  YellowStar: {fileID: 21300000, guid: a79994fbc50edef45b8d44184694d52e, type: 3}
 --- !u!1 &783006416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,6 +2948,7 @@ GameObject:
   - component: {fileID: 2140247219}
   - component: {fileID: 2140247221}
   - component: {fileID: 2140247220}
+  - component: {fileID: 2140247222}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -3045,6 +3066,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2140247222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140247218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1521c62386ccb244abd4c03fc8083228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StarScore: 0
+  World: 1
+  Level: 1
+  StarOne: {fileID: 1680917530}
+  StarTwo: {fileID: 1984121209}
+  StarThree: {fileID: 2102654875}
+  YellowStar: {fileID: 21300000, guid: a79994fbc50edef45b8d44184694d52e, type: 3}
 --- !u!1 &1313661617432167881
 GameObject:
   m_ObjectHideFlags: 0

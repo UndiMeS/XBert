@@ -3,13 +3,13 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 public static class SavedData
 {
-    public static void SavePlayer(Solution player)
+    public static void SavePlayer(object playerdata)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData(player);
+        PlayerData data = new PlayerData();
 
         formatter.Serialize(stream, data);
         stream.Close();

@@ -9,7 +9,7 @@ public class Solution : MonoBehaviour
 
     public int world;
     public int level;
-    public int[,,] WorldLevelScore;
+    //public int[,,] WorldLevelScore;
     public float NumbersSolution;
     public int EatenNumberCounter;
     public GameObject ZeroLeft;
@@ -53,6 +53,7 @@ public class Solution : MonoBehaviour
     public GameObject Level;
     public GameObject LevelComplete;
     public bool Spin;
+    public bool save = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +71,16 @@ public class Solution : MonoBehaviour
         
         Compare();
 
-        
+        if(LevelFinished == true && save == true)
+        {
+            PlayerData.current.world = world;
+            PlayerData.current.level = level;
+            PlayerData.current.score = StarScore;
+
+            SaveSystem.SavePlayer(PlayerData.current.profile);
+
+            save = false;
+        }
 
 
 
@@ -146,23 +156,27 @@ public class Solution : MonoBehaviour
 
     public void Stars(){
 
-        if(EatenNumberCounter <= ThirdStar)
+        if(EatenNumberCounter <= FirstStar)
         {
-            StarThree.sprite = YellowStar;
-            Debug.Log("3 star"+ EatenNumberCounter + " " + ThirdStar);
-            StarScore = 3;
+            StarOne.sprite = YellowStar;
+            StarScore = 1;
         }
+
         if(EatenNumberCounter <= SecondStar)
         {
             StarTwo.sprite = YellowStar;
             StarScore = 2;
         }
 
-         if(EatenNumberCounter <= FirstStar)
+        if(EatenNumberCounter <= ThirdStar)
         {
-            StarOne.sprite = YellowStar;
-            StarScore = 1;
+            StarThree.sprite = YellowStar;
+            Debug.Log("3 star"+ EatenNumberCounter + " " + ThirdStar);
+            StarScore = 3;
         }
+        
+
+         
 
         
         
@@ -178,7 +192,9 @@ public class Solution : MonoBehaviour
             Xbert.gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             Stars();
-            int[,,] WorldLevelScore = new int [world, level, StarScore];
+            //int[,,] WorldLevelScore = new int [world, level, StarScore];
+
+            
 
             Pause.GetComponent<PauseScript>().SpaceBool = false;
             LevelFinished = true;

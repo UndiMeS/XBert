@@ -158,6 +158,11 @@ public class PauseScript : MonoBehaviour
         SubmitMenu.SetActive(false);
     }
 
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene("XBert_MainMenu");
+    }
+
     
     public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {
         float startVolume = audioSource.volume;
