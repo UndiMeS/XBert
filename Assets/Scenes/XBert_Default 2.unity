@@ -6509,7 +6509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   world: 1
-  level: 1
+  level: 2
   shadow: 0
   complete: 0
   NumbersSolution: 0

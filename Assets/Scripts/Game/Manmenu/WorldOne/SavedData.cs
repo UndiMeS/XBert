@@ -9,9 +9,9 @@ public static class SavedData
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData();
+        //PlayerData data = new PlayerData();
 
-        formatter.Serialize(stream, data);
+        //formatter.Serialize(stream, data);
         stream.Close();
     }
 

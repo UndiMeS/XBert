@@ -1,32 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+using System;
 
 [System.Serializable]
 public class PlayerData
 {
-    //public int[,,] WorldLevelScore;
-    private static PlayerData _current;
-    public static PlayerData current
-    {
-        get
-        {
-            if(_current == null)
-            {
-                _current = new PlayerData();
-            }
-            return _current;
-        }
-    }
-
-
-
-    public PlayerProfile profile;
     public int world;
     public int level;
-    public int shadow;
-    public int complete;
+    public bool shadow;
+    public bool complete;
     public int score;
+
+
+    public PlayerData(int world, int level, bool shadow, bool complete, int score)
+    {
+        this.world = world;
+        this.level = level;
+        this.shadow = shadow;
+        this.complete = complete;
+        this.score = score;
+    }
 
 
     // public PlayerData (Solution player)

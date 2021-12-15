@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,8 +10,10 @@ public class Solution : MonoBehaviour
 
     public int world;
     public int level;
-    public int shadow;
-    public int complete = 0;
+    public bool shadow;
+    [HideInInspector]
+    public bool complete = false;
+    public PlayerData player;
     //public int[,,] WorldLevelScore;
     public float NumbersSolution;
     public int EatenNumberCounter;
@@ -56,10 +59,16 @@ public class Solution : MonoBehaviour
     public GameObject LevelComplete;
     public bool Spin;
     public bool save = true;
+    [SerializeField]
+    private string filename = "XBertDataFile.json";
+    private int ListPlace;
+
+    List<PlayerData> datas = new List<PlayerData>();
     // Start is called before the first frame update
     void Start()
     {
-        
+        datas = FileHandler.ReadFromJSON<PlayerData>(filename);
+        ListPlace = world * 7 -7 + level - 1;
     }
 
     // Update is called once per frame
@@ -73,18 +82,19 @@ public class Solution : MonoBehaviour
         
         Compare();
 
-        if(LevelFinished == true && save == true)
-        {
-            PlayerData.current.world = world;
-            PlayerData.current.level = level;
-            PlayerData.current.score = StarScore;
-            PlayerData.current.shadow = shadow;
-            PlayerData.current.complete = complete;
+        // if(LevelFinished == true && save == true)
+        // {
+            
+        //     player.profile.level = level;
+        //     player.profile.score = StarScore;
+        //     player.profile.shadow = shadow;
+        //     player.profile.complete = complete;
+        //     player.profile.world = world;
 
-            SaveSystem.SavePlayer(PlayerData.current.profile);
+        //     SaveSystem.SavePlayer(player);
 
-            save = false;
-        }
+        //     save = false;
+        // }
 
 
 
@@ -194,12 +204,13 @@ public class Solution : MonoBehaviour
         if (LevelFinished == false) {
 
             Xbert.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            complete = 1;
+            complete = true;
+            
 
             Stars();
             //int[,,] WorldLevelScore = new int [world, level, StarScore];
 
-            
+            SaveToJson();
 
             Pause.GetComponent<PauseScript>().SpaceBool = false;
             LevelFinished = true;
@@ -252,6 +263,41 @@ public class Solution : MonoBehaviour
 
         }
 
+    }
+
+    public void SaveToJson()
+    {
+        Debug.Log(ListPlace);
+        //List<PlayerData> datas = new List<PlayerData> ();
+        // if(datas[0].score < StarScore)
+        // {
+        //     datas.Insert (level-1, new PlayerData(world, level, shadow, complete, StarScore));
+        // }
+        if(datas.Count <= level)
+        {
+            datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+            
+        }
+        else if(datas[ListPlace].score <= StarScore)
+        {
+            datas.RemoveAt(ListPlace);
+            datas.Insert (ListPlace, new PlayerData(world, level, shadow, complete, StarScore));
+        }
+        // data.world = world;
+        // data.level = level;
+        // data.shadow = shadow;
+        // data.complete = complete;
+        // data.score = StarScore;
+
+        // string json = JsonUtility.ToJson(datas, true);
+        // File.WriteAllText(Application.dataPath + "/XBertDataFile.json", json);
+
+
+        FileHandler.SaveToJSON<PlayerData> (datas, filename);
+
+            
+
+        
     }
 
 
