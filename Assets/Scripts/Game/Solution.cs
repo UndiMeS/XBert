@@ -283,14 +283,6 @@ public class Solution : MonoBehaviour
             datas.RemoveAt(ListPlace);
             datas.Insert (ListPlace, new PlayerData(world, level, shadow, complete, StarScore));
         }
-        // data.world = world;
-        // data.level = level;
-        // data.shadow = shadow;
-        // data.complete = complete;
-        // data.score = StarScore;
-
-        // string json = JsonUtility.ToJson(datas, true);
-        // File.WriteAllText(Application.dataPath + "/XBertDataFile.json", json);
 
 
         FileHandler.SaveToJSON<PlayerData> (datas, filename);

@@ -54,6 +54,7 @@ public class LoadStars : MonoBehaviour
     {
         if(File.Exists(Application.dataPath + "/XBertDataFile.json") && Loaded == false)
         {
+            
 
             Loaded = true;
             datas = FileHandler.ReadFromJSON<PlayerData>(filename);
