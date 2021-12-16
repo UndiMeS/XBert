@@ -7,6 +7,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public GameObject StartMenu;
     public GameObject WorldOne;
+    public GameObject ShadowOne;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,18 @@ public class MenuButtonManager : MonoBehaviour
     public void ToWorldOne()
     {
         StartMenu.SetActive(false);
+        WorldOne.SetActive(true);
+    }
+
+    public void SwitchToNightOne()
+    {
+        WorldOne.SetActive(false);
+        ShadowOne.SetActive(true);
+    }
+
+    public void SwitchToWorldOne()
+    {
+        ShadowOne.SetActive(false);
         WorldOne.SetActive(true);
     }
 

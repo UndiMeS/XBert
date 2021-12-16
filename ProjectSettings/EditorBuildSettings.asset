@@ -14,4 +14,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/W1_2.unity
     guid: f20c0e71a4d444ddfb44aa9144d5309a
+  - enabled: 1
+    path: Assets/Scenes/W1_3.unity
+    guid: f45b9e123bc84484c9f73d22a4acc2c7
+  - enabled: 1
+    path: Assets/Scenes/W1_4.unity
+    guid: 909d6175781704bc691db9c2b26496f3
+  - enabled: 1
+    path: Assets/Scenes/W1_5.unity
+    guid: 32798edcc9d314002a462bc8acc6e7a8
+  - enabled: 1
+    path: Assets/Scenes/W1_6.unity
+    guid: 6565d241615794a62a697929b716ea51
+  - enabled: 1
+    path: Assets/Scenes/W1_1 (S).unity
+    guid: 0eef5c0014ed742f48be3af60671aff1
+  - enabled: 1
+    path: Assets/Scenes/W1_2 (S).unity
+    guid: eee0552eb190643cb8c8d94efeb1969e
+  - enabled: 1
+    path: Assets/Scenes/W1_3 (S).unity
+    guid: 3e5d74f091b36491390d51f877ecc5ed
+  - enabled: 1
+    path: Assets/Scenes/W1_4 (S).unity
+    guid: 587277c73cec1430390e7583043329cf
+  - enabled: 1
+    path: Assets/Scenes/W1_5 (S).unity
+    guid: d0ba1a2cc869244e6a2d982de118bcf7
+  - enabled: 1
+    path: Assets/Scenes/W1_6 (S).unity
+    guid: 7ee6017dd3662480eacda14e608fcae7
   m_configObjects: {}

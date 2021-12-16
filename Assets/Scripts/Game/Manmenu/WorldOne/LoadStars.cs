@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadStars : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LoadStars : MonoBehaviour
     public string LoadScene;
     public int World;
     public int Level;
+    public bool Shadow;
 [HideInInspector]
     public int world;
     [HideInInspector]
@@ -23,6 +25,9 @@ public class LoadStars : MonoBehaviour
     [HideInInspector]
     public SpriteRenderer LevelSprite;
     public SpriteRenderer NextLevelSprite;
+    public Button NextLevelButton;
+    public SpriteRenderer ShadowLevelSprite;
+    public Button ShadowLevelButton;
     public Sprite LevelSuccess;
 
     public Sprite NextLevelUnlock;
@@ -43,10 +48,19 @@ public class LoadStars : MonoBehaviour
 
     List<PlayerData> datas = new List<PlayerData>();
 
+    public int WorldCount = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        ListPlace = World * 7 -7 + Level - 1;
+        if(Shadow == false)
+        {
+            ListPlace = World * 7 -7 + Level - 1;
+        }
+        else
+        {
+            ListPlace = (World * 7 -7 + Level - 1) * (WorldCount + 1);
+        }
     }
 
     // Update is called once per frame
@@ -59,6 +73,8 @@ public class LoadStars : MonoBehaviour
             Loaded = true;
             datas = FileHandler.ReadFromJSON<PlayerData>(filename);
 
+            if(datas.Count > ListPlace )
+            {
             world = datas[ListPlace].world;
             level = datas[ListPlace].level;
             shadow = datas[ListPlace].shadow;
@@ -66,32 +82,15 @@ public class LoadStars : MonoBehaviour
             score = datas[ListPlace].score;
 
 
-
-
-
-        //     string json = File.ReadAllText(Application.dataPath + "/XBertDataFile.json");
-        // PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-
-        // world= data.world;
-        // level = data.level;
-        // shadow = data.shadow;
-        // complete = data.complete;
-        // score = data.score;
-
-
-
-
-
-
         LevelSprite = this.gameObject.GetComponent<SpriteRenderer>();
-        //PlayerData.current = (PlayerData)SerializationManager.LoadPlayer(Application.persistentDataPath + "/player.fun"); 
-        //SaveProfile = SaveSystem.LoadPlayer();
 
-        if(complete == true)
+        if(complete == true && Shadow == false)
         {
 
             LevelSprite.sprite = LevelSuccess;
             NextLevelSprite.sprite = NextLevelUnlock;
+            NextLevelButton.interactable = true;
+            ShadowLevelButton.interactable = true;
 
             if(World == world && Level == level && shadow == false)
             {
@@ -118,6 +117,9 @@ public class LoadStars : MonoBehaviour
         
         Debug.Log("List platz" + ListPlace );
         Debug.Log("Score" + score );
+            }
+
+
 
         }
     }

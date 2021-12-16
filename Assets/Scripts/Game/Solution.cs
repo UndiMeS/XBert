@@ -63,12 +63,22 @@ public class Solution : MonoBehaviour
     private string filename = "XBertDataFile.json";
     private int ListPlace;
 
+    public int WorldCount = 1;
+
     List<PlayerData> datas = new List<PlayerData>();
     // Start is called before the first frame update
     void Start()
     {
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
-        ListPlace = world * 7 -7 + level - 1;
+        if(shadow == false)
+        {
+            ListPlace = world * 7 -7 + level - 1;
+        }
+        else
+        {
+            ListPlace = (world * 7 -7 + level - 1) * (WorldCount + 1);
+        }
+        
     }
 
     // Update is called once per frame
@@ -170,24 +180,38 @@ public class Solution : MonoBehaviour
 
     public void Stars(){
 
-        if(EatenNumberCounter <= FirstStar)
-        {
-            StarOne.sprite = YellowStar;
-            StarScore = 1;
+        if(shadow == false)
+        { 
+            if(EatenNumberCounter <= FirstStar)
+            {
+                StarOne.sprite = YellowStar;
+                StarScore = 1;
+            }
+
+            if(EatenNumberCounter <= SecondStar)
+            {
+                StarTwo.sprite = YellowStar;
+                StarScore = 2;
+            }
+
+            if(EatenNumberCounter <= ThirdStar)
+            {
+                StarThree.sprite = YellowStar;
+                Debug.Log("3 star"+ EatenNumberCounter + " " + ThirdStar);
+                StarScore = 3;
+            }
         }
 
-        if(EatenNumberCounter <= SecondStar)
+        else
         {
-            StarTwo.sprite = YellowStar;
-            StarScore = 2;
+            if(EatenNumberCounter <= SecondStar)
+            {
+                StarTwo.sprite = YellowStar;
+                StarScore = 1;
+            }
         }
 
-        if(EatenNumberCounter <= ThirdStar)
-        {
-            StarThree.sprite = YellowStar;
-            Debug.Log("3 star"+ EatenNumberCounter + " " + ThirdStar);
-            StarScore = 3;
-        }
+
         
 
          
