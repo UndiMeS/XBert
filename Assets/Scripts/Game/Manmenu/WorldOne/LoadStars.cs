@@ -26,6 +26,7 @@ public class LoadStars : MonoBehaviour
     public SpriteRenderer LevelSprite;
     public SpriteRenderer NextLevelSprite;
     public Button NextLevelButton;
+    public Sprite ShadowUnlock;
     public SpriteRenderer ShadowLevelSprite;
     public Button ShadowLevelButton;
     public Sprite LevelSuccess;
@@ -91,6 +92,7 @@ public class LoadStars : MonoBehaviour
             NextLevelSprite.sprite = NextLevelUnlock;
             NextLevelButton.interactable = true;
             ShadowLevelButton.interactable = true;
+            ShadowLevelSprite.sprite = ShadowUnlock;
 
             if(World == world && Level == level && shadow == false)
             {
