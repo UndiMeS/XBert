@@ -5226,7 +5226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -240}
+  m_AnchoredPosition: {x: -4, y: -244}
   m_SizeDelta: {x: 91.52728, y: 65.72449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693712080
@@ -8021,7 +8021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Termwert <= -6
+  m_text: Termwert <= -8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -16533,7 +16533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   world: 1
-  level: 5
+  level: 6
   shadow: 1
   complete: 0
   player:
@@ -18127,7 +18127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 501, y: -143}
+  m_AnchoredPosition: {x: 503, y: -151}
   m_SizeDelta: {x: 91.15498, y: 62.355347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &6701678867381514170
@@ -18236,7 +18236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -9
+  m_text: -11
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -18264,8 +18264,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 37
+  m_fontSizeBase: 37
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
