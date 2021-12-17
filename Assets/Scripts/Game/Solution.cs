@@ -63,7 +63,7 @@ public class Solution : MonoBehaviour
     private string filename = "XBertDataFile.json";
     private int ListPlace;
 
-    public int WorldCount = 1;
+    public int WorldCount = 2;
 
     List<PlayerData> datas = new List<PlayerData>();
     // Start is called before the first frame update
