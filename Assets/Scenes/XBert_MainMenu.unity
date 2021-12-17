@@ -4609,7 +4609,7 @@ MonoBehaviour:
   score: 0
   LevelSprite: {fileID: 1623272366}
   NextLevelSprite: {fileID: 1723967359}
-  NextLevelButton: {fileID: 0}
+  NextLevelButton: {fileID: 275305039}
   ShadowUnlock: {fileID: 21300000, guid: 17fcee29b9213bd4c848eb7b5e67afa4, type: 3}
   ShadowLevelSprite: {fileID: 268222863}
   ShadowLevelButton: {fileID: 268222862}

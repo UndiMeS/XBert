@@ -80,7 +80,7 @@ public class LoadStars : MonoBehaviour
                 {
                     if(World == datas[i].world && Level == datas[i].level)
                     {
-                        if(datas[i].complete == true && datas[i].shadow == false)
+                        if(datas[i].complete == true && datas[i].shadow == false && Shadow == false)
                         {
 
                             world = datas[i].world;
@@ -110,6 +110,14 @@ public class LoadStars : MonoBehaviour
                                 StarTwo.sprite = YellowStar;
                                 StarThree.sprite = YellowStar;
                             }
+                        }
+                        if(datas[i].complete == true && datas[i].shadow == true && Shadow == true)
+                        {
+                            if(datas[i].score == 1)
+                            {
+                                StarOne.sprite = YellowStar;
+                            }
+                            LevelSprite.sprite = LevelSuccess;
                         }
                     }
                 }
