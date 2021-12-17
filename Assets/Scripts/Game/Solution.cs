@@ -291,22 +291,44 @@ public class Solution : MonoBehaviour
 
     public void SaveToJson()
     {
-        Debug.Log(ListPlace);
-        //List<PlayerData> datas = new List<PlayerData> ();
-        // if(datas[0].score < StarScore)
-        // {
-        //     datas.Insert (level-1, new PlayerData(world, level, shadow, complete, StarScore));
-        // }
-        if(datas.Count <= level)
+
+        if(datas.Count > 0)
+        {
+            for(int i = 0; i <= datas.Count - 1; i++)
+            {
+                if(datas[i].world == world && datas[i].level == level && datas[i].shadow == shadow)
+                {
+                    if(datas[i].score <= StarScore)
+                    {
+                        datas.RemoveAt(i);
+                        datas.Insert (i, new PlayerData(world, level, shadow, complete, StarScore));
+                    }
+                }
+                else
+                {
+                    datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+                }
+            }
+        }
+        else
         {
             datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+        }
+        
+
+
+        // Debug.Log(ListPlace);
+        // //List<PlayerData> datas = new List<PlayerData> ();
+        // // if(datas[0].score < StarScore)
+        // // {
+        // //     datas.Insert (level-1, new PlayerData(world, level, shadow, complete, StarScore));
+        // // }
+        // if(datas.Count <= level)
+        // {
+        //     datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
             
-        }
-        else if(datas[ListPlace].score <= StarScore)
-        {
-            datas.RemoveAt(ListPlace);
-            datas.Insert (ListPlace, new PlayerData(world, level, shadow, complete, StarScore));
-        }
+        // }
+        // else 
 
 
         FileHandler.SaveToJSON<PlayerData> (datas, filename);

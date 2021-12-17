@@ -315,7 +315,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 268222863}
   NextLevelSprite: {fileID: 1652412957}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -682,7 +682,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 275305040}
   NextLevelSprite: {fileID: 1623272366}
   NextLevelButton: {fileID: 1623272365}
   ShadowUnlock: {fileID: 21300000, guid: ebcf3dcc1b5907949a127cb8b26b61d9, type: 3}
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 494592301}
   NextLevelSprite: {fileID: 754592498}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 525019180}
   NextLevelSprite: {fileID: 1768242288}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -2036,7 +2036,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 618442968}
   NextLevelSprite: {fileID: 995347243}
   NextLevelButton: {fileID: 995347242}
   ShadowUnlock: {fileID: 21300000, guid: 382b7d31f232c284a8d35febae3d862b, type: 3}
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 754592498}
   NextLevelSprite: {fileID: 1652412957}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -2874,7 +2874,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 805791827}
   NextLevelSprite: {fileID: 1723967359}
   NextLevelButton: {fileID: 1723967358}
   ShadowUnlock: {fileID: 21300000, guid: 1d4ae2d173883374ea46e4ef0985dffc, type: 3}
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 995347243}
   NextLevelSprite: {fileID: 805791827}
   NextLevelButton: {fileID: 805791826}
   ShadowUnlock: {fileID: 21300000, guid: 5823376a11cc61f42816a0fe7b87d073, type: 3}
@@ -4607,7 +4607,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 1623272366}
   NextLevelSprite: {fileID: 1723967359}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 21300000, guid: 17fcee29b9213bd4c848eb7b5e67afa4, type: 3}
@@ -4720,7 +4720,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 1652412957}
   NextLevelSprite: {fileID: 2125266433}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -5219,7 +5219,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 1723967359}
   NextLevelSprite: {fileID: 275305040}
   NextLevelButton: {fileID: 275305039}
   ShadowUnlock: {fileID: 21300000, guid: 386f1da77cc3b2d4e82a46f641e89848, type: 3}
@@ -5375,7 +5375,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 1768242288}
   NextLevelSprite: {fileID: 494592301}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -6078,7 +6078,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 2125266433}
   NextLevelSprite: {fileID: 268222863}
   NextLevelButton: {fileID: 0}
   ShadowUnlock: {fileID: 0}
@@ -6459,7 +6459,7 @@ MonoBehaviour:
   shadow: 0
   complete: 0
   score: 0
-  LevelSprite: {fileID: 0}
+  LevelSprite: {fileID: 2140247221}
   NextLevelSprite: {fileID: 618442968}
   NextLevelButton: {fileID: 618442967}
   ShadowUnlock: {fileID: 21300000, guid: 039f5bb7b4e928e46a063962a7dda701, type: 3}
