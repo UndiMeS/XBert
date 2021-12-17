@@ -12,7 +12,6 @@ public class PauseScript : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Controler;
     public GameObject Axel;
-    public GameObject SubmitMenu;
     public GameObject StartMenu;
     public GameObject LevelComplete;
     public bool Complete;
@@ -105,7 +104,6 @@ public class PauseScript : MonoBehaviour
     {
         SpaceBool = false;
         Level.SetActive(false);
-        SubmitMenu.SetActive(false);
         PauseMenu.SetActive(true);
         Controler.SetActive(false);
         Axel.SetActive(false);
@@ -146,21 +144,21 @@ public class PauseScript : MonoBehaviour
         SpaceBool = false;
     }
 
-    public void ReturnToPause()
+    public void ToPause()
     {
         PauseMenu.SetActive(true);
-        SubmitMenu.SetActive(false);
 
     }
 
-    public void ReturnToCompleteLevel()
-    {
-        SubmitMenu.SetActive(false);
-    }
 
     public void ToMainMenu()
     {
         SceneManager.LoadScene("XBert_MainMenu");
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     
