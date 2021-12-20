@@ -92,8 +92,7 @@ public class LoadStars : MonoBehaviour
                             LevelSprite.sprite = LevelSuccess;
                             NextLevelSprite.sprite = NextLevelUnlock;
                             NextLevelButton.interactable = true;
-                            ShadowLevelButton.interactable = true;
-                            ShadowLevelSprite.sprite = ShadowUnlock;
+                            
 
                             if(datas[i].score == 1)
                             {
@@ -109,6 +108,8 @@ public class LoadStars : MonoBehaviour
                                 StarOne.sprite = YellowStar;
                                 StarTwo.sprite = YellowStar;
                                 StarThree.sprite = YellowStar;
+                                ShadowLevelButton.interactable = true;
+                            ShadowLevelSprite.sprite = ShadowUnlock;
                             }
                         }
                         if(datas[i].complete == true && datas[i].shadow == true && Shadow == true)
