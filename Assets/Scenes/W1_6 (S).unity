@@ -16547,7 +16547,7 @@ MonoBehaviour:
   ZeroLeft: {fileID: 0}
   ZeroRight: {fileID: 8968911165357002027}
   FirstStar: 0
-  SecondStar: 15
+  SecondStar: 22
   ThirdStar: 0
   StarScore: 0
   StarOne: {fileID: 1448634056}

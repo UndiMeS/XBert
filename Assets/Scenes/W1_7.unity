@@ -15529,7 +15529,7 @@ MonoBehaviour:
   ZeroRight: {fileID: 8968911165357002027}
   FirstStar: 35
   SecondStar: 10
-  ThirdStar: 8
+  ThirdStar: 6
   StarScore: 0
   StarOne: {fileID: 1448634056}
   StarTwo: {fileID: 831923610}
