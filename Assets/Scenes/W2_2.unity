@@ -2954,7 +2954,7 @@ GameObject:
   - component: {fileID: 426285408}
   - component: {fileID: 426285407}
   m_Layer: 0
-  m_Name: SubtractZone (1)
+  m_Name: SubtractZone
   m_TagString: SubAddZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13765,7 +13765,7 @@ MonoBehaviour:
   ZoneRenderer: {fileID: 0}
   AdditionColor: {r: 0.15294118, g: 1, b: 0, a: 0.3529412}
   Numbers: []
-  Subtract: 0
+  Subtract: 1
 --- !u!50 &1636954600
 Rigidbody2D:
   serializedVersion: 4
@@ -15740,7 +15740,7 @@ MonoBehaviour:
   ZoneRenderer: {fileID: 0}
   AdditionColor: {r: 0.15294118, g: 1, b: 0, a: 0.3529412}
   Numbers: []
-  Subtract: 0
+  Subtract: 1
 --- !u!50 &1823503110
 Rigidbody2D:
   serializedVersion: 4
@@ -18475,7 +18475,7 @@ MonoBehaviour:
   ZoneRenderer: {fileID: 0}
   AdditionColor: {r: 0.15294118, g: 1, b: 0, a: 0.3529412}
   Numbers: []
-  Subtract: 0
+  Subtract: 1
 --- !u!1 &2101423042
 GameObject:
   m_ObjectHideFlags: 0

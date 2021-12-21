@@ -14,14 +14,14 @@ public GameObject[] Numbers;
     void Start()
     {
         ZoneRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        if(this.gameObject.name == "SubtractZone")
+        if(Subtract == true)
         {
-            Subtract = true;
+            //Subtract = true;
             ZoneRenderer.color = SubtractColor;
         }
         else
         {
-            Subtract = false;
+            //Subtract = false;
             ZoneRenderer.color = AdditionColor;
         }
 
