@@ -30,7 +30,7 @@ public class LoadStars : MonoBehaviour
     public Button ShadowLevelButton;
     public Sprite LevelSuccess;
 
-    public Sprite NextLevelUnlock;
+    public Sprite LevelUnlock;
 
     public PlayerData SaveProfile;
     
@@ -45,6 +45,7 @@ public class LoadStars : MonoBehaviour
     public int ListPlace;
 
     public bool Loaded;
+    private bool Unlock;
 
     List<PlayerData> datas = new List<PlayerData>();
 
@@ -78,6 +79,11 @@ public class LoadStars : MonoBehaviour
             {
                 for(int i = 0; i <= datas.Count - 1; i++)
                 {
+                    
+                    
+
+
+
                     if(World == datas[i].world && Level == datas[i].level)
                     {
                         if(datas[i].complete == true && datas[i].shadow == false && Shadow == false)
@@ -89,9 +95,16 @@ public class LoadStars : MonoBehaviour
                             complete = datas[i].complete;
                             score = datas[i].score;
 
-                            LevelSprite.sprite = LevelSuccess;
-                            NextLevelSprite.sprite = NextLevelUnlock;
+                            
+
+                            
                             NextLevelButton.interactable = true;
+
+                                LevelSprite.sprite = LevelSuccess;
+
+                            
+
+                            //NextLevelSprite.sprite = NextLevelUnlock;
                             
 
                             if(datas[i].score == 1)
@@ -111,6 +124,10 @@ public class LoadStars : MonoBehaviour
                                 ShadowLevelButton.interactable = true;
                             ShadowLevelSprite.sprite = ShadowUnlock;
                             }
+                            else
+                            {
+
+                            }
                         }
                         if(datas[i].complete == true && datas[i].shadow == true && Shadow == true)
                         {
@@ -120,6 +137,12 @@ public class LoadStars : MonoBehaviour
                             }
                             LevelSprite.sprite = LevelSuccess;
                         }
+                    }
+
+                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
+                    {
+                            LevelSprite.sprite = LevelUnlock;
+                        
                     }
                 }
             }
