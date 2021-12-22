@@ -8,7 +8,8 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject StartMenu;
     public GameObject WorldOne;
     public GameObject ShadowOne;
-    public static bool NotFirstStart;
+    public static int World;
+    public static bool ShadowWorld;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,17 @@ public class MenuButtonManager : MonoBehaviour
 
     public void OnEnable()
     {
-        if(NotFirstStart == true)
+        if(World == 1 && ShadowWorld == false)
         {
             StartMenu.SetActive(false);
+            ShadowOne.SetActive(false);
             WorldOne.SetActive(true);
+        }
+        else if(World == 1 && ShadowWorld == true)
+        {
+            StartMenu.SetActive(false);
+            WorldOne.SetActive(false);
+            ShadowOne.SetActive(true);
         }
     }
 
@@ -34,7 +42,8 @@ public class MenuButtonManager : MonoBehaviour
     {
         StartMenu.SetActive(true);
         WorldOne.SetActive(false);
-        NotFirstStart = false;
+        World = 0;
+        ShadowWorld = false;
     }
 
 
@@ -42,19 +51,21 @@ public class MenuButtonManager : MonoBehaviour
     {
         StartMenu.SetActive(false);
         WorldOne.SetActive(true);
-        NotFirstStart = true;
+        World = 1;
     }
 
     public void SwitchToNightOne()
     {
         WorldOne.SetActive(false);
         ShadowOne.SetActive(true);
+        ShadowWorld = true;
     }
 
     public void SwitchToWorldOne()
     {
         ShadowOne.SetActive(false);
         WorldOne.SetActive(true);
+        ShadowWorld = false;
     }
 
     public void QuitGame()

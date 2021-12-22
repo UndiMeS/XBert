@@ -168,6 +168,18 @@ public class PauseScript : MonoBehaviour
         SceneManager.LoadScene(NextScene);
     }
 
+    public void NextShadowLevelButton()
+    {
+        if(ShadowNextLevel == true)
+        {
+            SceneManager.LoadScene(NextScene);
+        }
+        else
+        {
+            SceneManager.LoadScene("XBert_MainMenu");
+        }
+    }
+
     
     public static IEnumerator FadeOut (AudioSource audioSource, float FadeTime) {
         float startVolume = audioSource.volume;

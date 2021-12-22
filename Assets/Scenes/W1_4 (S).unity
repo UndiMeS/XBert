@@ -10107,7 +10107,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
-        m_MethodName: ToMainMenu
+        m_MethodName: NextShadowLevelButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15570,7 +15570,7 @@ MonoBehaviour:
   Axel: {fileID: 8968911167086048002}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
-  NextScene: 
+  NextScene: W1_5 (S)
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0

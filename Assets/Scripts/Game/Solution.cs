@@ -302,7 +302,7 @@ public class Solution : MonoBehaviour
                 {
                     datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
                 }
-                if(datas[i].world == world && datas[i].level == level  && datas[i].shadow == false && datas[i].score == 3)
+                if(datas[i].world == world && datas[i].level == level + 1  && datas[i].shadow == false && datas[i].score == 3)
                 {
                     NextShadowLevel = true;
                 }
