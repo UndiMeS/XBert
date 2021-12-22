@@ -14,6 +14,7 @@ public class PauseScript : MonoBehaviour
     public GameObject Axel;
     public GameObject StartMenu;
     public GameObject LevelComplete;
+    public string NextScene;
     public bool Complete;
 
     public GameObject SolutionScript;
@@ -29,7 +30,7 @@ public class PauseScript : MonoBehaviour
     public bool SpaceBool;
 
     public float startVolume;
-
+    public bool ShadowNextLevel;
 
     
 
@@ -54,6 +55,11 @@ public class PauseScript : MonoBehaviour
     void Update()
     {
          Finished = SolutionScript.GetComponent<Solution>().LevelFinished;
+
+         if(SolutionScript.GetComponent<Solution>().NextShadowLevel == true)
+         {
+             ShadowNextLevel = true;
+         }
 
         if(SpaceBool == true && LevelComplete.activeSelf == false){
                 if (Input.GetKeyDown("space"))
@@ -158,7 +164,8 @@ public class PauseScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(NextScene);
     }
 
     

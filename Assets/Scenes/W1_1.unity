@@ -11440,6 +11440,7 @@ MonoBehaviour:
   save: 1
   filename: XBertDataFile.json
   WorldCount: 4
+  NextShadowLevel: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12679,7 +12680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 36e63e0d979410048a2ab3c4682b388e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12831,10 +12832,13 @@ MonoBehaviour:
   findCamerasAutomatically: 0
   letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
   cameras:
+  - camera: {fileID: 5664502587233814748}
+    anchor: 0
+    vectorAnchor: {x: 0.5, y: 0.5}
   - camera: {fileID: 5664502587477860239}
     anchor: 0
     vectorAnchor: {x: 0.5, y: 0.5}
-  letterBoxCamera: {fileID: 0}
+  letterBoxCamera: {fileID: 5664502587477860239}
 --- !u!1 &5664502587477860236
 GameObject:
   m_ObjectHideFlags: 0
@@ -14262,6 +14266,7 @@ MonoBehaviour:
   Axel: {fileID: 8968911167086048002}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
+  NextScene: W1_2
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0
@@ -14269,6 +14274,7 @@ MonoBehaviour:
   PauseButton: {fileID: 8968911166272778276}
   SpaceBool: 0
   startVolume: 0
+  ShadowNextLevel: 0
   NextLevelButton: {fileID: 0}
 --- !u!1 &8968911165433954705
 GameObject:
@@ -15044,7 +15050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8968911166279308789}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PlayerMovePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15062,12 +15068,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.00913, y: 0.00913, z: 1}
   m_Children: []
-  m_Father: {fileID: 8968911167086048012}
+  m_Father: {fileID: 8968911167086048004}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00000041793822, y: -0.00000013931275}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8968911166332328836
@@ -15486,7 +15492,7 @@ RectTransform:
   m_LocalScale: {x: 0.9000001, y: 0.9000001, z: 1}
   m_Children:
   - {fileID: 7569831895000572678}
-  - {fileID: 8968911167086048012}
+  - {fileID: 8968911167086048004}
   - {fileID: 8968911166180589459}
   - {fileID: 8968911165420617585}
   - {fileID: 8968911167440392057}
@@ -15497,9 +15503,9 @@ RectTransform:
   m_Father: {fileID: 332517704}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 968.0001, y: 562}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10, y: 20}
   m_SizeDelta: {x: 2406, y: 1180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8968911166645342141
@@ -20405,7 +20411,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 8968911167086048012}
+  m_Father: {fileID: 8968911167086048004}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &8968911166940211996
@@ -20631,6 +20637,7 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
+  MovePointParent: {fileID: 332517700}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20665,7 +20672,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8968911167086048012}
+  - component: {fileID: 8968911167086048004}
   - component: {fileID: 8968911167086048015}
   - component: {fileID: 8968911167086048014}
   - component: {fileID: 8968911167086048001}
@@ -20697,7 +20704,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &8968911167086048012
+--- !u!4 &8968911167086048004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20705,7 +20712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8968911167086048002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91, y: 160, z: 0}
+  m_LocalPosition: {x: -195, y: -42, z: 0}
   m_LocalScale: {x: 109.52902, y: 109.52902, z: 1}
   m_Children:
   - {fileID: 8968911166279308789}

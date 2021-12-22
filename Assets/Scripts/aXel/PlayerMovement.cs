@@ -38,14 +38,16 @@ public class PlayerMovement : MonoBehaviour {
     public bool smash;
     public static bool moving = true;
 
+    public GameObject MovePointParent;
+
 
 
     // Start is called before the first frame update
     void Start () {
 
-        movePoint.SetParent (null);
+        movePoint.SetParent (MovePointParent.transform);
         movePoint.position = this.gameObject.transform.position;
-        StartPosition = this.transform.position;
+        StartPosition = this.gameObject.transform.position;
 
         rb = GetComponent<Rigidbody2D> ();
 

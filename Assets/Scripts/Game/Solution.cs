@@ -64,20 +64,14 @@ public class Solution : MonoBehaviour
     private int ListPlace;
 
     public int WorldCount = 4;
+    public bool NextShadowLevel;
 
     List<PlayerData> datas = new List<PlayerData>();
     // Start is called before the first frame update
     void Start()
     {
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
-        if(shadow == false)
-        {
-            ListPlace = world * 7 -7 + level - 1;
-        }
-        else
-        {
-            ListPlace = (world * 7 -7 + level - 1) * (WorldCount + 1);
-        }
+
         
     }
 
@@ -307,6 +301,10 @@ public class Solution : MonoBehaviour
                 else
                 {
                     datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+                }
+                if(datas[i].world == world && datas[i].level == level  && datas[i].shadow == false && datas[i].score == 3)
+                {
+                    NextShadowLevel = true;
                 }
             }
         }
