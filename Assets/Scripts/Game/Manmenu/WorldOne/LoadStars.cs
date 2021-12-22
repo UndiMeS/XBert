@@ -86,6 +86,15 @@ public class LoadStars : MonoBehaviour
 
                     if(World == datas[i].world && Level == datas[i].level)
                     {
+                        if(datas[i].complete == true && datas[i].shadow == false)
+                        {
+                            if(datas[i].score == 3)
+                            {
+                                
+                                ShadowLevelButton.interactable = true;
+                            ShadowLevelSprite.sprite = ShadowUnlock;
+                            }
+                        }
                         if(datas[i].complete == true && datas[i].shadow == false && Shadow == false)
                         {
 
@@ -147,53 +156,7 @@ public class LoadStars : MonoBehaviour
                 }
             }
 
-        //     if(datas.Count > ListPlace )
-        //     {
-        //     world = datas[ListPlace].world;
-        //     level = datas[ListPlace].level;
-        //     shadow = datas[ListPlace].shadow;
-        //     complete = datas[ListPlace].complete;
-        //     score = datas[ListPlace].score;
-
-
-        // LevelSprite = this.gameObject.GetComponent<SpriteRenderer>();
-
-        // if(complete == true && Shadow == false)
-        // {
-
-        //     LevelSprite.sprite = LevelSuccess;
-        //     NextLevelSprite.sprite = NextLevelUnlock;
-        //     NextLevelButton.interactable = true;
-        //     ShadowLevelButton.interactable = true;
-        //     ShadowLevelSprite.sprite = ShadowUnlock;
-
-        //     if(World == world && Level == level && shadow == false)
-        //     {
-        //         if(score == 1)
-        //         {
-        //             StarOne.sprite = YellowStar;
-        //         }
-        //         else if(score == 2)
-        //         {
-        //             StarOne.sprite = YellowStar;
-        //             StarTwo.sprite = YellowStar;
-        //         }
-        //         else if(score == 3)
-        //         {
-        //             StarOne.sprite = YellowStar;
-        //             StarTwo.sprite = YellowStar;
-        //             StarThree.sprite = YellowStar;
-        //         }
-        //     }
-        // }
-
         
-
-        
-        // Debug.Log("List platz" + ListPlace );
-        // Debug.Log("Score" + score );
-        //     }
-
 
 
          }
