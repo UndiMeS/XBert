@@ -14479,7 +14479,7 @@ MonoBehaviour:
   ZoneRenderer: {fileID: 0}
   AdditionColor: {r: 0.15294118, g: 1, b: 0, a: 0.3529412}
   Numbers: []
-  Subtract: 0
+  Subtract: 1
 --- !u!1 &2107676621
 GameObject:
   m_ObjectHideFlags: 0
@@ -16038,6 +16038,8 @@ MonoBehaviour:
   Spin: 0
   save: 1
   filename: XBertDataFile.json
+  WorldCount: 4
+  NextShadowLevel: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17411,6 +17413,9 @@ MonoBehaviour:
   findCamerasAutomatically: 0
   letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
   cameras:
+  - camera: {fileID: 5664502587233814748}
+    anchor: 0
+    vectorAnchor: {x: 0.5, y: 0.5}
   - camera: {fileID: 5664502587477860239}
     anchor: 0
     vectorAnchor: {x: 0.5, y: 0.5}
@@ -18713,9 +18718,9 @@ MonoBehaviour:
   PauseMenu: {fileID: 8968911166951410074}
   Controler: {fileID: 8968911166180589458}
   Axel: {fileID: 8968911167086048002}
-  SubmitMenu: {fileID: 0}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
+  NextScene: 
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0
@@ -18723,6 +18728,7 @@ MonoBehaviour:
   PauseButton: {fileID: 8968911166272778276}
   SpaceBool: 0
   startVolume: 0
+  ShadowNextLevel: 0
   NextLevelButton: {fileID: 0}
 --- !u!1 &8968911165433954705
 GameObject:
@@ -19951,9 +19957,9 @@ RectTransform:
   m_Father: {fileID: 332517704}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 968.0001, y: 562}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10, y: 20}
   m_SizeDelta: {x: 2406, y: 1180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8968911166645342141
@@ -25101,6 +25107,7 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
+  MovePointParent: {fileID: 332517700}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0

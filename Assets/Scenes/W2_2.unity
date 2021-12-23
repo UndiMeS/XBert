@@ -20390,6 +20390,7 @@ MonoBehaviour:
   save: 1
   filename: XBertDataFile.json
   WorldCount: 4
+  NextShadowLevel: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21771,6 +21772,9 @@ MonoBehaviour:
   findCamerasAutomatically: 0
   letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
   cameras:
+  - camera: {fileID: 5664502587233814748}
+    anchor: 0
+    vectorAnchor: {x: 0.5, y: 0.5}
   - camera: {fileID: 5664502587477860239}
     anchor: 0
     vectorAnchor: {x: 0.5, y: 0.5}
@@ -23075,6 +23079,7 @@ MonoBehaviour:
   Axel: {fileID: 8968911167086048002}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
+  NextScene: 
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0
@@ -23082,6 +23087,7 @@ MonoBehaviour:
   PauseButton: {fileID: 8968911166272778276}
   SpaceBool: 0
   startVolume: 0
+  ShadowNextLevel: 0
   NextLevelButton: {fileID: 0}
 --- !u!1 &8968911165433954705
 GameObject:
@@ -29469,6 +29475,7 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
+  MovePointParent: {fileID: 332517700}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0
