@@ -65,6 +65,7 @@ public class Solution : MonoBehaviour
 
     public int WorldCount = 4;
     public bool NextShadowLevel;
+    public int DataCount;
 
     List<PlayerData> datas = new List<PlayerData>();
     // Start is called before the first frame update
@@ -290,52 +291,51 @@ public class Solution : MonoBehaviour
         {
             for(int i = 0; i <= datas.Count - 1; i++)
             {
+                    if(datas[i].world == world && datas[i].level == level + 1  && datas[i].shadow == false && datas[i].score == 3)
+                {
+                    NextShadowLevel = true;
+                }
+
+
                 if(datas[i].world == world && datas[i].level == level && datas[i].shadow == shadow)
                 {
                     if(datas[i].score <= StarScore)
                     {
+                        Debug.Log("replace data");
                         datas.RemoveAt(i);
                         datas.Insert (i, new PlayerData(world, level, shadow, complete, StarScore));
+                        FileHandler.SaveToJSON<PlayerData> (datas, filename);
+                        break;
                     }
                 }
                 else
                 {
-                    datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+                    // Debug.Log("new data");
+                    // datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+                    // FileHandler.SaveToJSON<PlayerData> (datas, filename);
+                    DataCount++;
                 }
-                if(datas[i].world == world && datas[i].level == level + 1  && datas[i].shadow == false && datas[i].score == 3)
-                {
-                    NextShadowLevel = true;
-                }
+
+                
+            
+            }
+
+            if(DataCount == datas.Count)
+            {
+                Debug.Log("new data");
+                datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+                FileHandler.SaveToJSON<PlayerData> (datas, filename);
             }
         }
         else
         {
             datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
+            FileHandler.SaveToJSON<PlayerData> (datas, filename);
+            
         }
-        
-
-
-        // Debug.Log(ListPlace);
-        // //List<PlayerData> datas = new List<PlayerData> ();
-        // // if(datas[0].score < StarScore)
-        // // {
-        // //     datas.Insert (level-1, new PlayerData(world, level, shadow, complete, StarScore));
-        // // }
-        // if(datas.Count <= level)
-        // {
-        //     datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
-            
-        // }
-        // else 
-
-
-        FileHandler.SaveToJSON<PlayerData> (datas, filename);
-
-            
-
         
     }
 
 
+    }
 
-}
