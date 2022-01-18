@@ -35,6 +35,8 @@ public class PauseScript : MonoBehaviour
     
 
     public Button NextLevelButton;
+
+    public LevelLoader lvlLoader;
     // Start is called before the first frame update
 
 
@@ -140,7 +142,9 @@ public class PauseScript : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        lvlLoader.LoadScene = SceneManager.GetActiveScene().name;
     }
 
     public void Quit()
@@ -159,7 +163,8 @@ public class PauseScript : MonoBehaviour
 
     public void ToMainMenu()
     {
-        SceneManager.LoadScene("XBert_MainMenu");
+        //SceneManager.LoadScene("XBert_MainMenu");
+        lvlLoader.LoadScene = "XBert_MainMenu";
     }
 
     public void LoadNextLevel()

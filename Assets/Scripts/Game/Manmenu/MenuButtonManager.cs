@@ -10,6 +10,11 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject ShadowOne;
     public static int World;
     public static bool ShadowWorld;
+
+    public Animator WorldOnetransition;
+    public GameObject WorldOneTransition;
+    public Animator ShadowWorldOnetransition;
+    public GameObject ShadowWorldOneTransition;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,15 +31,18 @@ public class MenuButtonManager : MonoBehaviour
     {
         if(World == 1 && ShadowWorld == false)
         {
+            //StartCoroutine(ShadowToWorldOneTransition());
             StartMenu.SetActive(false);
             ShadowOne.SetActive(false);
             WorldOne.SetActive(true);
         }
         else if(World == 1 && ShadowWorld == true)
         {
+            StartCoroutine(ShadowOneTransition());
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
-            ShadowOne.SetActive(true);
+            
+            //ShadowOne.SetActive(true);
         }
     }
 
@@ -49,6 +57,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public void ToWorldOne()
     {
+        //StartCoroutine(ToWorldOneTransition());
         StartMenu.SetActive(false);
         WorldOne.SetActive(true);
         World = 1;
@@ -56,13 +65,16 @@ public class MenuButtonManager : MonoBehaviour
 
     public void SwitchToNightOne()
     {
-        WorldOne.SetActive(false);
-        ShadowOne.SetActive(true);
+        StartCoroutine(ShadowOneTransition());
+        
+        
+        //ShadowOne.SetActive(true);
         ShadowWorld = true;
     }
 
     public void SwitchToWorldOne()
     {
+        StartCoroutine(ShadowToWorldOneTransition());
         ShadowOne.SetActive(false);
         WorldOne.SetActive(true);
         ShadowWorld = false;
@@ -71,5 +83,35 @@ public class MenuButtonManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    IEnumerator ShadowOneTransition()
+    {
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOneTransition.SetActive(false);
+        ShadowWorldOneTransition.SetActive(true);
+        WorldOne.SetActive(false);
+        ShadowOne.SetActive(true);
+    }
+
+    IEnumerator ShadowToWorldOneTransition()
+    {
+        ShadowWorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        ShadowWorldOneTransition.SetActive(false);
+        WorldOneTransition.SetActive(true);
+        ShadowOne.SetActive(false);
+        WorldOne.SetActive(true);
+    }
+
+    IEnumerator ToWorldOneTransition()
+    {
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOnetransition.SetTrigger("end");
+        StartMenu.SetActive(false);
+        WorldOne.SetActive(true);
+        World = 1;
     }
 }

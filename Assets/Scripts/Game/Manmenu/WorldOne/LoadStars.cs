@@ -51,6 +51,8 @@ public class LoadStars : MonoBehaviour
 
     public int WorldCount = 1;
 
+    public LevelLoader lvlloader;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -169,11 +171,12 @@ public class LoadStars : MonoBehaviour
         
     }
 
-
-
-    public void OnLevelClick()
+    public void ClickOnLevel()
     {
-        Debug.Log("Load level");
-        SceneManager.LoadScene(LoadScene);
+        lvlloader.LoadScene = LoadScene;
     }
+
+
+
+
  }
