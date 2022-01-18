@@ -1996,6 +1996,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 627462663}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &452715806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,6 +3292,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &627462663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7634731601202640428, guid: 0b9066903d9c84647a7f7406a0d15a8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 476717919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649533583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,7 +5758,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 476717919}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 627462663}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f53471ddd9bb04c4bbe6693cd23d228e, type: 3}
@@ -6089,6 +6106,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1050953514}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9892,6 +9920,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1050953514}
+        m_MethodName: OnLevelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2055740152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10047,6 +10086,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1050953514}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

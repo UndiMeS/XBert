@@ -31,10 +31,11 @@ public class MenuButtonManager : MonoBehaviour
     {
         if(World == 1 && ShadowWorld == false)
         {
-            //StartCoroutine(ShadowToWorldOneTransition());
+            WorldOne.SetActive(true);
+            StartCoroutine(ShadowToWorldOneTransition());
             StartMenu.SetActive(false);
             ShadowOne.SetActive(false);
-            WorldOne.SetActive(true);
+            //WorldOne.SetActive(true);
         }
         else if(World == 1 && ShadowWorld == true)
         {
@@ -75,8 +76,8 @@ public class MenuButtonManager : MonoBehaviour
     public void SwitchToWorldOne()
     {
         StartCoroutine(ShadowToWorldOneTransition());
-        ShadowOne.SetActive(false);
-        WorldOne.SetActive(true);
+        // ShadowOne.SetActive(false);
+        // WorldOne.SetActive(true);
         ShadowWorld = false;
     }
 
@@ -97,12 +98,14 @@ public class MenuButtonManager : MonoBehaviour
 
     IEnumerator ShadowToWorldOneTransition()
     {
+        
         ShadowWorldOnetransition.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         ShadowWorldOneTransition.SetActive(false);
         WorldOneTransition.SetActive(true);
         ShadowOne.SetActive(false);
         WorldOne.SetActive(true);
+        
     }
 
     IEnumerator ToWorldOneTransition()
