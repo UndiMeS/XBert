@@ -1132,7 +1132,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!224 &332517704
 RectTransform:
@@ -2164,6 +2164,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1888616703}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6850,6 +6861,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1888616703}
+        m_MethodName: OnLevelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1117179451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10916,6 +10938,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8968911166645342140}
     m_Modifications:
+    - target: {fileID: 7868972157019744080, guid: 6512624665877914d886e745ae5d446c,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10954,12 +10981,12 @@ PrefabInstance:
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2071.6572
+      value: 2120.9336
       objectReference: {fileID: 0}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1165.3074
+      value: 1193.0256
       objectReference: {fileID: 0}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
@@ -10999,12 +11026,12 @@ PrefabInstance:
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.2
+      value: -7.6
       objectReference: {fileID: 0}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8
+      value: -22.4
       objectReference: {fileID: 0}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
@@ -11130,6 +11157,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1888616703}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12455,6 +12493,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1888616703}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
