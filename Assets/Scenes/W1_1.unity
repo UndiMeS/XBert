@@ -519,6 +519,11 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7868972157019744081, guid: 6512624665877914d886e745ae5d446c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c0c00a5baf9ff5f41b7ec788929e3537, type: 2}
     - target: {fileID: 7868972157019744094, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_Pivot.x
