@@ -29530,7 +29530,7 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
-  MovePointParent: {fileID: 0}
+  MovePointParent: {fileID: 332517700}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0
