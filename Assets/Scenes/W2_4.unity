@@ -8399,7 +8399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937836163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: -128, z: -0.008411599}
+  m_LocalPosition: {x: -91, y: -128, z: -0.008411599}
   m_LocalScale: {x: 105.27277, y: 104.58562, z: 1.1426471}
   m_Children: []
   m_Father: {fileID: 8968911166652122900}
@@ -8422,7 +8422,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.83, y: 0.81}
+    oldSize: {x: 1.02, y: 1.04}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8470,7 +8470,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: 21300000, guid: b45ae9bab1ca74539a96686228079824, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98e36781b6cef43738eabbda475c70b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8853,7 +8853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014470770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 114, y: -25, z: -0.008411599}
+  m_LocalPosition: {x: 519, y: 182, z: -0.008411599}
   m_LocalScale: {x: 105.27277, y: 104.58562, z: 1.1426471}
   m_Children: []
   m_Father: {fileID: 8968911166652122900}
@@ -19173,7 +19173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100039259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -92, y: -128, z: -0.008411599}
+  m_LocalPosition: {x: 418, y: 186, z: -0.008411599}
   m_LocalScale: {x: 110.00038, y: 110.00038, z: 1.0003175}
   m_Children: []
   m_Father: {fileID: 8968911166652122900}
@@ -19198,10 +19198,10 @@ MonoBehaviour:
   BlueWallOn: {fileID: 21300000, guid: 98e36781b6cef43738eabbda475c70b1, type: 3}
   BlueWallOff: {fileID: 21300000, guid: b45ae9bab1ca74539a96686228079824, type: 3}
   ButtonRenderer: {fileID: 2100039263}
-  blueWalls: []
+  blueWalls:
+  - {fileID: 937836163}
   redWalls:
   - {fileID: 1014470770}
-  - {fileID: 937836163}
   SingleSwitch: 1
   pressed: 0
 --- !u!70 &2100039262
@@ -20435,8 +20435,8 @@ MonoBehaviour:
   ZeroLeft: {fileID: 0}
   ZeroRight: {fileID: 8968911165357002027}
   FirstStar: 35
-  SecondStar: 10
-  ThirdStar: 8
+  SecondStar: 9
+  ThirdStar: 7
   StarScore: 0
   StarOne: {fileID: 1448634056}
   StarTwo: {fileID: 831923610}
