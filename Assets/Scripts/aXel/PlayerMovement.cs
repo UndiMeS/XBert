@@ -67,10 +67,22 @@ public class PlayerMovement : MonoBehaviour {
         {
             if(NumberEaten.GetComponent<aXelNumber>().Eaten == true)
             {
-                animator.SetBool("Eat", true);
-                animator.SetTrigger("EatTrigger");
+
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("aXel_eats"))
+                    {
+                        
+                        //animator.SetBool("Eat", true);
+                    }
+                else
+                {
+                    animator.SetTrigger("EatTrigger");
+                    //animator.SetBool("Eat", false);
+                }
+                
+                
                 NumberEaten.GetComponent<aXelNumber>().Eaten = false;
                 NumberEaten.gameObject.SetActive(false);
+                
             }
             
         }
@@ -199,6 +211,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(col.tag == "Drill" && Drill == false)
         {
+
+            animator.SetBool("Eat", false);
             Drill = true;
 
             animator.SetBool("drill", true);
