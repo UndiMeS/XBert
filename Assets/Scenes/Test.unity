@@ -1059,6 +1059,127 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &584731160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584731161}
+  - component: {fileID: 584731164}
+  - component: {fileID: 584731163}
+  - component: {fileID: 584731162}
+  m_Layer: 0
+  m_Name: ColorSwitch (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584731161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584731160}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 417.2, y: 262.7, z: 0}
+  m_LocalScale: {x: 75.95091, y: 75.95091, z: 0.75950915}
+  m_Children: []
+  m_Father: {fileID: 7569831895000572678}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584731162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584731160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6efb978f92d300348b0ed2ec7892a0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &584731163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584731160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004420221, y: -0.0065875947}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.02, y: 1.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.86997724, y: 0.8995196}
+  m_EdgeRadius: 0
+--- !u!212 &584731164
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584731160}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 16
+  m_Sprite: {fileID: 21300000, guid: fe5b62334c988524193e120ab7045535, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.02, y: 1.67}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &590175345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,10 +4025,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45404b225e9d884e838cd62e441419d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  world: 0
+  level: 0
+  shadow: 0
+  complete: 0
+  player:
+    world: 0
+    level: 0
+    shadow: 0
+    complete: 0
+    score: 0
   NumbersSolution: 0
   EatenNumberCounter: 0
   ZeroLeft: {fileID: 8968911165800466451}
   ZeroRight: {fileID: 8968911165357002027}
+  FirstStar: 0
+  SecondStar: 0
+  ThirdStar: 0
+  StarScore: 0
+  StarOne: {fileID: 0}
+  StarTwo: {fileID: 0}
+  StarThree: {fileID: 0}
+  YellowStar: {fileID: 0}
+  EatenCounter: {fileID: 0}
+  BiggerAs: 0
+  BiggerAndEqualAs: 0
+  SmallerAs: 0
+  SmallerAndEqualAs: 0
+  Equal: 0
+  Win: 0
+  TermWerte: []
+  LevelFinished: 0
+  Particles: {fileID: 0}
+  PlayParticle: 1
+  Pause: {fileID: 0}
+  Buttons: []
+  PauseButton: {fileID: 0}
+  XBertTeleport: {fileID: 0}
+  Xbert: {fileID: 0}
+  Level: {fileID: 0}
+  LevelComplete: {fileID: 0}
+  Spin: 0
+  save: 1
+  filename: XBertDataFile.json
+  WorldCount: 4
+  NextShadowLevel: 0
+  DataCount: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9754,6 +9917,7 @@ RectTransform:
   - {fileID: 451084665}
   - {fileID: 536301487}
   - {fileID: 709882745}
+  - {fileID: 584731161}
   m_Father: {fileID: 8968911166645342140}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10495,57 +10659,19 @@ MonoBehaviour:
   PauseMenu: {fileID: 8968911166951410074}
   Controler: {fileID: 8968911166180589458}
   Axel: {fileID: 8968911167086048002}
-  leftOne: {fileID: 8968911167182113004}
-  rightOne: {fileID: 0}
-  leftTwo: {fileID: 0}
-  rightTwo: {fileID: 0}
-  leftThree: {fileID: 0}
-  rightThree: {fileID: 0}
-  LeftZeroOne: {fileID: 8968911165800466451}
-  RightZeroOne: {fileID: 8968911165357002027}
-  LeftZeroTwo: {fileID: 8968911165800466451}
-  RightZeroTwo: {fileID: 8968911165357002027}
-  LeftZeroThree: {fileID: 8968911165800466451}
-  RightZeroThree: {fileID: 8968911165357002027}
-  NumberSolution: {fileID: 8968911167379317863}
-  SubmitMenu: {fileID: 8968911165685193739}
   StartMenu: {fileID: 8968911167246622910}
-  SubmitRestart: {fileID: 8968911167171401757}
   LevelComplete: {fileID: 8968911167406151597}
-  LevelTwo: {fileID: 0}
-  Solution: {fileID: 8968911167379317863}
-  LevelThree: {fileID: 0}
-  TaskOne: {fileID: 0}
-  TaskTwo: {fileID: 0}
-  TaskThree: {fileID: 0}
-  Particle: {fileID: 8968911166940211996}
-  _TermLeft: {fileID: 8968911166633718021}
-  _TermRight: {fileID: 8968911166103221569}
-  FinalScreen: {fileID: 7631659097144706420}
-  _MovePosition: {fileID: 8968911166279308789}
-  CompleteOne: 0
-  CompleteTwo: 0
-  CompleteThree: 0
-  AxelGame: {fileID: 8968911166572699416}
-  ArcadeRoom: {fileID: 0}
+  NextScene: 
+  Complete: 0
   SolutionScript: {fileID: 8968911167379317863}
-  FinalPyramid: {fileID: 5638206262409947992}
   Finished: 0
-  GameText: {fileID: 8968911167440392056}
-  EqualSign: {fileID: 8968911166850194739}
-  Inventory: {fileID: 0}
   StartScreen: {fileID: 1574005223235973051}
-  FinishedArcadeButton: {fileID: 0}
-  StartArcadeButton: {fileID: 0}
-  InventoryArrowUp: {fileID: 0}
   PauseButton: {fileID: 8968911166272778276}
   SpaceBool: 0
   startVolume: 0
-  HelpOne: {fileID: 5638206263463315363}
-  HelpTwo: {fileID: 5638206262594982859}
-  HelpThree: {fileID: 5638206262120373033}
-  HelpFour: {fileID: 5638206263363830123}
+  ShadowNextLevel: 0
   NextLevelButton: {fileID: 8968911167024873283}
+  lvlLoader: {fileID: 0}
 --- !u!1 &8968911165433954705
 GameObject:
   m_ObjectHideFlags: 0
@@ -18162,38 +18288,25 @@ MonoBehaviour:
   DownPress: 0
   LeftPress: 0
   rb: {fileID: 0}
-  movementStep: 0.01
   step: 0.908
-  targetposition: {x: 0, y: 0, z: 0}
-  startPosition: {x: 0, y: 0, z: 0}
-  ButtonOff: 0
-  timeElapsed: 0
-  savedPosition: {x: 110.85, y: 159.6123, z: 1}
   StartPosition: {x: 110.85, y: 159.6123, z: 1}
-  StartRotation: {x: 0, y: 0, z: 0, w: 0}
   NumbersEaten: []
-  UpButton: {fileID: 8968911167111516721}
-  RightButton: {fileID: 8968911165433954718}
-  DownButton: {fileID: 8968911165819881270}
-  LeftButton: {fileID: 8968911165413059341}
   animator: {fileID: 8968911167086048003}
   speed: 400
   Solution: {fileID: 8968911167379317863}
-  OneFinished: 0
-  TwoFinished: 0
-  ThreeFinished: 0
+  Finished: 0
   solution: 0
   moveSpeed: 20
   movePoint: {fileID: 8968911166279308789}
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 256
-  Pause: {fileID: 8968911165420617584}
+  BreakingWall:
+    serializedVersion: 2
+    m_Bits: 0
   Drill: 0
   smash: 0
-  DestroyWall: {fileID: 5466482698493356556, guid: 320f8fa2d4ec1e94cb803e93649d13c2,
-    type: 3}
-  Wall: {fileID: 0}
+  MovePointParent: {fileID: 0}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19000,23 +19113,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5813c62be234df4a9b547b1e204fcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumbersSolution: 0
-  VariableSolution: 0
   Solution: 0
   Level: {fileID: 0}
   LevelComplete: {fileID: 0}
   EatenNumberCounter: 0
   spinOne: 0
   Xbert: {fileID: 8968911167086048002}
-  speed: 500
   LevelFinished: 0
   Particles: {fileID: 8968911166940211996}
   PlayParticle: 1
-  rotationSpeed: 50
   Pause: {fileID: 8968911165420617584}
-  SolutionSprite: {fileID: 2915757767932927835}
-  SolutionQ: {fileID: 21300000, guid: d54fa9937f70760488ec9cdfb8e38199, type: 3}
-  SolutionEmpty: {fileID: 21300000, guid: 170984b588d780f418f6e12b5d5c3c29, type: 3}
   Buttons:
   - {fileID: 8968911167111516720}
   - {fileID: 8968911165433954705}

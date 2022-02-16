@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour {
     public float solution;
 
 
-    public float moveSpeed = 5.0f;
+    public float moveSpeed;
     public Transform movePoint;
 
     public LayerMask whatStopsMovement;
