@@ -72,7 +72,7 @@ public class TreadmillItem : MonoBehaviour
 
         if(XBertRotating == true)
         {
-            if(Vector3.Distance(XBert.transform.position, XBertMovement.movePoint.position) > 0.1f)
+            if(Vector3.Distance(XBert.transform.position, XBertMovement.movePoint.position) > 0.01f)
         //if(Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.whatStopsMovement)||Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.BreakingWall))
         {
             XBertMovement.moveSpeed = 5;
@@ -80,9 +80,7 @@ public class TreadmillItem : MonoBehaviour
         }
         else
         {
-            XBertMovement.moveSpeed = 20;
-            PlayerMovement.moving = true;
-            XBertRotating = false;
+            StartCoroutine(TreadmillStop());
         }
         }
         
@@ -94,9 +92,13 @@ public class TreadmillItem : MonoBehaviour
         yield return new WaitForSeconds(delay);
         
         Collidet = true;
-                
-        
-        
+    }
+    IEnumerator TreadmillStop()
+    {
+        yield return new WaitForSeconds(delay);
+        XBertMovement.moveSpeed = 20;
+            PlayerMovement.moving = true;
+            XBertRotating = false;
     }
 
     void OnTriggerEnter2D(Collider2D col)
