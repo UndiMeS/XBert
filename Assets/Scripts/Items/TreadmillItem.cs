@@ -5,8 +5,8 @@ using UnityEngine;
 public class TreadmillItem : MonoBehaviour
 {
 
-    public GameObject XBert;
-    public PlayerMovement XBertMovement;
+    private GameObject XBert;
+    private PlayerMovement XBertMovement;
     public bool Collidet;
     public bool XBertRotating;
     public bool Up;
@@ -15,21 +15,34 @@ public class TreadmillItem : MonoBehaviour
     public bool Down;
     public float delay;
     public float RotationTime;
-    public Vector3 LeftDirection;
-    public Vector3 UpDirection;
-    public Vector3 RightDirection;
-    public Vector3 DownDirection;
+    private Vector3 LeftDirection;
+    private Vector3 UpDirection;
+    private Vector3 RightDirection;
+    private Vector3 DownDirection;
     public Vector3 TreadmillDirection;
-    public LayerMask TreadmillLayer;
     public bool StopTreadmill;
-    public TreadmillItem[] OtherTreadmills;
+    private GameObject[] Treadmills;
+    //public TreadmillItem[] OtherTreadmills;
     // Start is called before the first frame update
     void Start()
     {
+
+        XBert = GameObject.FindGameObjectWithTag("Axel");
+        XBertMovement = XBert.GetComponent<PlayerMovement>();
+
+
+        Treadmills = GameObject.FindGameObjectsWithTag("Treadmill");
+
+
         LeftDirection = new Vector3 (-XBertMovement.step, 0.0f, 0.0f);
         UpDirection = new Vector3 (0.0f, XBertMovement.step, 0.0f);
         RightDirection = new Vector3 (XBertMovement.step, 0.0f, 0.0f);
         DownDirection = new Vector3 (0.0f, -XBertMovement.step, 0.0f);
+
+        //RotationTime = RotationTime * Time.deltaTime;
+
+
+        
     }
 
     // Update is called once per frame
@@ -38,9 +51,11 @@ public class TreadmillItem : MonoBehaviour
         if(Collidet == true)
         {
 
-            foreach (TreadmillItem OtherTreadmill in OtherTreadmills)
+            foreach (GameObject Treadmill in Treadmills)
             {
-                if(Vector3.Distance(OtherTreadmill.transform.position, XBertMovement.movePoint.position) < 0.05f)
+                if(Treadmill.Equals(this.gameObject))
+                continue;
+                if(Vector3.Distance(Treadmill.transform.position, XBertMovement.movePoint.position) < 0.1f)
                 {
                     StopTreadmill = true;
                 }
@@ -54,18 +69,11 @@ public class TreadmillItem : MonoBehaviour
             if(! Physics2D.OverlapCircle(XBertMovement.movePoint.position + TreadmillDirection, .2f, XBertMovement.whatStopsMovement)&&! Physics2D.OverlapCircle(XBertMovement.movePoint.position + TreadmillDirection, .2f, XBertMovement.BreakingWall) && StopTreadmill == false)
             {
 
-                // if(Physics2D.OverlapCircle(XBertMovement.movePoint.position, .2f, TreadmillLayer))
-                // {
-                //     Collidet = false;
-                //     //return;
-                // }
-                
                 XBertMovement.movePoint.position += TreadmillDirection;
                 
             }
             else
             {
-                //XBertMovement.moveSpeed = 20;
                 Collidet = false;
             }
         }
@@ -76,7 +84,7 @@ public class TreadmillItem : MonoBehaviour
         //if(Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.whatStopsMovement)||Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.BreakingWall))
         {
             XBertMovement.moveSpeed = 5;
-            XBert.transform.Rotate(new Vector3( 0, 0, 90) * RotationTime * Time.deltaTime);
+            XBert.transform.Rotate(new Vector3( 0, 0, 90) * RotationTime);
         }
         else
         {
@@ -130,14 +138,7 @@ public class TreadmillItem : MonoBehaviour
                 StartCoroutine(StartTreatmill());
             
         }
-        // else if(col.gameObject.tag == "Axel" && Collidet == true)
-        // {
-        //     foreach (TreadmillItem OtherTreadmill in OtherTreadmills)
-        //     {
-        //         OtherTreadmill.Collidet = false;
-        //     }
-            
-        // }
+       
 
         
     }

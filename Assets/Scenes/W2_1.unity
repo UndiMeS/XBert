@@ -18924,7 +18924,7 @@ MonoBehaviour:
   Axel: {fileID: 8968911167086048002}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
-  NextScene: 
+  NextScene: W2_2
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0

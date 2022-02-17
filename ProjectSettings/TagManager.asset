@@ -18,6 +18,7 @@ TagManager:
   - Amount
   - Square
   - Treadmill
+  - PlaverMovePoint
   layers:
   - Default
   - TransparentFX
