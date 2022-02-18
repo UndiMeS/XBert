@@ -7,6 +7,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public GameObject StartMenu;
     public GameObject WorldOne;
+    public GameObject WorldTwo;
     public GameObject ShadowOne;
     public static int World;
     public static bool ShadowWorld;
@@ -44,6 +45,18 @@ public class MenuButtonManager : MonoBehaviour
             WorldOne.SetActive(false);
             
             //ShadowOne.SetActive(true);
+        }
+        else if(World == 2 && ShadowWorld == false)
+        {
+            WorldTwo.SetActive(true);
+            StartMenu.SetActive(false);
+            WorldOne.SetActive(false);
+        }
+        else if(World == 2 && ShadowWorld == true)
+        {
+            StartMenu.SetActive(false);
+            WorldOne.SetActive(false);
+            WorldTwo.SetActive(false);
         }
     }
 
