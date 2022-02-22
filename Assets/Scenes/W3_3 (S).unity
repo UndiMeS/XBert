@@ -190,6 +190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 909349699971417781, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 909349699971417781, guid: 890b2c318b0ef4644b40082396892b9c,
+        type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
@@ -3013,13 +3018,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346793933}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 112, y: 63, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7207327, w: 0.6932131}
+  m_LocalPosition: {x: 118, y: 63, z: 0}
   m_LocalScale: {x: 101.29656, y: 101.29656, z: 2.625317}
   m_Children: []
   m_Father: {fileID: 1731147313}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 92.23}
 --- !u!61 &346793935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7274,7 +7279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Termwert >= 222
+  m_text: Termwert > 222
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
