@@ -11,7 +11,7 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject ShadowOne;
     public static int World;
     public static bool ShadowWorld;
-
+    public GameObject WorldTwoTransition;
     public Animator WorldOnetransition;
     public GameObject WorldOneTransition;
     public Animator ShadowWorldOnetransition;
@@ -72,9 +72,22 @@ public class MenuButtonManager : MonoBehaviour
     public void ToWorldOne()
     {
         //StartCoroutine(ToWorldOneTransition());
+        // WorldOneTransition.SetActive(true);
+        // WorldTwoTransition.SetActive(false);
         StartMenu.SetActive(false);
+        WorldTwo.SetActive(false);
         WorldOne.SetActive(true);
         World = 1;
+    }
+
+    public void ToWorldTwo()
+    {
+        // WorldTwoTransition.SetActive(true);
+        // WorldOneTransition.SetActive(false);
+        
+        WorldOne.SetActive(false);
+        WorldTwo.SetActive(true);
+        World = 2;
     }
 
     public void SwitchToNightOne()

@@ -42,9 +42,12 @@ public class aXelNumber : MonoBehaviour
             if(this.gameObject.tag == "Multiply" || this.gameObject.tag == "Divide")
             {
                 //this.gameObject.GetComponent<TMP_Text>().text.Substring(1);
+                
+
 
                 if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(1), out result))
                 {
+                
                     value = result;
                     
                 }
@@ -121,6 +124,8 @@ public class aXelNumber : MonoBehaviour
 
             if(this.gameObject.tag == "Multiply")
             {
+                    this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace("(","");
+                this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace(")","");
 
                 if(GameObject.Find("Zero_Right") != null)
                 {
@@ -135,6 +140,8 @@ public class aXelNumber : MonoBehaviour
 
             if(this.gameObject.tag == "Divide")
             {
+                    this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace("(","");
+                this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace(")","");
                 if(GameObject.Find("Zero_Right") != null)
                 {
                     

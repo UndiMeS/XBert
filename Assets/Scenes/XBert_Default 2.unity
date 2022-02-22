@@ -5457,6 +5457,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5611272742691105691}
     m_Modifications:
+    - target: {fileID: 909349699971417781, guid: 890b2c318b0ef4644b40082396892b9c,
+        type: 3}
+      propertyPath: m_text
+      value: '*(-2)'
+      objectReference: {fileID: 0}
     - target: {fileID: 909349699971417801, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
       propertyPath: m_Name
@@ -5500,7 +5505,7 @@ PrefabInstance:
     - target: {fileID: 909349699971417802, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100.052704
+      value: 187.44443
       objectReference: {fileID: 0}
     - target: {fileID: 909349699971417802, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
@@ -5545,7 +5550,7 @@ PrefabInstance:
     - target: {fileID: 909349699971417802, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.4
+      value: 45.1
       objectReference: {fileID: 0}
     - target: {fileID: 909349699971417802, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
@@ -6512,6 +6517,12 @@ MonoBehaviour:
   level: 2
   shadow: 0
   complete: 0
+  player:
+    world: 0
+    level: 0
+    shadow: 0
+    complete: 0
+    score: 0
   NumbersSolution: 0
   EatenNumberCounter: 0
   ZeroLeft: {fileID: 0}
@@ -6549,6 +6560,10 @@ MonoBehaviour:
   LevelComplete: {fileID: 827265256}
   Spin: 0
   save: 1
+  filename: XBertDataFile.json
+  WorldCount: 4
+  NextShadowLevel: 0
+  DataCount: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9368,9 +9383,9 @@ MonoBehaviour:
   PauseMenu: {fileID: 8968911166951410074}
   Controler: {fileID: 8968911166180589458}
   Axel: {fileID: 8968911167086048002}
-  SubmitMenu: {fileID: 0}
   StartMenu: {fileID: 8968911167246622910}
   LevelComplete: {fileID: 827265256}
+  NextScene: 
   Complete: 0
   SolutionScript: {fileID: 8968911166633718021}
   Finished: 0
@@ -9378,7 +9393,9 @@ MonoBehaviour:
   PauseButton: {fileID: 8968911166272778276}
   SpaceBool: 0
   startVolume: 0
+  ShadowNextLevel: 0
   NextLevelButton: {fileID: 0}
+  lvlLoader: {fileID: 0}
 --- !u!1 &8968911165433954705
 GameObject:
   m_ObjectHideFlags: 0
@@ -15700,7 +15717,7 @@ MonoBehaviour:
   RightPress: 0
   DownPress: 0
   LeftPress: 0
-  rb: {fileID: 0}
+  rb: {fileID: 8968911167086048014}
   step: 0.908
   StartPosition: {x: 110.85, y: 159.6123, z: 1}
   NumbersEaten: []
@@ -15719,6 +15736,7 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
+  MovePointParent: {fileID: 8968911166645342143}
 --- !u!61 &8968911167086048001
 BoxCollider2D:
   m_ObjectHideFlags: 0

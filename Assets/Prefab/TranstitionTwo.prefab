@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7868972157019744095
+--- !u!1 &8141621986373211002
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7868972157019744094}
-  - component: {fileID: 7868972157019744083}
-  - component: {fileID: 7868972157019744080}
-  - component: {fileID: 7868972157019744081}
-  - component: {fileID: 5017627312265971797}
+  - component: {fileID: 1828327016192454824}
+  - component: {fileID: 3317447922546988267}
+  - component: {fileID: 1044792568671160632}
+  - component: {fileID: 6809095248567738661}
+  - component: {fileID: 1828327015494554550}
   m_Layer: 0
   m_Name: TranstitionTwo
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7868972157019744094
+--- !u!224 &1828327016192454824
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868972157019744095}
+  m_GameObject: {fileID: 8141621986373211002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,24 +36,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.2, y: -8}
-  m_SizeDelta: {x: 2071.6572, y: 1165.3074}
+  m_AnchoredPosition: {x: -13.151, y: -23.385}
+  m_SizeDelta: {x: 2126.36, y: 1196.078}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7868972157019744083
+--- !u!222 &3317447922546988267
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868972157019744095}
+  m_GameObject: {fileID: 8141621986373211002}
   m_CullTransparentMesh: 0
---- !u!114 &7868972157019744080
+--- !u!114 &1044792568671160632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868972157019744095}
+  m_GameObject: {fileID: 8141621986373211002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -76,17 +76,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &7868972157019744081
+--- !u!95 &6809095248567738661
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868972157019744095}
+  m_GameObject: {fileID: 8141621986373211002}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b658c9f8835da049934e511a11a38f8, type: 2}
+  m_Controller: {fileID: 9100000, guid: fafc57f3b038bed419066f4af09b0ca8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -95,18 +95,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5017627312265971797
+--- !u!114 &1828327015494554550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7868972157019744095}
+  m_GameObject: {fileID: 8141621986373211002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f53471ddd9bb04c4bbe6693cd23d228e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 7868972157019744081}
+  transition: {fileID: 6809095248567738661}
   transitionTime: 1
   LoadScene: 
