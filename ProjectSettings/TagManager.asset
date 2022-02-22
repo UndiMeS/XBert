@@ -19,6 +19,8 @@ TagManager:
   - Square
   - Treadmill
   - PlaverMovePoint
+  - LevelButton
+  - StarCount
   layers:
   - Default
   - TransparentFX
