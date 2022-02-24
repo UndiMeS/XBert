@@ -158,7 +158,8 @@ public class LoadStars : MonoBehaviour
                         }
                     }
 
-                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
+                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false ||
+                        World - 1 == datas[i].world && Level  == datas[i].level - 6 && datas[i].complete == true && complete != true && Shadow == false)
                     {
                             LevelSprite.sprite = LevelUnlock;
                         
