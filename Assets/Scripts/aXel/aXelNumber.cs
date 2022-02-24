@@ -140,8 +140,7 @@ public class aXelNumber : MonoBehaviour
 
             if(this.gameObject.tag == "Divide")
             {
-                    this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace("(","");
-                this.gameObject.GetComponent<TMP_Text>().text = this.gameObject.GetComponent<TMP_Text>().text.Replace(")","");
+                    
                 if(GameObject.Find("Zero_Right") != null)
                 {
                     

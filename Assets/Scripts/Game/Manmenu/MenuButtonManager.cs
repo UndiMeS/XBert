@@ -9,13 +9,17 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject WorldOne;
     public GameObject WorldTwo;
     public GameObject ShadowOne;
+    public GameObject ShadowTwo;
     public static int World;
     public static bool ShadowWorld;
     public GameObject WorldTwoTransition;
     public Animator WorldOnetransition;
+    public Animator WorldTwotransition;
     public GameObject WorldOneTransition;
     public Animator ShadowWorldOnetransition;
+    public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
+    public GameObject ShadowWorldTwoTransition;
     // Start is called before the first frame update
     void Start()
     {
@@ -74,20 +78,21 @@ public class MenuButtonManager : MonoBehaviour
         //StartCoroutine(ToWorldOneTransition());
         // WorldOneTransition.SetActive(true);
         // WorldTwoTransition.SetActive(false);
-        StartMenu.SetActive(false);
-        WorldTwo.SetActive(false);
-        WorldOne.SetActive(true);
-        World = 1;
+        StartCoroutine(WorldTwoToWorldOne());
+        
+        // WorldTwo.SetActive(false);
+        // WorldOne.SetActive(true);
+        // World = 1;
     }
 
     public void ToWorldTwo()
     {
         // WorldTwoTransition.SetActive(true);
         // WorldOneTransition.SetActive(false);
+
+        StartCoroutine(WorldOneToWorldTwo());
         
-        WorldOne.SetActive(false);
-        WorldTwo.SetActive(true);
-        World = 2;
+        
     }
 
     public void SwitchToNightOne()
@@ -102,6 +107,26 @@ public class MenuButtonManager : MonoBehaviour
     public void SwitchToWorldOne()
     {
         StartCoroutine(ShadowToWorldOneTransition());
+        // ShadowOne.SetActive(false);
+        // WorldOne.SetActive(true);
+        ShadowWorld = false;
+    }
+
+
+    public void SwitchToNightTwo()
+    {
+        StartCoroutine(ShadowTwoTransition());
+        
+        
+        //ShadowOne.SetActive(true);
+        ShadowWorld = true;
+    }
+
+
+
+    public void SwitchToWorldTwo()
+    {
+        StartCoroutine(ShadowToWorldTwoTransition());
         // ShadowOne.SetActive(false);
         // WorldOne.SetActive(true);
         ShadowWorld = false;
@@ -143,4 +168,57 @@ public class MenuButtonManager : MonoBehaviour
         WorldOne.SetActive(true);
         World = 1;
     }
+
+
+
+    IEnumerator ShadowTwoTransition()
+    {
+        WorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldTwoTransition.SetActive(false);
+        ShadowWorldTwoTransition.SetActive(true);
+        WorldTwo.SetActive(false);
+        ShadowTwo.SetActive(true);
+    }
+
+
+    IEnumerator ShadowToWorldTwoTransition()
+    {
+        
+        ShadowWorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        ShadowWorldTwoTransition.SetActive(false);
+        WorldTwoTransition.SetActive(true);
+        ShadowTwo.SetActive(false);
+        WorldTwo.SetActive(true);
+        
+    }
+
+    IEnumerator WorldOneToWorldTwo()
+    {
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOneTransition.SetActive(false);
+        WorldOne.SetActive(false);
+        WorldTwo.SetActive(true);
+        World = 2;
+
+    }
+
+    IEnumerator WorldTwoToWorldOne()
+    {
+        if(World == 2)
+        {
+            WorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOneTransition.SetActive(true);
+        }
+        
+        WorldOne.SetActive(true);
+        WorldTwo.SetActive(false);
+        StartMenu.SetActive(false);
+        World = 1;
+
+    }
+
 }
