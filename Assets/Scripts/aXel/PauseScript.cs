@@ -170,7 +170,8 @@ public class PauseScript : MonoBehaviour
     public void LoadNextLevel()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene(NextScene);
+        //SceneManager.LoadScene(NextScene);
+        lvlLoader.LoadScene = NextScene;
     }
 
     public void NextShadowLevelButton()
