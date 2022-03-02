@@ -8,14 +8,18 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject StartMenu;
     public GameObject WorldOne;
     public GameObject WorldTwo;
+    public GameObject WorldThree;
     public GameObject ShadowOne;
     public GameObject ShadowTwo;
+    public GameObject ShadowThree;
     public static int World;
     public static bool ShadowWorld;
     public GameObject WorldTwoTransition;
     public Animator WorldOnetransition;
     public Animator WorldTwotransition;
     public GameObject WorldOneTransition;
+    public GameObject WorldThreeTransition;
+    public Animator WorldThreetransition;
     public Animator ShadowWorldOnetransition;
     public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
@@ -59,6 +63,21 @@ public class MenuButtonManager : MonoBehaviour
         else if(World == 2 && ShadowWorld == true)
         {
             StartMenu.SetActive(false);
+            ShadowTwo.SetActive(true);
+            WorldOne.SetActive(false);
+            WorldTwo.SetActive(false);
+        }
+        else if(World == 3 && ShadowWorld == false)
+        {
+            WorldTwo.SetActive(false);
+            WorldThree.SetActive(true);
+            StartMenu.SetActive(false);
+            WorldOne.SetActive(false);
+        }
+        else if(World == 3 && ShadowWorld == true)
+        {
+            StartMenu.SetActive(false);
+            ShadowThree.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
         }
@@ -91,6 +110,16 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         StartCoroutine(WorldOneToWorldTwo());
+        
+        
+    }
+
+    public void ToWorldThree()
+    {
+        // WorldTwoTransition.SetActive(true);
+        // WorldOneTransition.SetActive(false);
+
+        StartCoroutine(WorldTwoToWorldThree());
         
         
     }
@@ -202,6 +231,17 @@ public class MenuButtonManager : MonoBehaviour
         WorldOne.SetActive(false);
         WorldTwo.SetActive(true);
         World = 2;
+
+    }
+
+    IEnumerator WorldTwoToWorldThree()
+    {
+        //WorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldTwoTransition.SetActive(false);
+        WorldTwo.SetActive(false);
+        WorldThree.SetActive(true);
+        World = 3;
 
     }
 
