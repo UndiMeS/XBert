@@ -24,6 +24,10 @@ public class MenuButtonManager : MonoBehaviour
     public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
     public GameObject ShadowWorldTwoTransition;
+
+
+    public Animator MenuTransition;
+    public float MenuTransTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,7 +101,9 @@ public class MenuButtonManager : MonoBehaviour
         //StartCoroutine(ToWorldOneTransition());
         // WorldOneTransition.SetActive(true);
         // WorldTwoTransition.SetActive(false);
-        StartCoroutine(WorldTwoToWorldOne());
+        //StartCoroutine(WorldTwoToWorldOne());
+
+        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,WorldOne));
         
         // WorldTwo.SetActive(false);
         // WorldOne.SetActive(true);
@@ -109,7 +115,8 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(true);
         // WorldOneTransition.SetActive(false);
 
-        StartCoroutine(WorldOneToWorldTwo());
+        //StartCoroutine(WorldOneToWorldTwo());
+        StartCoroutine(MenuTransitioning(WorldThree,WorldOne,WorldTwo));
         
         
     }
@@ -119,7 +126,9 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(true);
         // WorldOneTransition.SetActive(false);
 
-        StartCoroutine(WorldTwoToWorldThree());
+        //StartCoroutine(WorldTwoToWorldThree());
+
+        StartCoroutine(MenuTransitioning(WorldOne, WorldTwo,WorldThree));
         
         
     }
@@ -259,6 +268,17 @@ public class MenuButtonManager : MonoBehaviour
         StartMenu.SetActive(false);
         World = 1;
 
+    }
+
+    public IEnumerator MenuTransitioning(GameObject DeactivateScreenOne, GameObject DeactivateScreenTwo, GameObject ActivateScreen)
+    {
+        MenuTransition.SetTrigger("start");
+        DeactivateScreenOne.SetActive(false);
+        DeactivateScreenTwo.SetActive(false);
+        yield return new WaitForSeconds(MenuTransTime);
+        MenuTransition.SetTrigger("end");
+        ActivateScreen.SetActive(true);
+        
     }
 
 }
