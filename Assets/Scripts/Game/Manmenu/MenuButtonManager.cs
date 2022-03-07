@@ -28,6 +28,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public Animator MenuTransition;
     public float MenuTransTime;
+    public int worldNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class MenuButtonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        worldNumber = World;
     }
 
     public void OnEnable()
@@ -45,14 +46,18 @@ public class MenuButtonManager : MonoBehaviour
         if(World == 1 && ShadowWorld == false)
         {
             WorldOne.SetActive(true);
-            StartCoroutine(ShadowToWorldOneTransition());
+            WorldOneTransition.SetActive(true);
+            //StartCoroutine(ShadowToWorldOneTransition());
             StartMenu.SetActive(false);
             ShadowOne.SetActive(false);
             //WorldOne.SetActive(true);
         }
         else if(World == 1 && ShadowWorld == true)
         {
-            StartCoroutine(ShadowOneTransition());
+            //StartCoroutine(ShadowOneTransition());
+            
+        ShadowOne.SetActive(true);
+        ShadowWorldOneTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
             
@@ -61,6 +66,7 @@ public class MenuButtonManager : MonoBehaviour
         else if(World == 2 && ShadowWorld == false)
         {
             WorldTwo.SetActive(true);
+            WorldTwoTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
         }
@@ -68,6 +74,7 @@ public class MenuButtonManager : MonoBehaviour
         {
             StartMenu.SetActive(false);
             ShadowTwo.SetActive(true);
+            ShadowWorldTwoTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
         }
@@ -75,6 +82,7 @@ public class MenuButtonManager : MonoBehaviour
         {
             WorldTwo.SetActive(false);
             WorldThree.SetActive(true);
+            WorldThreeTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
         }
@@ -84,6 +92,10 @@ public class MenuButtonManager : MonoBehaviour
             ShadowThree.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
+        }
+        else if(World == 0)
+        {
+            WorldOneTransition.SetActive(true);
         }
     }
 

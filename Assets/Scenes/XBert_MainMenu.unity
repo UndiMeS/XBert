@@ -616,8 +616,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 47979683}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -627,8 +638,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 47979683}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2369,11 +2380,11 @@ MonoBehaviour:
   ShadowOne: {fileID: 691189027}
   ShadowTwo: {fileID: 1794618567}
   ShadowThree: {fileID: 987736086}
-  WorldTwoTransition: {fileID: 31638538}
+  WorldTwoTransition: {fileID: 1251676271}
   WorldOnetransition: {fileID: 2132120533}
   WorldTwotransition: {fileID: 1233150051}
   WorldOneTransition: {fileID: 2132120532}
-  WorldThreeTransition: {fileID: 0}
+  WorldThreeTransition: {fileID: 2011699075}
   WorldThreetransition: {fileID: 0}
   ShadowWorldOnetransition: {fileID: 31638539}
   ShadowWorldTwotransition: {fileID: 6249807515739586775}
@@ -2381,6 +2392,7 @@ MonoBehaviour:
   ShadowWorldTwoTransition: {fileID: 8663193748502393480}
   MenuTransition: {fileID: 335585030526955461}
   MenuTransTime: 0
+  worldNumber: 0
 --- !u!1 &268222857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,8 +2557,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 268222859}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2556,8 +2579,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 268222859}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3603,8 +3626,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 355841078}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3614,8 +3648,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 355841078}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4584,8 +4618,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 438318335}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4595,8 +4640,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 438318335}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5041,8 +5086,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 494592297}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5052,8 +5108,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 494592297}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5472,8 +5528,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 525019179}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5483,8 +5550,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 525019179}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7532,8 +7599,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 700754657}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7543,8 +7621,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 700754657}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8166,8 +8244,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 754592494}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8177,8 +8266,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 754592494}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11372,6 +11461,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2011699075}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1037746934}
         m_MethodName: ClickOnLevel
         m_Mode: 1
@@ -11381,7 +11481,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4344881361653367905}
         m_MethodName: OnLevelClick
@@ -12485,6 +12585,12 @@ Transform:
   m_Father: {fileID: 1274513554}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1251676271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8141621986373211002, guid: d7242b81c5f2da949a88202950688d12,
+    type: 3}
+  m_PrefabInstance: {fileID: 1706815927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251923198
 GameObject:
   m_ObjectHideFlags: 0
@@ -13506,7 +13612,7 @@ PrefabInstance:
     - target: {fileID: 6418007241286515707, guid: 738e4f57cccc9bc459a113c702f20882,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738e4f57cccc9bc459a113c702f20882, type: 3}
@@ -15374,8 +15480,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1468280004}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 2011699075}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4344881361653367905}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15385,8 +15502,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4344881361653367905}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1468280004}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17492,8 +17609,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1628370900}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17503,8 +17631,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1628370900}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17963,8 +18091,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1652412958}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17974,8 +18113,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1652412958}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18442,8 +18581,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659305216}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18453,8 +18603,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1659305216}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19086,7 +19236,7 @@ PrefabInstance:
     - target: {fileID: 8141621986373211002, guid: d7242b81c5f2da949a88202950688d12,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7242b81c5f2da949a88202950688d12, type: 3}
@@ -19096,7 +19246,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1706815927}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1251676271}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f53471ddd9bb04c4bbe6693cd23d228e, type: 3}
@@ -19756,8 +19906,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1768242286}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19767,8 +19928,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1768242286}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20636,8 +20797,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1829067716}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 1251676271}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1706815928}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20647,8 +20819,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1706815928}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 1829067716}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21994,6 +22166,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2011699075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2958248465653965650, guid: e6c7fb3683527a04eb9a57658bbed6f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8998911612743198719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2060391695
 GameObject:
   m_ObjectHideFlags: 0
@@ -22705,8 +22883,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2125266434}
-        m_MethodName: ClickOnLevel
+      - m_Target: {fileID: 31638538}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2132123073}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22716,8 +22905,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2132123073}
-        m_MethodName: OnLevelClick
+      - m_Target: {fileID: 2125266434}
+        m_MethodName: ClickOnLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23659,6 +23848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowTranstitionTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 6418007241286515707, guid: 738e4f57cccc9bc459a113c702f20882,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738e4f57cccc9bc459a113c702f20882, type: 3}
 --- !u!114 &3188049109396209857
@@ -23682,7 +23876,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8998911612743198719}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2011699075}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f53471ddd9bb04c4bbe6693cd23d228e, type: 3}
@@ -24226,7 +24420,7 @@ PrefabInstance:
     - target: {fileID: 7634731601202640428, guid: 0b9066903d9c84647a7f7406a0d15a8e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7634731601202640471, guid: 0b9066903d9c84647a7f7406a0d15a8e,
         type: 3}
@@ -24360,7 +24554,7 @@ PrefabInstance:
     - target: {fileID: 7868972157019744095, guid: 6512624665877914d886e745ae5d446c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6512624665877914d886e745ae5d446c, type: 3}
@@ -25068,6 +25262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TranstitionThree
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958248465653965650, guid: e6c7fb3683527a04eb9a57658bbed6f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4660822071491264640, guid: e6c7fb3683527a04eb9a57658bbed6f9,
         type: 3}
