@@ -64,14 +64,14 @@ public class LoadStars : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Shadow == false)
-        {
-            ListPlace = World * 7 -7 + Level - 1;
-        }
-        else
-        {
-            ListPlace = (World * 7 -7 + Level - 1) * (WorldCount + 1);
-        }
+        // if(Shadow == false)
+        // {
+        //     ListPlace = World * 7 -7 + Level - 1;
+        // }
+        // else
+        // {
+        //     ListPlace = (World * 7 -7 + Level - 1) * (WorldCount + 1);
+        // }
 
 
 
@@ -158,12 +158,19 @@ public class LoadStars : MonoBehaviour
                         }
                     }
 
-                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false ||
-                        World - 1 == datas[i].world && Level  == datas[i].level - 6 && datas[i].complete == true && complete != true && Shadow == false)
+                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
                     {
                             LevelSprite.sprite = LevelUnlock;
                         
                     }
+
+                    if(World - 1 == datas[i].world && Level + 6 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
+                    {
+                            LevelSprite.sprite = LevelUnlock;
+                        
+                    }
+
+
                 }
             }
 
