@@ -24,6 +24,7 @@ public class MenuButtonManager : MonoBehaviour
     public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
     public GameObject ShadowWorldTwoTransition;
+    public GameObject ShadowWorldThreeTransition;
 
 
     public Animator MenuTransition;
@@ -58,6 +59,7 @@ public class MenuButtonManager : MonoBehaviour
             
         ShadowOne.SetActive(true);
         ShadowWorldOneTransition.SetActive(true);
+        //ShadowWorldOneTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
             
@@ -75,6 +77,7 @@ public class MenuButtonManager : MonoBehaviour
             StartMenu.SetActive(false);
             ShadowTwo.SetActive(true);
             ShadowWorldTwoTransition.SetActive(true);
+            //ShadowWorldTwoTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
         }
@@ -90,6 +93,7 @@ public class MenuButtonManager : MonoBehaviour
         {
             StartMenu.SetActive(false);
             ShadowThree.SetActive(true);
+            ShadowWorldThreeTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
         }
@@ -115,7 +119,7 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(false);
         //StartCoroutine(WorldTwoToWorldOne());
 
-        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,WorldOne));
+        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
         
         // WorldTwo.SetActive(false);
         // WorldOne.SetActive(true);
@@ -128,7 +132,8 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         //StartCoroutine(WorldOneToWorldTwo());
-        StartCoroutine(MenuTransitioning(WorldThree,WorldOne,WorldTwo));
+        ShadowTwo.SetActive(false);
+        StartCoroutine(MenuTransitioning(WorldThree,WorldOne,ShadowTwo,WorldTwo));
         
         
     }
@@ -140,9 +145,22 @@ public class MenuButtonManager : MonoBehaviour
 
         //StartCoroutine(WorldTwoToWorldThree());
 
-        StartCoroutine(MenuTransitioning(WorldOne, WorldTwo,WorldThree));
+        StartCoroutine(MenuTransitioning(ShadowOne, WorldTwo,ShadowThree,WorldThree));
         
         
+    }
+
+    public void ToShadowOne()
+    {
+        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowOne));
+    }
+    public void ToShadowTwo()
+    {
+        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowTwo));
+    }
+    public void ToShadowThree()
+    {
+        StartCoroutine(MenuTransitioning(WorldThree,WorldTwo, WorldOne, ShadowThree));
     }
 
     public void SwitchToNightOne()
@@ -282,11 +300,12 @@ public class MenuButtonManager : MonoBehaviour
 
     }
 
-    public IEnumerator MenuTransitioning(GameObject DeactivateScreenOne, GameObject DeactivateScreenTwo, GameObject ActivateScreen)
+    public IEnumerator MenuTransitioning(GameObject DeactivateScreenOne, GameObject DeactivateScreenTwo, GameObject DeactivateScreenThree, GameObject ActivateScreen)
     {
         MenuTransition.SetTrigger("start");
         DeactivateScreenOne.SetActive(false);
         DeactivateScreenTwo.SetActive(false);
+        DeactivateScreenThree.SetActive(false);
         yield return new WaitForSeconds(MenuTransTime);
         MenuTransition.SetTrigger("end");
         ActivateScreen.SetActive(true);

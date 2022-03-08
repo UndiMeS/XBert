@@ -155,6 +155,7 @@ public class LoadStars : MonoBehaviour
                                 StarOne.sprite = YellowStar;
                             }
                             LevelSprite.sprite = LevelSuccess;
+                            ShadowLevelButton.interactable = true;
                         }
                     }
 
@@ -196,6 +197,7 @@ public class LoadStars : MonoBehaviour
     public void ClickOnLevel()
     {
         MenuButtonManager.World = World;
+        MenuButtonManager.ShadowWorld = Shadow;
         lvlloader.LoadScene = LoadScene;
     }
 
