@@ -24,10 +24,12 @@ public class MenuButtonManager : MonoBehaviour
     public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
     public GameObject ShadowWorldTwoTransition;
+    public GameObject ShadowWorldThreeTransition;
 
 
     public Animator MenuTransition;
     public float MenuTransTime;
+    public int worldNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class MenuButtonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        worldNumber = World;
     }
 
     public void OnEnable()
@@ -45,14 +47,19 @@ public class MenuButtonManager : MonoBehaviour
         if(World == 1 && ShadowWorld == false)
         {
             WorldOne.SetActive(true);
-            StartCoroutine(ShadowToWorldOneTransition());
+            WorldOneTransition.SetActive(true);
+            //StartCoroutine(ShadowToWorldOneTransition());
             StartMenu.SetActive(false);
             ShadowOne.SetActive(false);
             //WorldOne.SetActive(true);
         }
         else if(World == 1 && ShadowWorld == true)
         {
-            StartCoroutine(ShadowOneTransition());
+            //StartCoroutine(ShadowOneTransition());
+            
+        ShadowOne.SetActive(true);
+        ShadowWorldOneTransition.SetActive(true);
+        //ShadowWorldOneTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
             
@@ -61,6 +68,7 @@ public class MenuButtonManager : MonoBehaviour
         else if(World == 2 && ShadowWorld == false)
         {
             WorldTwo.SetActive(true);
+            WorldTwoTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
         }
@@ -68,6 +76,8 @@ public class MenuButtonManager : MonoBehaviour
         {
             StartMenu.SetActive(false);
             ShadowTwo.SetActive(true);
+            ShadowWorldTwoTransition.SetActive(true);
+            //ShadowWorldTwoTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
         }
@@ -75,6 +85,7 @@ public class MenuButtonManager : MonoBehaviour
         {
             WorldTwo.SetActive(false);
             WorldThree.SetActive(true);
+            WorldThreeTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
         }
@@ -82,8 +93,13 @@ public class MenuButtonManager : MonoBehaviour
         {
             StartMenu.SetActive(false);
             ShadowThree.SetActive(true);
+            ShadowWorldThreeTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
+        }
+        else if(World == 0)
+        {
+            WorldOneTransition.SetActive(true);
         }
     }
 
@@ -103,7 +119,7 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(false);
         //StartCoroutine(WorldTwoToWorldOne());
 
-        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,WorldOne));
+        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
         
         // WorldTwo.SetActive(false);
         // WorldOne.SetActive(true);
@@ -116,7 +132,8 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         //StartCoroutine(WorldOneToWorldTwo());
-        StartCoroutine(MenuTransitioning(WorldThree,WorldOne,WorldTwo));
+        ShadowTwo.SetActive(false);
+        StartCoroutine(MenuTransitioning(WorldThree,WorldOne,ShadowTwo,WorldTwo));
         
         
     }
@@ -128,9 +145,22 @@ public class MenuButtonManager : MonoBehaviour
 
         //StartCoroutine(WorldTwoToWorldThree());
 
-        StartCoroutine(MenuTransitioning(WorldOne, WorldTwo,WorldThree));
+        StartCoroutine(MenuTransitioning(ShadowOne, WorldTwo,ShadowThree,WorldThree));
         
         
+    }
+
+    public void ToShadowOne()
+    {
+        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowOne));
+    }
+    public void ToShadowTwo()
+    {
+        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowTwo));
+    }
+    public void ToShadowThree()
+    {
+        StartCoroutine(MenuTransitioning(WorldThree,WorldTwo, WorldOne, ShadowThree));
     }
 
     public void SwitchToNightOne()
@@ -270,11 +300,12 @@ public class MenuButtonManager : MonoBehaviour
 
     }
 
-    public IEnumerator MenuTransitioning(GameObject DeactivateScreenOne, GameObject DeactivateScreenTwo, GameObject ActivateScreen)
+    public IEnumerator MenuTransitioning(GameObject DeactivateScreenOne, GameObject DeactivateScreenTwo, GameObject DeactivateScreenThree, GameObject ActivateScreen)
     {
         MenuTransition.SetTrigger("start");
         DeactivateScreenOne.SetActive(false);
         DeactivateScreenTwo.SetActive(false);
+        DeactivateScreenThree.SetActive(false);
         yield return new WaitForSeconds(MenuTransTime);
         MenuTransition.SetTrigger("end");
         ActivateScreen.SetActive(true);

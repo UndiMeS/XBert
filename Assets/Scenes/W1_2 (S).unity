@@ -8383,7 +8383,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
-        m_MethodName: CloseMenu
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12079,6 +12079,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
         m_MethodName: NextShadowLevelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1542514887}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18580,7 +18591,7 @@ RectTransform:
   - {fileID: 8968911165413059336}
   - {fileID: 5638206263708332780}
   m_Father: {fileID: 8968911166645342140}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19134,8 +19145,8 @@ RectTransform:
   m_Children:
   - {fileID: 1542514888}
   - {fileID: 7569831895000572678}
-  - {fileID: 779555890}
   - {fileID: 8968911166180589459}
+  - {fileID: 779555890}
   - {fileID: 8968911165420617585}
   - {fileID: 8968911167440392057}
   - {fileID: 8968911166951410054}

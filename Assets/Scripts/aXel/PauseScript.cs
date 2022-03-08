@@ -144,6 +144,8 @@ public class PauseScript : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+        lvlLoader.ActvateTransition();
+
         lvlLoader.LoadScene = SceneManager.GetActiveScene().name;
     }
 
@@ -164,6 +166,7 @@ public class PauseScript : MonoBehaviour
     public void ToMainMenu()
     {
         //SceneManager.LoadScene("XBert_MainMenu");
+        lvlLoader.ActvateTransition();
         lvlLoader.LoadScene = "XBert_MainMenu";
     }
 
@@ -171,6 +174,7 @@ public class PauseScript : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene(NextScene);
+        lvlLoader.ActvateTransition();
         lvlLoader.LoadScene = NextScene;
     }
 
@@ -178,10 +182,12 @@ public class PauseScript : MonoBehaviour
     {
         if(ShadowNextLevel == true)
         {
+            lvlLoader.ActvateTransition();
             SceneManager.LoadScene(NextScene);
         }
         else
         {
+            lvlLoader.ActvateTransition();
             SceneManager.LoadScene("XBert_MainMenu");
         }
     }

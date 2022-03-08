@@ -37,4 +37,14 @@ public class LevelLoader : MonoBehaviour
         }
         
     }
+
+    public void DeactvateTransition()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    public void ActvateTransition()
+    {
+        this.gameObject.SetActive(true);
+    }
 }
