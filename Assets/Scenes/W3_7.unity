@@ -5101,6 +5101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TranstitionThree
       objectReference: {fileID: 0}
+    - target: {fileID: 2958248465653965650, guid: e6c7fb3683527a04eb9a57658bbed6f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4660822071491264640, guid: e6c7fb3683527a04eb9a57658bbed6f9,
         type: 3}
       propertyPath: m_Pivot.x
@@ -16475,7 +16480,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0084473565, y: -0.059387397}
+  m_Offset: {x: -0.0027601868, y: -0.025272219}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16486,7 +16491,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14794685, y: 0.10515968}
+  m_Size: {x: 0.15932125, y: 0.12790218}
   m_EdgeRadius: 0
 --- !u!212 &1712871788
 SpriteRenderer:

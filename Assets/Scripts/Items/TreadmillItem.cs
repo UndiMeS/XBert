@@ -50,13 +50,14 @@ public class TreadmillItem : MonoBehaviour
     {
         if(Collidet == true)
         {
-
+            PlayerMovement.moving = false;
             foreach (GameObject Treadmill in Treadmills)
             {
                 if(Treadmill.Equals(this.gameObject))
                 continue;
                 if(Vector3.Distance(Treadmill.transform.position, XBertMovement.movePoint.position) < 0.1f)
                 {
+                    PlayerMovement.moving = false;
                     StopTreadmill = true;
                 }
 
@@ -68,18 +69,20 @@ public class TreadmillItem : MonoBehaviour
             XBertRotating = true;
             if(! Physics2D.OverlapCircle(XBertMovement.movePoint.position + TreadmillDirection, .2f, XBertMovement.whatStopsMovement)&&! Physics2D.OverlapCircle(XBertMovement.movePoint.position + TreadmillDirection, .2f, XBertMovement.BreakingWall) && StopTreadmill == false)
             {
-
+                PlayerMovement.moving = false;
                 XBertMovement.movePoint.position += TreadmillDirection;
                 
             }
             else
             {
+                PlayerMovement.moving = false;
                 Collidet = false;
             }
         }
 
         if(XBertRotating == true)
         {
+            PlayerMovement.moving = false;
             if(Vector3.Distance(XBert.transform.position, XBertMovement.movePoint.position) > 0.01f)
         //if(Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.whatStopsMovement)||Physics2D.OverlapCircle(XBert.transform.position + new Vector3 (-XBertMovement.step,0.0f, 0.0f), .2f, XBertMovement.BreakingWall))
         {
@@ -103,6 +106,7 @@ public class TreadmillItem : MonoBehaviour
     }
     IEnumerator TreadmillStop()
     {
+        PlayerMovement.moving = false;
         yield return new WaitForSeconds(delay);
         XBertMovement.moveSpeed = 20;
             PlayerMovement.moving = true;
@@ -112,11 +116,13 @@ public class TreadmillItem : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
+        
+
         StopTreadmill = false;
         
         if(col.gameObject.tag == "Axel" && Collidet == false)
         {
-            
+            PlayerMovement.moving = false;
             if(Left == true)
             {
                 TreadmillDirection = LeftDirection;
@@ -141,5 +147,13 @@ public class TreadmillItem : MonoBehaviour
        
 
         
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Axel")
+        {
+            PlayerMovement.moving = false;
+        }
     }
 }
