@@ -183,12 +183,14 @@ public class PauseScript : MonoBehaviour
         if(ShadowNextLevel == true)
         {
             lvlLoader.ActvateTransition();
-            SceneManager.LoadScene(NextScene);
+            //SceneManager.LoadScene(NextScene);
+            lvlLoader.LoadScene = NextScene;
         }
         else
         {
             lvlLoader.ActvateTransition();
-            SceneManager.LoadScene("XBert_MainMenu");
+            //SceneManager.LoadScene("XBert_MainMenu");
+            lvlLoader.LoadScene = "XBert_MainMenu";
         }
     }
 
