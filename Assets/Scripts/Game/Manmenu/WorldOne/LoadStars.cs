@@ -52,6 +52,7 @@ public class LoadStars : MonoBehaviour
     public int WorldCount = 1;
 
     public LevelLoader lvlloader;
+    public bool Shadowsuccess;
 
 
     void awake()
@@ -102,7 +103,11 @@ public class LoadStars : MonoBehaviour
                             {
                                 
                                 ShadowLevelButton.interactable = true;
-                            ShadowLevelSprite.sprite = ShadowUnlock;
+                                if(Shadowsuccess == false)
+                                {
+                                    ShadowLevelSprite.sprite = ShadowUnlock;
+                                }
+                            
                             }
                         }
                         if(datas[i].complete == true && datas[i].shadow == false && Shadow == false)
@@ -141,12 +146,21 @@ public class LoadStars : MonoBehaviour
                                 StarTwo.sprite = YellowStar;
                                 StarThree.sprite = YellowStar;
                                 ShadowLevelButton.interactable = true;
-                            ShadowLevelSprite.sprite = ShadowUnlock;
+                                if(Shadowsuccess == false)
+                                {
+                                    ShadowLevelSprite.sprite = ShadowUnlock;
+                                }
+                            
                             }
                             else
                             {
 
                             }
+                        }
+
+                        if(datas[i].complete == true && datas[i].shadow == true)
+                        {
+                            Shadowsuccess = true;
                         }
                         if(datas[i].complete == true && datas[i].shadow == true && Shadow == true)
                         {
@@ -154,6 +168,7 @@ public class LoadStars : MonoBehaviour
                             {
                                 StarOne.sprite = YellowStar;
                             }
+                            
                             LevelSprite.sprite = LevelSuccess;
                             ShadowLevelButton.interactable = true;
                         }
