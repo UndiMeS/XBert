@@ -32,6 +32,7 @@ public class Solution : MonoBehaviour
     public Sprite YellowStar;
 
     public TMP_Text EatenCounter;
+    public TMP_Text NumberCounter;
 
 
     public bool BiggerAs;
@@ -82,6 +83,7 @@ public class Solution : MonoBehaviour
         this.GetComponent<TMP_Text>().text = NumbersSolution.ToString();
 
         EatenCounter.text = EatenNumberCounter.ToString();
+        NumberCounter.text = EatenNumberCounter.ToString();
 
 
         
