@@ -88,7 +88,8 @@ public class LoadStars : MonoBehaviour
 
             if(datas.Count > 0)
             {
-                for(int i = 0; i <= datas.Count - 1; i++)
+                
+                for(int i = 0; i <= datas.Count -1; i++)
                 {
                     
                     

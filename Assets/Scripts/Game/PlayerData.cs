@@ -12,6 +12,9 @@ public class PlayerData
     public bool complete;
     public int score;
 
+    // public static int FirstLevelSuccess = 0;
+    // public int FirstThreeStars = 0;
+
 
     public PlayerData(int world, int level, bool shadow, bool complete, int score)
     {

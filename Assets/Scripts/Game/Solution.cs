@@ -289,9 +289,15 @@ public class Solution : MonoBehaviour
     public void SaveToJson()
     {
 
+        if(level == 1 && world == 1 && shadow == false)
+                        {
+                            //PlayerData.FirstLevelSuccess = 1;
+                            //FileHandler.SaveToJSON<PlayerData> (datas.FirstLevelSuccess, filename);
+                        }
+
         if(datas.Count > 0)
         {
-            for(int i = 0; i <= datas.Count - 1; i++)
+            for(int i = 0; i <= datas.Count -1; i++)
             {
                     if(datas[i].world == world && datas[i].level == level + 1  && datas[i].shadow == false && datas[i].score == 3)
                 {
@@ -307,6 +313,8 @@ public class Solution : MonoBehaviour
                         datas.RemoveAt(i);
                         datas.Insert (i, new PlayerData(world, level, shadow, complete, StarScore));
                         FileHandler.SaveToJSON<PlayerData> (datas, filename);
+
+                        
                         break;
                     }
                 }

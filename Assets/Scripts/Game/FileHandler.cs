@@ -73,9 +73,20 @@ public static class JsonHelper {
         return wrapper.Items;
     }
 
+    public static T FromJsonP<T> (string json) {
+        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>> (json);
+        return wrapper.Progress;
+    }
+
     public static string ToJson<T> (T[] array) {
         Wrapper<T> wrapper = new Wrapper<T> ();
         wrapper.Items = array;
+        return JsonUtility.ToJson (wrapper);
+    }
+
+    public static string ToJsonP<T> (T progress) {
+        Wrapper<T> wrapper = new Wrapper<T> ();
+        wrapper.Progress = progress;
         return JsonUtility.ToJson (wrapper);
     }
 
@@ -88,5 +99,8 @@ public static class JsonHelper {
     [Serializable]
     private class Wrapper<T> {
         public T[] Items;
+        public T Progress;
     }
+
+
 }
