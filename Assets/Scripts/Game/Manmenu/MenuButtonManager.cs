@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using System.IO;
 using UnityEngine;
 
 public class MenuButtonManager : MonoBehaviour
@@ -25,6 +27,9 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject ShadowWorldOneTransition;
     public GameObject ShadowWorldTwoTransition;
     public GameObject ShadowWorldThreeTransition;
+    public GameObject StartPopUps;
+
+    public GameObject Tutorial;
 
 
     public Animator MenuTransition;
@@ -33,7 +38,12 @@ public class MenuButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
+        if(!File.Exists(Application.dataPath + "/XBertDataFile.json"))
+        {
+            StartPopUps.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -119,7 +129,14 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(false);
         //StartCoroutine(WorldTwoToWorldOne());
 
+        
+
         StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
+
+        if(!File.Exists(Application.dataPath + "/XBertDataFile.json"))
+        {
+            Tutorial.SetActive(true);
+        }
         
         // WorldTwo.SetActive(false);
         // WorldOne.SetActive(true);

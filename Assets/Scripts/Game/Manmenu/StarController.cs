@@ -11,13 +11,19 @@ public class StarController : MonoBehaviour
 {
     public GameObject[] StarLoaders;
     public LoadStars[] LoadScripts;
-    public int StarComplete;
+    public static int StarComplete;
     public bool Loaded;
     List<PlayerData> datas = new List<PlayerData>();
     private string filename = "XBertDataFile.json";
 
     public GameObject[] StarOutputs;
     // Start is called before the first frame update
+
+    void awake()
+        {
+
+        }
+    
     void Start()
     {
 
