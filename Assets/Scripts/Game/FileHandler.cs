@@ -17,6 +17,17 @@ public static class FileHandler {
         WriteFile (GetPath (filename), content);
     }
 
+    public static void SaveToJSONP<T> (List<T> toSave, List<GameDatas> toSave2, string filename) {
+        Debug.Log (GetPath (filename));
+        string content = JsonHelper.ToJsonP<T> (toSave.ToArray (), toSave2.ToArray ());
+        WriteFile (GetPath (filename), content);
+    }
+
+    public static void SaveToJSONP<T> (T toSave, string filename) {
+        string content = JsonUtility.ToJson (toSave);
+        WriteFile (GetPath (filename), content);
+    }
+
     public static List<T> ReadListFromJSON<T> (string filename) {
         string content = ReadFile (GetPath (filename));
 
@@ -38,6 +49,19 @@ public static class FileHandler {
         }
 
         List<T> res = JsonHelper.FromJson<T> (content).ToList();
+
+        return res;
+
+    }
+
+    public static List<GameDatas> ReadFromJSONP<T> (string filename) {
+        string content = ReadFile (GetPath (filename));
+
+        if (string.IsNullOrEmpty (content) || content == "{}") {
+            return new List<GameDatas>();
+        }
+
+        List<GameDatas> res = JsonHelper.FromJsonP<GameDatas> (content).ToList();
 
         return res;
 
@@ -73,7 +97,7 @@ public static class JsonHelper {
         return wrapper.Items;
     }
 
-    public static T FromJsonP<T> (string json) {
+    public static GameDatas[] FromJsonP<T> (string json) {
         Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>> (json);
         return wrapper.Progress;
     }
@@ -84,9 +108,10 @@ public static class JsonHelper {
         return JsonUtility.ToJson (wrapper);
     }
 
-    public static string ToJsonP<T> (T progress) {
+    public static string ToJsonP<T> (T[] array, GameDatas[] array2) {
         Wrapper<T> wrapper = new Wrapper<T> ();
-        wrapper.Progress = progress;
+        wrapper.Progress = array2;
+        wrapper.Items = array;
         return JsonUtility.ToJson (wrapper);
     }
 
@@ -96,10 +121,16 @@ public static class JsonHelper {
         return JsonUtility.ToJson (wrapper, prettyPrint);
     }
 
+    public static string ToJsonP<T> (T[] array, bool prettyPrint) {
+        Wrapper<T> wrapper = new Wrapper<T> ();
+        wrapper.Items = array;
+        return JsonUtility.ToJson (wrapper, prettyPrint);
+    }
+
     [Serializable]
     private class Wrapper<T> {
         public T[] Items;
-        public T Progress;
+        public GameDatas[] Progress;
     }
 
 

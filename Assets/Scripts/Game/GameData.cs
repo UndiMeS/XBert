@@ -4,7 +4,7 @@
 using System;
 
 [System.Serializable]
-public class GameData
+public class GameDatas
 {
     public int OneLevelSuccess;
     public int FirstThreeStars;
@@ -12,7 +12,7 @@ public class GameData
     public int GameComplete;
 
 
-    public GameData(int OneLevelSuccess, int FirstThreeStars, int GameFinished, int GameComplete)
+    public GameDatas(int OneLevelSuccess, int FirstThreeStars, int GameFinished, int GameComplete)
     {
         this.OneLevelSuccess = OneLevelSuccess;
         this.FirstThreeStars = FirstThreeStars;

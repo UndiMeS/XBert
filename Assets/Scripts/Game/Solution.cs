@@ -69,10 +69,12 @@ public class Solution : MonoBehaviour
     public int DataCount;
 
     List<PlayerData> datas = new List<PlayerData>();
+    List<GameDatas> Gamedatas = new List<GameDatas>();
     // Start is called before the first frame update
     void Start()
     {
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
+        Gamedatas = FileHandler.ReadFromJSONP<GameDatas>(filename);
 
         
     }
@@ -312,7 +314,7 @@ public class Solution : MonoBehaviour
                         Debug.Log("replace data");
                         datas.RemoveAt(i);
                         datas.Insert (i, new PlayerData(world, level, shadow, complete, StarScore));
-                        FileHandler.SaveToJSON<PlayerData> (datas, filename);
+                        FileHandler.SaveToJSONP<PlayerData> (datas, Gamedatas, filename);
 
                         
                         break;
@@ -334,13 +336,13 @@ public class Solution : MonoBehaviour
             {
                 Debug.Log("new data");
                 datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
-                FileHandler.SaveToJSON<PlayerData> (datas, filename);
+                FileHandler.SaveToJSONP<PlayerData> (datas, Gamedatas, filename);
             }
         }
         else
         {
             datas.Add (new PlayerData(world, level, shadow, complete, StarScore));
-            FileHandler.SaveToJSON<PlayerData> (datas, filename);
+            FileHandler.SaveToJSONP<PlayerData> (datas, Gamedatas, filename);
             
         }
         
