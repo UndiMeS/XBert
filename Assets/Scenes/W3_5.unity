@@ -15791,7 +15791,7 @@ MonoBehaviour:
   Equal: 0
   Win: 0
   TermWerte:
-  - 10
+  - 20
   LevelFinished: 0
   Particles: {fileID: 97029066}
   PlayParticle: 1

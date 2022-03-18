@@ -13,7 +13,7 @@ public class LoadStars : MonoBehaviour
     public int World;
     public int Level;
     public bool Shadow;
-[HideInInspector]
+    [HideInInspector]
     public int world;
     [HideInInspector]
     public int level;
@@ -26,6 +26,7 @@ public class LoadStars : MonoBehaviour
     public SpriteRenderer NextLevelSprite;
     public Button NextLevelButton;
     public Sprite ShadowUnlock;
+    public Sprite ShadowComplete;
     public SpriteRenderer ShadowLevelSprite;
     public Button ShadowLevelButton;
     public Sprite LevelSuccess;
@@ -33,7 +34,7 @@ public class LoadStars : MonoBehaviour
     public Sprite LevelUnlock;
 
     public PlayerData SaveProfile;
-    
+
 
     public SpriteRenderer StarOne;
     public SpriteRenderer StarTwo;
@@ -57,61 +58,44 @@ public class LoadStars : MonoBehaviour
 
     void awake()
     {
-        
+
     }
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        // if(Shadow == false)
-        // {
-        //     ListPlace = World * 7 -7 + Level - 1;
-        // }
-        // else
-        // {
-        //     ListPlace = (World * 7 -7 + Level - 1) * (WorldCount + 1);
-        // }
 
-
-
-
-
-        if(File.Exists(Application.persistentDataPath + "/XBertDataFile.json") && Loaded == false)
+        if (File.Exists(Application.persistentDataPath + "/XBertDataFile.json") && Loaded == false)
         {
-            
+
 
             Loaded = true;
             datas = FileHandler.ReadFromJSON<PlayerData>(filename);
 
 
-            if(datas.Count > 0)
+            if (datas.Count > 0)
             {
-                
-                for(int i = 0; i <= datas.Count -1; i++)
+
+                for (int i = 0; i <= datas.Count - 1; i++)
                 {
-                    
-                    
-
-
-
-                    if(World == datas[i].world && Level == datas[i].level)
+                    if (World == datas[i].world && Level == datas[i].level)
                     {
-                        if(datas[i].complete == true && datas[i].shadow == false)
+                        if (datas[i].complete == true && datas[i].shadow == false)
                         {
-                            if(datas[i].score == 3)
+                            if (datas[i].score == 3)
                             {
-                                
+
                                 ShadowLevelButton.interactable = true;
-                                if(Shadowsuccess == false)
+                                if (Shadowsuccess == false)
                                 {
                                     ShadowLevelSprite.sprite = ShadowUnlock;
                                 }
-                            
+
                             }
                         }
-                        if(datas[i].complete == true && datas[i].shadow == false && Shadow == false)
+                        if (datas[i].complete == true && datas[i].shadow == false && Shadow == false)
                         {
 
                             world = datas[i].world;
@@ -120,38 +104,39 @@ public class LoadStars : MonoBehaviour
                             complete = datas[i].complete;
                             score = datas[i].score;
 
-                            
 
-                            
+
+
                             NextLevelButton.interactable = true;
+                            this.gameObject.GetComponent<Button>().interactable = true;
 
-                                LevelSprite.sprite = LevelSuccess;
+                            LevelSprite.sprite = LevelSuccess;
 
-                            
+
 
                             //NextLevelSprite.sprite = NextLevelUnlock;
-                            
 
-                            if(datas[i].score == 1)
+
+                            if (datas[i].score == 1)
                             {
                                 StarOne.sprite = YellowStar;
                             }
-                            else if(datas[i].score == 2)
+                            else if (datas[i].score == 2)
                             {
                                 StarOne.sprite = YellowStar;
                                 StarTwo.sprite = YellowStar;
                             }
-                            else if(datas[i].score == 3)
+                            else if (datas[i].score == 3)
                             {
                                 StarOne.sprite = YellowStar;
                                 StarTwo.sprite = YellowStar;
                                 StarThree.sprite = YellowStar;
                                 ShadowLevelButton.interactable = true;
-                                if(Shadowsuccess == false)
+                                if (Shadowsuccess == false)
                                 {
                                     ShadowLevelSprite.sprite = ShadowUnlock;
                                 }
-                            
+
                             }
                             else
                             {
@@ -159,55 +144,58 @@ public class LoadStars : MonoBehaviour
                             }
                         }
 
-                        if(datas[i].complete == true && datas[i].shadow == true)
+                        if (datas[i].complete == true && datas[i].shadow == true)
                         {
                             Shadowsuccess = true;
                         }
-                        if(datas[i].complete == true && datas[i].shadow == true && Shadow == true)
+                        if (datas[i].complete == true && datas[i].shadow == true && Shadow == true)
                         {
-                            if(datas[i].score == 1)
+                            if (datas[i].score == 1)
                             {
                                 StarOne.sprite = YellowStar;
                             }
-                            
+
                             LevelSprite.sprite = LevelSuccess;
                             ShadowLevelButton.interactable = true;
                         }
                     }
 
-                    if(World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
+                    if (World == datas[i].world && Level - 1 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
                     {
-                            LevelSprite.sprite = LevelUnlock;
-                        
+                        LevelSprite.sprite = LevelUnlock;
+
                     }
 
-                    if(World - 1 == datas[i].world && Level + 6 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
+                    if (World - 1 == datas[i].world && Level + 6 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
                     {
-                            LevelSprite.sprite = LevelUnlock;
-                        
+                        LevelSprite.sprite = LevelUnlock;
+
                     }
 
 
                 }
             }
 
-        
 
 
-         }
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-     }
+        if(Shadowsuccess == true)
+        {
+            ShadowLevelSprite.sprite = ShadowComplete;
+        }
+    }
 
     void OnEnable()
     {
-        
+
         Loaded = false;
-        
+
     }
 
     public void ClickOnLevel()
@@ -220,4 +208,4 @@ public class LoadStars : MonoBehaviour
 
 
 
- }
+}

@@ -19421,7 +19421,7 @@ MonoBehaviour:
   startVolume: 0
   ShadowNextLevel: 0
   NextLevelButton: {fileID: 0}
-  lvlLoader: {fileID: 0}
+  lvlLoader: {fileID: 1327802817}
 --- !u!1 &8968911165433954705
 GameObject:
   m_ObjectHideFlags: 0
