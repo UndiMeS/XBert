@@ -337,12 +337,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &88152854 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7634731601202640428, guid: 0b9066903d9c84647a7f7406a0d15a8e,
-    type: 3}
-  m_PrefabInstance: {fileID: 397038679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &88152855 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7634731601202640427, guid: 0b9066903d9c84647a7f7406a0d15a8e,
@@ -355,7 +349,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 397038679}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88152854}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f53471ddd9bb04c4bbe6693cd23d228e, type: 3}
@@ -11652,12 +11646,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 88152854}
-        m_MethodName: 
+      - m_Target: {fileID: 88152856}
+        m_MethodName: OnLevelClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
