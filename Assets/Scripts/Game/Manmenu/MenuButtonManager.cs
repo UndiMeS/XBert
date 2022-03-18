@@ -40,7 +40,7 @@ public class MenuButtonManager : MonoBehaviour
     {
 
 
-        if(!File.Exists(Application.dataPath + "/XBertDataFile.json"))
+        if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))
         {
             StartPopUps.SetActive(true);
         }
@@ -133,7 +133,7 @@ public class MenuButtonManager : MonoBehaviour
 
         StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
 
-        if(!File.Exists(Application.dataPath + "/XBertDataFile.json"))
+        if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))
         {
             Tutorial.SetActive(true);
         }

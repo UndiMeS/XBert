@@ -78,7 +78,7 @@ public class LoadStars : MonoBehaviour
 
 
 
-        if(File.Exists(Application.dataPath + "/XBertDataFile.json") && Loaded == false)
+        if(File.Exists(Application.persistentDataPath + "/XBertDataFile.json") && Loaded == false)
         {
             
 
