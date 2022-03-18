@@ -9440,7 +9440,7 @@ PrefabInstance:
     - target: {fileID: 8033652638614659896, guid: 41897cb8a93452349b40879509596059,
         type: 3}
       propertyPath: m_text
-      value: Welt 3-1
+      value: Tag 3-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41897cb8a93452349b40879509596059, type: 3}
