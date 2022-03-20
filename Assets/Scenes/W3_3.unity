@@ -17199,7 +17199,7 @@ MonoBehaviour:
   ZeroRight: {fileID: 8968911165357002027}
   FirstStar: 18
   SecondStar: 9
-  ThirdStar: 7
+  ThirdStar: 8
   StarScore: 0
   StarOne: {fileID: 1448634056}
   StarTwo: {fileID: 831923610}
