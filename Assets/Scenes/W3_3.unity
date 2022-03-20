@@ -7452,7 +7452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Termwert > 94
+  m_text: Termwert >110
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -17198,8 +17198,8 @@ MonoBehaviour:
   ZeroLeft: {fileID: 0}
   ZeroRight: {fileID: 8968911165357002027}
   FirstStar: 18
-  SecondStar: 9
-  ThirdStar: 8
+  SecondStar: 11
+  ThirdStar: 9
   StarScore: 0
   StarOne: {fileID: 1448634056}
   StarTwo: {fileID: 831923610}
@@ -17214,7 +17214,7 @@ MonoBehaviour:
   Equal: 0
   Win: 0
   TermWerte:
-  - 94
+  - 110
   LevelFinished: 0
   Particles: {fileID: 1491396260}
   PlayParticle: 1

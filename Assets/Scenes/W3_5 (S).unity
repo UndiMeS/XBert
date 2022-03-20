@@ -7604,7 +7604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Termwert > 30
+  m_text: Termwert > 56
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -16557,7 +16557,7 @@ MonoBehaviour:
   Equal: 0
   Win: 0
   TermWerte:
-  - 30
+  - 56
   LevelFinished: 0
   Particles: {fileID: 1798205047}
   PlayParticle: 1
