@@ -67,7 +67,7 @@ public class WallDestroy : MonoBehaviour
                  if(movement.smash == true)
                 {
                     animator.SetBool("smash", true);
-                    Destroy (this.gameObject, animator.GetCurrentAnimatorStateInfo(0).length + 0.0f);
+                    Destroy (gameObject, animator.GetCurrentAnimatorStateInfo(0).length + 0.0f);
                     movement.smash = false;
 
                     // DestroyUp = false;

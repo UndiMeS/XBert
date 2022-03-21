@@ -8839,7 +8839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +0.5
+  m_text: +0,5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -13556,7 +13556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -0.2
+  m_text: -0,2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -19729,7 +19729,7 @@ PrefabInstance:
     - target: {fileID: 909349699971417781, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
       propertyPath: m_text
-      value: '*3.5'
+      value: '*3,5'
       objectReference: {fileID: 0}
     - target: {fileID: 909349699971417781, guid: 890b2c318b0ef4644b40082396892b9c,
         type: 3}
