@@ -226,6 +226,16 @@ public class Solution : MonoBehaviour
 
         if (LevelFinished == false) {
 
+            if(level == 7 && world < 3 && shadow == false)
+        {
+            
+            MenuButtonManager.World = world + 1;
+        }
+        else
+        {
+            MenuButtonManager.World = world;
+        }
+
             Xbert.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             complete = true;
             

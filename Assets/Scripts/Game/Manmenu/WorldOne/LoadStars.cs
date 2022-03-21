@@ -200,14 +200,14 @@ public class LoadStars : MonoBehaviour
 
     public void ClickOnLevel()
     {
-        if(Level == 7 && World < 3)
-        {
-            MenuButtonManager.World = World + 1;
-        }
-        else
-        {
-            MenuButtonManager.World = World;
-        }
+        // if(Level == 7 && World < 3 && Shadow == false)
+        // {
+        //     MenuButtonManager.World = World + 1;
+        // }
+        // else
+        // {
+        //     MenuButtonManager.World = World;
+        // }
         
         MenuButtonManager.ShadowWorld = Shadow;
         lvlloader.LoadScene = LoadScene;
