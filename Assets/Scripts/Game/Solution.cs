@@ -114,6 +114,8 @@ public class Solution : MonoBehaviour
         if(NumbersSolution != 0)
         {
             ZeroRight.SetActive(false);
+
+            NumbersSolution = Mathf.Round(NumbersSolution * 1000) / 1000;
         }
     }
 
@@ -223,6 +225,8 @@ public class Solution : MonoBehaviour
 
 
     public IEnumerator WinningTime () {
+
+        Debug.Log("Winning");
 
         if (LevelFinished == false) {
 
