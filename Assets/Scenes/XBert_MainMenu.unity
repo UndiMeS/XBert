@@ -30835,7 +30835,7 @@ PrefabInstance:
     - target: {fileID: 8141621986373211002, guid: d7242b81c5f2da949a88202950688d12,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7242b81c5f2da949a88202950688d12, type: 3}

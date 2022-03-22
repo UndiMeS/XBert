@@ -169,6 +169,7 @@ public class LoadStars : MonoBehaviour
                     if (World - 1 == datas[i].world && Level + 6 == datas[i].level && datas[i].complete == true && complete != true && Shadow == false)
                     {
                         LevelSprite.sprite = LevelUnlock;
+                        this.gameObject.GetComponent<Button>().interactable = true;
 
                     }
 
