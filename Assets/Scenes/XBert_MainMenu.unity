@@ -14823,7 +14823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Helfe X-Bert das Levelziel zu erreichen, indem du ihn die richtigen Zahlen
+  m_text: "Hilf X-Bert das Levelziel zu erreichen, indem du ihn die richtigen Zahlen
     fressen l\xE4sst, sodass du den gesuchten <#FFC000>Termwert</color> erreichst!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
