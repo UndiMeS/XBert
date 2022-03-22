@@ -13,6 +13,7 @@ public class WallDestroy : MonoBehaviour
     public LayerMask Axel;
 
     public Animator animator;
+    public GameObject ThisWall;
 
     public bool DestroyUp;
     public bool DestroyDown;
@@ -22,6 +23,7 @@ public class WallDestroy : MonoBehaviour
     void Start()
     {
         movement = axel.gameObject.GetComponent<PlayerMovement>();
+        ThisWall = this.gameObject;
     }
 
     // Update is called once per frame
@@ -67,7 +69,7 @@ public class WallDestroy : MonoBehaviour
                  if(movement.smash == true)
                 {
                     animator.SetBool("smash", true);
-                    Destroy (gameObject, animator.GetCurrentAnimatorStateInfo(0).length + 0.0f);
+                    Destroy (ThisWall, animator.GetCurrentAnimatorStateInfo(0).length + 0.0f);
                     movement.smash = false;
 
                     // DestroyUp = false;
