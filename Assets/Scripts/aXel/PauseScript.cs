@@ -32,7 +32,7 @@ public class PauseScript : MonoBehaviour
     public float startVolume;
     public bool ShadowNextLevel;
 
-    
+    public Solution solution;
 
     public Button NextLevelButton;
 
@@ -42,6 +42,8 @@ public class PauseScript : MonoBehaviour
 
     void Start()
     {
+
+        solution = SolutionScript.GetComponent<Solution>();
 
         BackgroundMusic = this.gameObject.GetComponent<AudioSource>();
 
@@ -173,10 +175,20 @@ public class PauseScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //SceneManager.LoadScene(NextScene);
+        
+
+
         lvlLoader.ActvateTransition();
-        lvlLoader.LoadScene = NextScene;
+
+        if(solution.oneLevelSuccess == 1 || solution.firstThreeStars == 1 || solution.gameFinished == 1 || solution.gameComplete == 1)
+        {
+            lvlLoader.LoadScene = "XBert_MainMenu";
+        }
+        else
+        {
+            lvlLoader.LoadScene = NextScene;
+        }
+        
     }
 
     public void NextShadowLevelButton()
