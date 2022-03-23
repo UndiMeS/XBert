@@ -19,11 +19,16 @@ public class WallDestroy : MonoBehaviour
     public bool DestroyDown;
     public bool DestroyLeft;
     public bool DestroyRight;
+
+    void Awake()
+    {
+        ThisWall = this.gameObject;
+    }
     // Start is called before the first frame update
     void Start()
     {
         movement = axel.gameObject.GetComponent<PlayerMovement>();
-        ThisWall = this.gameObject;
+        
     }
 
     // Update is called once per frame
@@ -68,6 +73,7 @@ public class WallDestroy : MonoBehaviour
                 //movePoint.position += new Vector3 (0.0f,-step, 0.0f);
                  if(movement.smash == true)
                 {
+                    Debug.Log(ThisWall.name);
                     animator.SetBool("smash", true);
                     Destroy (ThisWall, animator.GetCurrentAnimatorStateInfo(0).length + 0.0f);
                     movement.smash = false;

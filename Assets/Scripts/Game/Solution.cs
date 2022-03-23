@@ -82,7 +82,19 @@ public class Solution : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<TMP_Text>().text = NumbersSolution.ToString();
+
+        // if(NumbersSolution != 0)
+        // {
+        //     ZeroRight.SetActive(false);
+
+        //     NumbersSolution = Mathf.Round(NumbersSolution * 1000) / 1000;
+        // }
+
+
+        //this.GetComponent<TMP_Text>().text = NumbersSolution.ToString();
+
+        this.GetComponent<TMP_Text>().text = (Mathf.Round(NumbersSolution * 1000) / 1000).ToString();
+        Debug.Log(NumbersSolution.ToString());
 
         EatenCounter.text = EatenNumberCounter.ToString();
         NumberCounter.text = EatenNumberCounter.ToString();
@@ -111,12 +123,7 @@ public class Solution : MonoBehaviour
 
        
 
-        if(NumbersSolution != 0)
-        {
-            ZeroRight.SetActive(false);
-
-            NumbersSolution = Mathf.Round(NumbersSolution * 1000) / 1000;
-        }
+        
     }
 
     public void Compare(){
@@ -170,7 +177,7 @@ public class Solution : MonoBehaviour
         {
             foreach (float TermWert in TermWerte)
             {
-                if(NumbersSolution == TermWert)
+                if(Mathf.Approximately(NumbersSolution, TermWert))
                 {
                     StartCoroutine(WinningTime());
                 }
