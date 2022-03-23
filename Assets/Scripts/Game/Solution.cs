@@ -102,12 +102,12 @@ public class Solution : MonoBehaviour
     void Update()
     {
 
-        // if(NumbersSolution != 0)
-        // {
-        //     ZeroRight.SetActive(false);
+        if(NumbersSolution != 0)
+        {
+            ZeroRight.SetActive(false);
 
-        //     NumbersSolution = Mathf.Round(NumbersSolution * 1000) / 1000;
-        // }
+            //NumbersSolution = Mathf.Round(NumbersSolution * 1000) / 1000;
+        }
 
 
         //this.GetComponent<TMP_Text>().text = NumbersSolution.ToString();

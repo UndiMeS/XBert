@@ -54,6 +54,7 @@ public class StarController : MonoBehaviour
          {
 
         Gamedatas = FileHandler.ReadFromJSONP<GameDatas> (filename);
+        datas = FileHandler.ReadFromJSON<PlayerData>(filename);
 
             if(Gamedatas.Count > 0)
             {
