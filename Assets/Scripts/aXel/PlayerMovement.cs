@@ -91,11 +91,48 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-        UpPress = Up.GetComponent<ControllerClick> ().selected;
-        RightPress = Right.GetComponent<ControllerClick> ().selected;
-        DownPress = Down.GetComponent<ControllerClick> ().selected;
-        LeftPress = Left.GetComponent<ControllerClick> ().selected;
+        UpPress = Up.GetComponent<ControllerClick> ().pressed;
+        RightPress = Right.GetComponent<ControllerClick> ().pressed;
+        DownPress = Down.GetComponent<ControllerClick> ().pressed;
+        LeftPress = Left.GetComponent<ControllerClick> ().pressed;
+
+        if(UpPress == true)
+        {
+            RightPress = false;
+            DownPress = false;
+            LeftPress = false;
+        }
+        else if(RightPress == true)
+        {
+            UpPress = false;
+            DownPress = false;
+            LeftPress = false;
+        }
+        else if(DownPress == true)
+        {
+            RightPress = false;
+            UpPress = false;
+            LeftPress = false;
+        }
+        else if(LeftPress == true)
+        {
+            RightPress = false;
+            DownPress = false;
+            UpPress = false;
+        }
         //move ();
+
+
+        if(Finished == true)
+        {
+            UpPress = false;
+            DownPress = false;
+            RightPress = false;
+            LeftPress = false;
+
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+
+        }
 
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
@@ -104,12 +141,7 @@ public class PlayerMovement : MonoBehaviour {
             move();
         }
 
-        if(Finished == true)
-        {
-
-            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
-
-        }
+        
 
 
 

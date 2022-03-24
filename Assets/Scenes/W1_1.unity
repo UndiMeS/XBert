@@ -1527,6 +1527,11 @@ PrefabInstance:
       objectReference: {fileID: 8968911166633718021}
     - target: {fileID: 5296981633928198734, guid: 8cb2f32cfe5480a47a49ec0e5250793c,
         type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296981633928198734, guid: 8cb2f32cfe5480a47a49ec0e5250793c,
+        type: 3}
       propertyPath: MovePointParent
       value: 
       objectReference: {fileID: 332517700}
@@ -12286,6 +12291,18 @@ MonoBehaviour:
   WorldCount: 4
   NextShadowLevel: 0
   DataCount: 0
+  FirstAchievement: {fileID: 0}
+  SecondAchievement: {fileID: 0}
+  ThirdAchievement: {fileID: 0}
+  FourthAchievement: {fileID: 0}
+  ThreeStarCount: 0
+  oneLevelSuccess: 0
+  firstThreeStars: 0
+  gameFinished: 0
+  gameComplete: 0
+  datalength: 0
+  LevelFinishedCount: 0
+  Loaded: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14900,6 +14917,7 @@ MonoBehaviour:
   SpaceBool: 0
   startVolume: 0
   ShadowNextLevel: 0
+  solution: {fileID: 0}
   NextLevelButton: {fileID: 0}
   lvlLoader: {fileID: 175652603}
 --- !u!212 &8968911165495145896
