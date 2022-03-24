@@ -173,7 +173,7 @@ public class PlayerMovement : MonoBehaviour {
                 else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall) && Drill == true )
             {
             animator.SetBool("drill", false);
-            Drill = false;
+            //Drill = false;
 
             }
 
@@ -191,7 +191,7 @@ public class PlayerMovement : MonoBehaviour {
             {
 
                 animator.SetBool("drill", false);
-            Drill = false;
+            //Drill = false;
 
             }
             
@@ -211,7 +211,7 @@ public class PlayerMovement : MonoBehaviour {
             {
 
                 animator.SetBool("drill", false);
-            Drill = false;
+            //Drill = false;
 
             }
             
@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour {
             {
 
                 animator.SetBool("drill", false);
-            Drill = false;
+            //Drill = false;
             
 
             
