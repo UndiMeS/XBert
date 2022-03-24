@@ -96,6 +96,7 @@ public class ControllerClick : MonoBehaviour {
         if (Input.GetMouseButtonUp (0)) {
             
             selected = false;
+            //pressed = false;
 
         }
 

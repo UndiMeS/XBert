@@ -39,22 +39,22 @@ public class WallDestroy : MonoBehaviour
     {
         smash = movement.smash;
 
-        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, Axel) && movement.UpPress == true && movement.Drill == true)
+        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, Axel) && movement.UpMove == true && movement.Drill == true)
         {
             DestroyUp = true;
         }
 
-        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, Axel) && movement.DownPress == true && movement.Drill == true)
+        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, Axel) && movement.DownMove == true && movement.Drill == true)
         {
             DestroyDown = true;
         }
 
-        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (step, 0.0f, 0.0f), .2f, Axel) && movement.LeftPress == true && movement.Drill == true)
+        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (step, 0.0f, 0.0f), .2f, Axel) && movement.LeftMove == true && movement.Drill == true)
         {
             DestroyLeft = true;
         }
 
-        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, Axel) && movement.RightPress == true && movement.Drill == true)
+        if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, Axel) && movement.RightMove == true && movement.Drill == true)
         {
             DestroyRight = true;
         }

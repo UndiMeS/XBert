@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour {
     public bool DownPress;
     public bool LeftPress;
 
+    public bool UpMove;
+    public bool RightMove;
+    public bool DownMove;
+    public bool LeftMove;
+
     public Rigidbody2D rb;
     public float step;
     public Vector3 StartPosition;
@@ -96,29 +101,44 @@ public class PlayerMovement : MonoBehaviour {
         DownPress = Down.GetComponent<ControllerClick> ().pressed;
         LeftPress = Left.GetComponent<ControllerClick> ().pressed;
 
+
+        UpMove= Up.GetComponent<ControllerClick> ().selected;
+        RightMove = Right.GetComponent<ControllerClick> ().selected;
+        DownMove = Down.GetComponent<ControllerClick> ().selected;
+        LeftMove = Left.GetComponent<ControllerClick> ().selected;
+
         if(UpPress == true)
         {
             RightPress = false;
             DownPress = false;
             LeftPress = false;
+
+            //UpMove = true;
         }
         else if(RightPress == true)
         {
             UpPress = false;
             DownPress = false;
             LeftPress = false;
+
+
+            //RightMove = true;
         }
         else if(DownPress == true)
         {
             RightPress = false;
             UpPress = false;
             LeftPress = false;
+
+            //DownMove = true;
         }
         else if(LeftPress == true)
         {
             RightPress = false;
             DownPress = false;
             UpPress = false;
+
+            //LeftMove = true;
         }
         //move ();
 
@@ -144,7 +164,10 @@ public class PlayerMovement : MonoBehaviour {
         
 
 
-
+        // if(UpMove == true || DownMove == true || RightMove == true || LeftMove == true)
+        // {
+            
+        // }
          if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
                 {
                     
@@ -170,12 +193,18 @@ public class PlayerMovement : MonoBehaviour {
                 {
                     movePoint.position += new Vector3 (0.0f,step, 0.0f);
                 }
-                else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall) && Drill == true )
+                else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall) && Drill == true && UpMove == true )
             {
             animator.SetBool("drill", false);
             //Drill = false;
 
             }
+            
+
+            // if( Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, whatStopsMovement) &&  Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall))
+            //     {
+            //         UpMove = false;
+            //     }
 
              Up.GetComponent<ControllerClick> ().selected = false;
 
@@ -187,7 +216,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 movePoint.position += new Vector3 (step, 0.0f, 0.0f);
             }
-            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, BreakingWall) && Drill == true)
+            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, BreakingWall) && Drill == true && RightMove == true)
             {
 
                 animator.SetBool("drill", false);
@@ -195,7 +224,10 @@ public class PlayerMovement : MonoBehaviour {
 
             }
             
-
+            // if( Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, whatStopsMovement) &&  Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, BreakingWall))
+            //     {
+            //         RightMove = false;
+            //     }
 
 
             Right.GetComponent<ControllerClick> ().selected = false;
@@ -207,7 +239,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 movePoint.position += new Vector3 (-step, 0.0f, 0.0f);
             }
-            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, BreakingWall) && Drill == true)
+            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, BreakingWall) && Drill == true && LeftMove == true)
             {
 
                 animator.SetBool("drill", false);
@@ -215,7 +247,10 @@ public class PlayerMovement : MonoBehaviour {
 
             }
             
-
+            // if( Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, whatStopsMovement) &&  Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, BreakingWall))
+            //     {
+            //         LeftMove = false;
+            //     }
 
             Left.GetComponent<ControllerClick> ().selected = false;
         }
@@ -226,7 +261,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 movePoint.position += new Vector3 (0.0f,-step, 0.0f);
             }
-            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, BreakingWall) && Drill == true)
+            else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, BreakingWall) && Drill == true && DownMove == true)
             {
 
                 animator.SetBool("drill", false);
@@ -235,6 +270,11 @@ public class PlayerMovement : MonoBehaviour {
 
             
         }
+
+        // if( Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f, -step, 0.0f), .2f, whatStopsMovement) &&  Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f, -step, 0.0f), .2f, BreakingWall))
+        //         {
+        //             DownMove = false;
+        //         }
             Down.GetComponent<ControllerClick> ().selected = false;
 
     }
