@@ -22,10 +22,13 @@ public class TreadmillItem : MonoBehaviour
     public Vector3 TreadmillDirection;
     public bool StopTreadmill;
     private GameObject[] Treadmills;
+    private float XBertSpeed;
     //public TreadmillItem[] OtherTreadmills;
     // Start is called before the first frame update
     void Start()
     {
+
+        
 
         XBert = GameObject.FindGameObjectWithTag("Axel");
         XBertMovement = XBert.GetComponent<PlayerMovement>();
@@ -40,7 +43,7 @@ public class TreadmillItem : MonoBehaviour
         DownDirection = new Vector3 (0.0f, -XBertMovement.step, 0.0f);
 
         //RotationTime = RotationTime * Time.deltaTime;
-
+        XBertSpeed = XBertMovement.moveSpeed;
 
         
     }
@@ -108,7 +111,7 @@ public class TreadmillItem : MonoBehaviour
     {
         PlayerMovement.moving = false;
         yield return new WaitForSeconds(delay);
-        XBertMovement.moveSpeed = 20;
+        XBertMovement.moveSpeed = XBertSpeed;
             PlayerMovement.moving = true;
             XBertRotating = false;
     }
