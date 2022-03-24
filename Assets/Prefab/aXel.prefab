@@ -198,7 +198,7 @@ MonoBehaviour:
   Solution: {fileID: 0}
   Finished: 0
   solution: 0
-  moveSpeed: 20
+  moveSpeed: 7
   movePoint: {fileID: 5296981633124048059}
   whatStopsMovement:
     serializedVersion: 2
