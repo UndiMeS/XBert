@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -21056,6 +21056,18 @@ MonoBehaviour:
   WorldCount: 4
   NextShadowLevel: 0
   DataCount: 0
+  FirstAchievement: {fileID: 0}
+  SecondAchievement: {fileID: 0}
+  ThirdAchievement: {fileID: 0}
+  FourthAchievement: {fileID: 0}
+  ThreeStarCount: 0
+  oneLevelSuccess: 0
+  firstThreeStars: 0
+  gameFinished: 0
+  gameComplete: 0
+  datalength: 0
+  LevelFinishedCount: 0
+  Loaded: 0
 --- !u!114 &3064780919733721480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23532,6 +23544,7 @@ MonoBehaviour:
   SpaceBool: 0
   startVolume: 0
   ShadowNextLevel: 0
+  solution: {fileID: 0}
   NextLevelButton: {fileID: 0}
   lvlLoader: {fileID: 293948078}
 --- !u!212 &8968911165495145896
