@@ -11589,7 +11589,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8968911165420617598}
-        m_MethodName: ToMainMenu
+        m_MethodName: NextShadowLevelButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
