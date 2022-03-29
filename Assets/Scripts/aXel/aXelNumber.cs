@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Globalization;
 using TMPro;
 
 public class aXelNumber : MonoBehaviour
@@ -11,6 +12,10 @@ public class aXelNumber : MonoBehaviour
     private BoxCollider2D BoxCollider;
     public float value;
     public float variable;
+
+    
+
+    CultureInfo culture;
 
     float result;
 
@@ -26,7 +31,7 @@ public class aXelNumber : MonoBehaviour
         if(this.gameObject.GetComponent<TMP_Text>().text.Contains("x") && this.gameObject.GetComponent<TMP_Text>().text != "+x" && this.gameObject.GetComponent<TMP_Text>().text != "-x")
         {
 
-            if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(0, this.gameObject.GetComponent<TMP_Text>().text.Length - 1), out result))
+            if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(0, this.gameObject.GetComponent<TMP_Text>().text.Length - 1), NumberStyles.Float, CultureInfo.CreateSpecificCulture("de-DE"), out result))
             {
                 variable = result;
                 //variable = float.Parse(this.gameObject.GetComponent<TMP_Text>().text.Substring(0, this.gameObject.GetComponent<TMP_Text>().text.Length - 1));
@@ -45,7 +50,7 @@ public class aXelNumber : MonoBehaviour
                 
 
 
-                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(1), out result))
+                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text.Substring(1), NumberStyles.Float, CultureInfo.CreateSpecificCulture("de-DE"), out result))
                 {
                 
                     value = result;
@@ -55,7 +60,7 @@ public class aXelNumber : MonoBehaviour
 
             else if (this.gameObject.tag == "Numbers")
             {
-                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text, out result))
+                if(float.TryParse(this.gameObject.GetComponent<TMP_Text>().text, NumberStyles.Float, CultureInfo.CreateSpecificCulture("de-DE"), out result))
                 {
                     value = result;
                     
