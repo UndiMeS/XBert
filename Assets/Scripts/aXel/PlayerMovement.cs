@@ -193,27 +193,30 @@ public class PlayerMovement : MonoBehaviour {
         if(Vector3.Distance(transform.position, movePoint.position) <= 0.01f && moving == true)
         {
             
+            
+
+            // if(UpPress == true)
+            // FirstUp = true;
+            // else
+            // FirstUp = false;
+
+            // if(DownPress == true)
+            // FirstDown = true;
+            // else
+            // FirstDown = false;
+
+            // if(RightPress == true)
+            // FirstRight = true;
+            // else
+            // FirstRight = false;
+
+            // if(LeftPress == true)
+            // FirstLeft = true;
+            // else
+            // FirstLeft = false;
+
+
             StartCoroutine(move());
-
-            if(UpPress == true)
-            FirstUp = true;
-            else
-            FirstUp = false;
-
-            if(DownPress == true)
-            FirstDown = true;
-            else
-            FirstDown = false;
-
-            if(RightPress == true)
-            FirstRight = true;
-            else
-            FirstRight = false;
-
-            if(LeftPress == true)
-            FirstLeft = true;
-            else
-            FirstLeft = false;
             
         }
         
@@ -244,6 +247,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (UpPress == true) {
             
+            
             rb.transform.rotation = Quaternion.Euler (0, 0, 90.0f);
             if(UpRun == false && FirstUp == true)
             {
@@ -266,6 +270,7 @@ public class PlayerMovement : MonoBehaviour {
             //Drill = false;
 
             }
+            
 
             
             
@@ -277,8 +282,13 @@ public class PlayerMovement : MonoBehaviour {
             //         UpMove = false;
             //     }
 
+            FirstUp = true;
              Up.GetComponent<ControllerClick> ().selected = false;
 
+        }
+        else
+        {
+            FirstUp = false;
         }
         if (RightPress == true) {
             rb.transform.rotation = Quaternion.Euler (0, 0, 0.0f);
@@ -308,10 +318,14 @@ public class PlayerMovement : MonoBehaviour {
             //         RightMove = false;
             //     }
 
-            
+            FirstRight = true;
 
 
             Right.GetComponent<ControllerClick> ().selected = false;
+        }
+        else
+        {
+            FirstRight = false;
         }
         if (LeftPress == true) {
             rb.transform.rotation = Quaternion.Euler (180.0f, 0, -180.0f);
@@ -341,11 +355,16 @@ public class PlayerMovement : MonoBehaviour {
             //         LeftMove = false;
             //     }
 
-            
+            FirstLeft = true;
 
             Left.GetComponent<ControllerClick> ().selected = false;
         }
+        else
+        {
+            FirstLeft = false;
+        }
         if (DownPress == true) {
+            
             rb.transform.rotation = Quaternion.Euler (0, 0, -90.0f);
 
             if(DownRun == false && FirstDown == true)
@@ -377,10 +396,14 @@ public class PlayerMovement : MonoBehaviour {
 
 
         
-
+            FirstDown = true;
 
             Down.GetComponent<ControllerClick> ().selected = false;
 
+    }
+    else
+    {
+        FirstDown = false;
     }
     }
     void OnTriggerEnter2D(Collider2D col)

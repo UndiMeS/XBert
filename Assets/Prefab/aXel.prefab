@@ -197,6 +197,10 @@ MonoBehaviour:
   RightRun: 0
   DownRun: 0
   LeftRun: 0
+  FirstUp: 0
+  FirstRight: 0
+  FirstDown: 0
+  FirstLeft: 0
   RunTimer: 0.25
   rb: {fileID: 0}
   step: 0.908
