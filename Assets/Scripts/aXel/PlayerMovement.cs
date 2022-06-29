@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour {
     public bool DownRun;
     public bool LeftRun;
 
+    public bool FirstUp;
+    public bool FirstRight;
+    public bool FirstDown;
+    public bool FirstLeft;
+
     public float RunTimer;
 
     public Rigidbody2D rb;
@@ -152,18 +157,22 @@ public class PlayerMovement : MonoBehaviour {
         if(UpPress == false)
         {
             UpRun = false;
+            FirstUp = false;
         }
         if(DownPress == false)
         {
             DownRun = false;
+            FirstDown = false;
         }
         if(RightPress == false)
         {
             RightRun = false;
+            FirstRight = false;
         }
         if(LeftPress == false)
         {
             LeftRun = false;
+            FirstLeft = false;
         }
         //move ();
 
@@ -183,9 +192,31 @@ public class PlayerMovement : MonoBehaviour {
 
         if(Vector3.Distance(transform.position, movePoint.position) <= 0.01f && moving == true)
         {
+            
             StartCoroutine(move());
+
+            if(UpPress == true)
+            FirstUp = true;
+            else
+            FirstUp = false;
+
+            if(DownPress == true)
+            FirstDown = true;
+            else
+            FirstDown = false;
+
+            if(RightPress == true)
+            FirstRight = true;
+            else
+            FirstRight = false;
+
+            if(LeftPress == true)
+            FirstLeft = true;
+            else
+            FirstLeft = false;
             
         }
+        
 
         
 
@@ -214,11 +245,20 @@ public class PlayerMovement : MonoBehaviour {
         if (UpPress == true) {
             
             rb.transform.rotation = Quaternion.Euler (0, 0, 90.0f);
+            if(UpRun == false && FirstUp == true)
+            {
+                moving = false;
+                yield return new WaitForSeconds(RunTimer);
+                moving = true;
+                UpRun = true;
+            }
 
                 if(! Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, whatStopsMovement) && ! Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall))
                 {
                     
                     movePoint.position += new Vector3 (0.0f,step, 0.0f);
+                    
+                    
                                     }
                 else if(Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,step, 0.0f), .2f, BreakingWall) && Drill == true && UpMove == true )
             {
@@ -227,13 +267,7 @@ public class PlayerMovement : MonoBehaviour {
 
             }
 
-            if(UpRun == false)
-            {
-                moving = false;
-                yield return new WaitForSeconds(RunTimer);
-                moving = true;
-                UpRun = true;
-            }
+            
             
             
             
@@ -248,6 +282,14 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (RightPress == true) {
             rb.transform.rotation = Quaternion.Euler (0, 0, 0.0f);
+
+            if(RightRun == false && FirstRight == true)
+            {
+                moving = false;
+                yield return new WaitForSeconds(RunTimer);
+                moving = true;
+                RightRun = true;
+            }
      
             if(! Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, whatStopsMovement)&&! Physics2D.OverlapCircle(movePoint.position + new Vector3 (step,0.0f, 0.0f), .2f, BreakingWall))
             {
@@ -266,19 +308,21 @@ public class PlayerMovement : MonoBehaviour {
             //         RightMove = false;
             //     }
 
-            if(RightRun == false)
-            {
-                moving = false;
-                yield return new WaitForSeconds(RunTimer);
-                moving = true;
-                RightRun = true;
-            }
+            
 
 
             Right.GetComponent<ControllerClick> ().selected = false;
         }
         if (LeftPress == true) {
             rb.transform.rotation = Quaternion.Euler (180.0f, 0, -180.0f);
+
+            if(LeftRun == false && FirstLeft == true)
+            {
+                moving = false;
+                yield return new WaitForSeconds(RunTimer);
+                moving = true;
+                LeftRun = true;
+            }
   
             if(! Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, whatStopsMovement)&&! Physics2D.OverlapCircle(movePoint.position + new Vector3 (-step,0.0f, 0.0f), .2f, BreakingWall))
             {
@@ -297,18 +341,20 @@ public class PlayerMovement : MonoBehaviour {
             //         LeftMove = false;
             //     }
 
-            if(LeftRun == false)
-            {
-                moving = false;
-                yield return new WaitForSeconds(RunTimer);
-                moving = true;
-                LeftRun = true;
-            }
+            
 
             Left.GetComponent<ControllerClick> ().selected = false;
         }
         if (DownPress == true) {
             rb.transform.rotation = Quaternion.Euler (0, 0, -90.0f);
+
+            if(DownRun == false && FirstDown == true)
+            {
+                moving = false;
+                yield return new WaitForSeconds(RunTimer);
+                moving = true;
+                DownRun = true;
+            }
 
             if(! Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, whatStopsMovement) &&! Physics2D.OverlapCircle(movePoint.position + new Vector3 (0.0f,-step, 0.0f), .2f, BreakingWall))
             {
@@ -330,13 +376,7 @@ public class PlayerMovement : MonoBehaviour {
         //         }
 
 
-        if(DownRun == false)
-            {
-                moving = false;
-                yield return new WaitForSeconds(RunTimer);
-                moving = true;
-                DownRun = true;
-            }
+        
 
 
             Down.GetComponent<ControllerClick> ().selected = false;

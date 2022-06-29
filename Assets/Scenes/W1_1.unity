@@ -1522,6 +1522,16 @@ PrefabInstance:
       objectReference: {fileID: 1237812333}
     - target: {fileID: 5296981633928198734, guid: 8cb2f32cfe5480a47a49ec0e5250793c,
         type: 3}
+      propertyPath: UpRun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296981633928198734, guid: 8cb2f32cfe5480a47a49ec0e5250793c,
+        type: 3}
+      propertyPath: speed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296981633928198734, guid: 8cb2f32cfe5480a47a49ec0e5250793c,
+        type: 3}
       propertyPath: Solution
       value: 
       objectReference: {fileID: 8968911166633718021}

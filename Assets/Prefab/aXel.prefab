@@ -203,7 +203,7 @@ MonoBehaviour:
   StartPosition: {x: 110.85, y: 159.6123, z: 1}
   NumbersEaten: []
   animator: {fileID: 5296981633928198733}
-  speed: 400
+  speed: 500
   Solution: {fileID: 0}
   Finished: 0
   solution: 0
