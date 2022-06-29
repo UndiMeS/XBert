@@ -189,6 +189,15 @@ MonoBehaviour:
   RightPress: 0
   DownPress: 0
   LeftPress: 0
+  UpMove: 0
+  RightMove: 0
+  DownMove: 0
+  LeftMove: 0
+  UpRun: 0
+  RightRun: 0
+  DownRun: 0
+  LeftRun: 0
+  RunTimer: 0.25
   rb: {fileID: 0}
   step: 0.908
   StartPosition: {x: 110.85, y: 159.6123, z: 1}
