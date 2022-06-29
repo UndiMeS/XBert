@@ -12,6 +12,7 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 1.0f;
     public string LoadScene;
 
+
     // Update is called once per frame
     void Update()
     {
