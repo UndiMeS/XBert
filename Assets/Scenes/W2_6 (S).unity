@@ -1065,7 +1065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108, y: -349}
+  m_AnchoredPosition: {x: -9, y: -349}
   m_SizeDelta: {x: 91.52728, y: 65.72449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93062897
@@ -10353,7 +10353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Termwert > 5
+  m_text: Termwert > 7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -16951,7 +16951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544626030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: -335, z: 0}
+  m_LocalPosition: {x: -88, y: -335, z: 0}
   m_LocalScale: {x: 105.93991, y: 105.93991, z: 143.86763}
   m_Children:
   - {fileID: 1026445428}
@@ -25421,7 +25421,7 @@ MonoBehaviour:
   Equal: 0
   Win: 0
   TermWerte:
-  - 5
+  - 7
   LevelFinished: 0
   Particles: {fileID: 2118726561}
   PlayParticle: 1
