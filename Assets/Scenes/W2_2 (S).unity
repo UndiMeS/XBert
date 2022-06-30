@@ -22327,7 +22327,7 @@ MonoBehaviour:
   forceRatioOnAwake: 0
   listenForWindowChanges: 1
   createCameraForLetterBoxRendering: 1
-  findCamerasAutomatically: 0
+  findCamerasAutomatically: 1
   letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
   cameras:
   - camera: {fileID: 5664502587477860239}

@@ -6,10 +6,25 @@ public class ControllerClick : MonoBehaviour {
 
     public bool selected;
     public bool pressed;
+    public bool holding;
+    public float HoldingTime;
     // Start is called before the first frame update
     void Start () {
 
     }
+
+    // IEnumerator HoldingTimer()
+    // {
+    //     yield return new WaitForSeconds(HoldingTime);
+    //     if(this.gameObject.name == "ButtonDown")
+    //     {
+    //         if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
+    //         {
+    //             holding = true;
+    //         }
+    //     }
+        
+    // }
 
     // Update is called once per frame
     void Update () {
@@ -30,7 +45,12 @@ public class ControllerClick : MonoBehaviour {
             {
                 pressed = false;
                 selected = false;
+                holding = false;
             }
+            // if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
+            // {
+            //     StartCoroutine(HoldingTimer());
+            // }
         }
         if(this.gameObject.name == "ButtonUp")
         {
