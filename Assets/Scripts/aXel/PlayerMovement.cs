@@ -67,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
         movePoint.position = this.gameObject.transform.position;
         StartPosition = this.gameObject.transform.position;
 
+        PlayerMovement.moving = true;
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -265,19 +267,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(0.0f, step, 0.0f);
             }
-            else if (
-                Physics2D.OverlapCircle(
-                    movePoint.position + new Vector3(0.0f, step, 0.0f),
-                    .2f,
-                    BreakingWall
-                )
-                && Drill == true
-                && UpMove == true
-            )
-            {
-                animator.SetBool("drill", false);
+            // else if (
+            //     Physics2D.OverlapCircle(
+            //         movePoint.position + new Vector3(0.0f, step, 0.0f),
+            //         .2f,
+            //         BreakingWall
+            //     )
+            //     && Drill == true
+            //     && UpMove == true
+            // )
+            // {
+            //     animator.SetBool("drill", false);
 
-            }
+            // }
 
           
 
@@ -354,19 +356,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(step, 0.0f, 0.0f);
             }
-            else if (
-                Physics2D.OverlapCircle(
-                    movePoint.position + new Vector3(step, 0.0f, 0.0f),
-                    .2f,
-                    BreakingWall
-                )
-                && Drill == true
-                && RightMove == true
-            )
-            {
-                animator.SetBool("drill", false);
-                //Drill = false;
-            }
+            // else if (
+            //     Physics2D.OverlapCircle(
+            //         movePoint.position + new Vector3(step, 0.0f, 0.0f),
+            //         .2f,
+            //         BreakingWall
+            //     )
+            //     && Drill == true
+            //     && RightMove == true
+            // )
+            // {
+            //     animator.SetBool("drill", false);
+            //     //Drill = false;
+            // }
 
             Right.GetComponent<ControllerClick>().selected = false;
         }
@@ -437,19 +439,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(-step, 0.0f, 0.0f);
             }
-            else if (
-                Physics2D.OverlapCircle(
-                    movePoint.position + new Vector3(-step, 0.0f, 0.0f),
-                    .2f,
-                    BreakingWall
-                )
-                && Drill == true
-                && LeftMove == true
-            )
-            {
-                animator.SetBool("drill", false);
-                //Drill = false;
-            }
+            // else if (
+            //     Physics2D.OverlapCircle(
+            //         movePoint.position + new Vector3(-step, 0.0f, 0.0f),
+            //         .2f,
+            //         BreakingWall
+            //     )
+            //     && Drill == true
+            //     && LeftMove == true
+            // )
+            // {
+            //     animator.SetBool("drill", false);
+            //     //Drill = false;
+            // }
 
             Left.GetComponent<ControllerClick>().selected = false;
         }
@@ -519,18 +521,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(0.0f, -step, 0.0f);
             }
-            else if (
-                Physics2D.OverlapCircle(
-                    movePoint.position + new Vector3(0.0f, -step, 0.0f),
-                    .2f,
-                    BreakingWall
-                )
-                && Drill == true
-                && DownMove == true
-            )
-            {
-                animator.SetBool("drill", false);
-            }
+            // else if (
+            //     Physics2D.OverlapCircle(
+            //         movePoint.position + new Vector3(0.0f, -step, 0.0f),
+            //         .2f,
+            //         BreakingWall
+            //     )
+            //     && Drill == true
+            //     && DownMove == true
+            // )
+            // {
+            //     animator.SetBool("drill", false);
+            // }
 
             Down.GetComponent<ControllerClick>().selected = false;
         }

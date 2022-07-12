@@ -37,15 +37,14 @@ public class ControllerClick : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown("s"))
             {
-                pressed = true;
                 selected = true;
+                pressed = true;
             }
 
             if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp("s"))
             {
-                pressed = false;
                 selected = false;
-                holding = false;
+                pressed = false;
             }
             // if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
             // {
