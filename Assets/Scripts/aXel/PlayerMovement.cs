@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     public bool Drill;
     public bool smash;
     public static bool moving = true;
+    public bool mve;
 
     public GameObject MovePointParent;
 
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        mve = PlayerMovement.moving;
         Finished = Solution.GetComponent<Solution>().LevelFinished;
 
         NumbersEaten = FindGameObjectsWithTags(

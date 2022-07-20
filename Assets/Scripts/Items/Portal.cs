@@ -69,7 +69,21 @@ public class Portal : MonoBehaviour
 
             maxScale = Axel.transform.localScale;
             PlayerMovement.moving = false;
+            
             Debug.Log("Teleport");
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        //if Axel ist on portal start teleporting
+        if(col.tag == "Axel" && TeleportStart == true)
+        {
+            
+           
+            PlayerMovement.moving = false;
+            
+            
         }
     }
 

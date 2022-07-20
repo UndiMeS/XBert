@@ -160,6 +160,7 @@ public class PauseScript : MonoBehaviour
 
     public void ToPause()
     {
+        Level.SetActive(false);
         PauseMenu.SetActive(true);
 
     }
