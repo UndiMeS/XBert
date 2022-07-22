@@ -8,6 +8,17 @@ public class SetVolume : MonoBehaviour
 {
     public AudioMixer EffektMixer;
     public AudioMixer MusikMixer;
+    public Slider EffektSlider;
+    public Slider MusikSlider;
+
+    void Start()
+    {
+        MusikSlider.value = PlayerPrefs.GetFloat("MusikVolume", 0.000f);
+        EffektSlider.value = PlayerPrefs.GetFloat("EffektVolume", 0.000f);
+
+        EffektMixer.SetFloat ("EffektVol", Mathf.Log10(EffektSlider.value)*20);
+        MusikMixer.SetFloat ("MusikVol", Mathf.Log10(MusikSlider.value)*20);
+    }
 
 
 
