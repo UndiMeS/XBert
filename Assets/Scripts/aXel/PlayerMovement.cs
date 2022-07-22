@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
@@ -61,9 +62,38 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject MovePointParent;
 
+
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
+
+        // #if UNITY_STANDALONE
+
+        //     Debug.Log("Standalone Windows");
+        //     MovePointParent.GetComponent<CanvasScaler>().match = 1.0f;
+
+        // #endif
+
+        // #if UNITY_WEBGL
+
+        //     Debug.Log("Standalone Windows");
+        //     MovePointParent.GetComponent<CanvasScaler>().match = 1.0f;
+
+        // #endif
+
+        // #if UNITY_IOS
+
+        //     Debug.Log("Standalone Windows");
+        //     MovePointParent.GetComponent<CanvasScaler>().match = 0.0f;
+
+        // #endif
+
+
+
+
         movePoint.SetParent(MovePointParent.transform);
         movePoint.position = this.gameObject.transform.position;
         StartPosition = this.gameObject.transform.position;
