@@ -70,26 +70,35 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
 
-        // #if UNITY_STANDALONE
+        
 
-        //     Debug.Log("Standalone Windows");
-        //     MovePointParent.GetComponent<CanvasScaler>().match = 1.0f;
+        #if UNITY_STANDALONE
 
-        // #endif
+            Debug.Log("Standalone Windows");
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
 
-        // #if UNITY_WEBGL
+        #endif
 
-        //     Debug.Log("Standalone Windows");
-        //     MovePointParent.GetComponent<CanvasScaler>().match = 1.0f;
+        #if UNITY_WEBGL
 
-        // #endif
+            Debug.Log("Standalone Windows");
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
 
-        // #if UNITY_IOS
+        #endif
 
-        //     Debug.Log("Standalone Windows");
-        //     MovePointParent.GetComponent<CanvasScaler>().match = 0.0f;
+        #if UNITY_IOS
 
-        // #endif
+            Debug.Log("IOS");
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
+
+        #endif
+
+        #if UNITY_ANDROID
+
+            Debug.Log("Android");
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+
+        #endif
 
 
 
