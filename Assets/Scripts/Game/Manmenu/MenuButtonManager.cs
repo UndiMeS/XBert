@@ -29,12 +29,16 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject ShadowWorldThreeTransition;
     public GameObject StartPopUps;
 
+    public GameObject SkinMenu;
+
     public GameObject Tutorial;
 
 
     public Animator MenuTransition;
     public float MenuTransTime;
     public int worldNumber;
+
+    public int MenuNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +66,7 @@ public class MenuButtonManager : MonoBehaviour
             StartMenu.SetActive(false);
             ShadowOne.SetActive(false);
             //WorldOne.SetActive(true);
+            MenuNumber = 1;
         }
         else if(World == 1 && ShadowWorld == true)
         {
@@ -81,6 +86,7 @@ public class MenuButtonManager : MonoBehaviour
             WorldTwoTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
+            MenuNumber = 2;
         }
         else if(World == 2 && ShadowWorld == true)
         {
@@ -98,6 +104,7 @@ public class MenuButtonManager : MonoBehaviour
             WorldThreeTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
+            MenuNumber = 3;
         }
         else if(World == 3 && ShadowWorld == true)
         {
@@ -129,6 +136,8 @@ public class MenuButtonManager : MonoBehaviour
         // WorldTwoTransition.SetActive(false);
         //StartCoroutine(WorldTwoToWorldOne());
 
+        MenuNumber = 1;
+
         
 
         StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
@@ -149,8 +158,10 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         //StartCoroutine(WorldOneToWorldTwo());
+        MenuNumber = 2;
         ShadowTwo.SetActive(false);
         StartCoroutine(MenuTransitioning(WorldThree,WorldOne,ShadowTwo,WorldTwo));
+
         
         
     }
@@ -161,6 +172,7 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         //StartCoroutine(WorldTwoToWorldThree());
+        MenuNumber = 3;
 
         StartCoroutine(MenuTransitioning(ShadowOne, WorldTwo,ShadowThree,WorldThree));
         
@@ -216,6 +228,28 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOne.SetActive(true);
         ShadowWorld = false;
     }
+
+    public void ToSkinMenu()
+    {
+        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,SkinMenu));
+    }
+
+    public void FromSkinMenuToWorld()
+    {
+        if(MenuNumber == 1)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,WorldTwo,WorldThree,WorldOne));
+        }
+        if(MenuNumber == 2)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,WorldOne,WorldThree,WorldTwo));
+        }
+        if(MenuNumber == 3)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,WorldTwo,WorldOne,WorldThree));
+        }
+    }
+
 
     public void QuitGame()
     {

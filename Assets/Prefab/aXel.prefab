@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 5296981633928198720}
   - component: {fileID: 5296981633928198735}
   - component: {fileID: 5296981633928198734}
+  - component: {fileID: 845447645443514582}
   - component: {fileID: 5296981633928198733}
   m_Layer: 10
   m_Name: aXel
@@ -64,8 +65,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5296981633928198732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 58, z: 0}
-  m_LocalScale: {x: 109.52902, y: 109.52902, z: 1}
+  m_LocalPosition: {x: 0, y: 0.0000021192761, z: 0}
+  m_LocalScale: {x: 636.2052, y: 636.2052, z: 5.8085537}
   m_Children:
   - {fileID: 5296981633124048059}
   - {fileID: 5296981634862359125}
@@ -111,7 +112,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 3ba65cec0337ea64fb9ab8b226c52341, type: 3}
+  m_Sprite: {fileID: 3768851824330903757, guid: 972c8bc03677844b383548ead9201ba2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,7 +162,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84, y: 0.84}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.84, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -223,7 +225,27 @@ MonoBehaviour:
     m_Bits: 2048
   Drill: 0
   smash: 0
+  mve: 0
   MovePointParent: {fileID: 0}
+--- !u!114 &845447645443514582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296981633928198732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b12cf1bb036245d9a5ba56c156b7fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XBertAnim: {fileID: 5296981633928198733}
+  XBertSkin:
+  - {fileID: 22100000, guid: 3b9de42204f0d478689676eda280e719, type: 2}
+  - {fileID: 22100000, guid: 0184a8a897f87489bbbe9437925efe89, type: 2}
+  - {fileID: 22100000, guid: 1783dd33553f34ab9bf536c866f85722, type: 2}
+  - {fileID: 22100000, guid: afd9e3f2cf5584f2280c6c74aaf3725e, type: 2}
+  SelectedSkin: 0
 --- !u!95 &5296981633928198733
 Animator:
   serializedVersion: 3
@@ -234,7 +256,7 @@ Animator:
   m_GameObject: {fileID: 5296981633928198732}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6956cf049fcaf248a935023f141b324, type: 2}
+  m_Controller: {fileID: 22100000, guid: 3b9de42204f0d478689676eda280e719, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5011,7 +5033,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 12f23f300f7defa49b8b9f6026332491, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

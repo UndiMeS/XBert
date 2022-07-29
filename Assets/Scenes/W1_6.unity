@@ -4658,6 +4658,16 @@ PrefabInstance:
       propertyPath: NextScene
       value: W1_7
       objectReference: {fileID: 0}
+    - target: {fileID: 5526202838339839342, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 8968911167192804045}
+    - target: {fileID: 5526202838339839342, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: NextScene
+      value: W1_7
+      objectReference: {fileID: 0}
     - target: {fileID: 7174852869308633922, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_text

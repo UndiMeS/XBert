@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: XBertaSkin
+  m_Controller: {fileID: 9100000, guid: c6956cf049fcaf248a935023f141b324, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 89f9e421bdccfdf4a86f0ad9a0b47c2e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 89f9e421bdccfdf4a86f0ad9a0b47c2e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6c0ee0377495cd643bb66bd227d9e7ba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6c0ee0377495cd643bb66bd227d9e7ba, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 972dfbfbb9904af499d04caeb250632f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4684e67e4951c476bbb502c6e054082b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c81c864b8b63f0b49bd478ed6a9f5921, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 27a6f86100a7848a1924d778ab65b84d, type: 2}
