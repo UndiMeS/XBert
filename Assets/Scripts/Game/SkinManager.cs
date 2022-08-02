@@ -7,13 +7,20 @@ public class SkinManager : MonoBehaviour
 {
     public Animator XBertAnim;
     public List<AnimatorOverrideController> XBertSkin = new List<AnimatorOverrideController>();
-    public int selectedSkin = 0;
+    public static int selectedSkin = 0;
+    public int showSkinNumber=0;
     public GameObject PlayerSkin;
 
 
     public void Awake()
     {
-        XBertAnim.runtimeAnimatorController = XBertSkin[0] as RuntimeAnimatorController;
+        selectedSkin = PlayerPrefs.GetInt("SkinNumber");
+        XBertAnim.runtimeAnimatorController = XBertSkin[selectedSkin] as RuntimeAnimatorController;
+    }
+
+    void Update()
+    {
+        showSkinNumber = selectedSkin;
     }
 
 
