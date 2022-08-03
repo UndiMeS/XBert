@@ -18,6 +18,7 @@ public class SkinScrollSnap : MonoBehaviour
     public Image[] TitleBackgrounds;
     public TMP_Text[] SkinText;
     public Color[] SkinColor;
+    public Image[] NewLabel;
 
     public GameObject[] SkinContainers;
 
@@ -79,25 +80,11 @@ public class SkinScrollSnap : MonoBehaviour
                 Vector2 newAnchorPos = new Vector2(curX - (contents.Length * contentDistance), curY);
                 contents[i].GetComponent<RectTransform>().anchoredPosition = newAnchorPos;
             }
-
-            // if(SkinImages[i].transform.localScale.x >= 0.1f && TitleBackgrounds[i].transform.localScale.x >= 0.1f && SkinText[i].transform.localScale.x >= 0.1f)
-            // {
-            //     //SkinImages[i].transform.localScale = (initialScale / distReposition[i]) * ScaleMultiplier;
-            //     //SkinImages[i].transform.localScale.y = SkinImages[i].transform.localScale.y * distance[i] * ScaleMultiplier;
-
-            //     SkinImageSize = Vector3.Lerp(SkinImages[i].transform.localScale,new Vector3(Mathf.Clamp(2/distance[i],0.1f,1.0f),Mathf.Clamp(2/distance[i],0.1f,1.0f),1.0f), 1f);
-            //     //SkinImageSize.y = Vector3.Lerp(SkinImages[i].transform.localScale.y,distance[i], 10f);
-
-            //     SkinImages[i].transform.localScale = new Vector3(SkinImageSize.x,SkinImageSize.y,1.0f);
-
-            //     TitleBackgrounds[i].transform.localScale = new Vector3(SkinImageSize.x,SkinImageSize.y,1.0f);
-            //     SkinText[i].transform.localScale = new Vector3(SkinImageSize.x,SkinImageSize.y,1.0f);
-            // }
-
-            if(SkinContainers[i].transform.localScale.x >= 0.1f)
+            
+            if(SkinContainers[i].transform.localScale.x >= 0.01f)
             {
 
-                SkinImageSize = Vector3.Lerp(SkinContainers[i].transform.localScale,new Vector3(Mathf.Clamp(2/distance[i],0.1f,1.0f),Mathf.Clamp(2/distance[i],0.1f,1.0f),1.0f), 1f);
+                SkinImageSize = Vector3.Lerp(SkinContainers[i].transform.localScale,new Vector3(Mathf.Clamp(1.5f/distance[i],0.1f,1.0f),Mathf.Clamp(1.5f/distance[i],0.1f,1.0f),1.0f), 10f);
                 SkinContainers[i].transform.localScale = new Vector3(SkinImageSize.x,SkinImageSize.y,1.0f);
 
                 SkinColor[i] = SkinImages[i].color;
@@ -111,6 +98,11 @@ public class SkinScrollSnap : MonoBehaviour
                 SkinColor[i] = SkinText[i].color;
                 SkinText[i].color = Color.Lerp(SkinColor[i],new Color(SkinColor[i].r, SkinColor[i].g, SkinColor[i].b, Mathf.Clamp(1/distance[i],0.1f,1.0f)), 1f);
             
+                SkinColor[i] = NewLabel[i].color;
+                NewLabel[i].color = Color.Lerp(SkinColor[i],new Color(SkinColor[i].r, SkinColor[i].g, SkinColor[i].b, Mathf.Clamp(1/distance[i],0.1f,1.0f)), 1f);
+
+
+
             }
 
             

@@ -16,6 +16,7 @@ public class SkinManager : MonoBehaviour
     {
         selectedSkin = PlayerPrefs.GetInt("SkinNumber");
         XBertAnim.runtimeAnimatorController = XBertSkin[selectedSkin] as RuntimeAnimatorController;
+        Debug.Log(Application.persistentDataPath);
     }
 
     void Update()
