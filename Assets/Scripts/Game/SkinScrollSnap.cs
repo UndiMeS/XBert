@@ -84,7 +84,7 @@ public class SkinScrollSnap : MonoBehaviour
             if(SkinContainers[i].transform.localScale.x >= 0.01f)
             {
 
-                SkinImageSize = Vector3.Lerp(SkinContainers[i].transform.localScale,new Vector3(Mathf.Clamp(1.5f/distance[i],0.1f,1.0f),Mathf.Clamp(1.5f/distance[i],0.1f,1.0f),1.0f), 10f);
+                SkinImageSize = Vector3.Lerp(SkinContainers[i].transform.localScale,new Vector3(Mathf.Clamp(1f/distance[i],0.1f,1.0f),Mathf.Clamp(1f/distance[i],0.1f,1.0f),1.0f), 40f);
                 SkinContainers[i].transform.localScale = new Vector3(SkinImageSize.x,SkinImageSize.y,1.0f);
 
                 SkinColor[i] = SkinImages[i].color;

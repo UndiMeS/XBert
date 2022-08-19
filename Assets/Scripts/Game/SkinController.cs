@@ -20,21 +20,7 @@ public class SkinController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // if(unlocked == true) {
-        //     SkinImage.sprite = UnlockedSkin;
-        //     TMP_Titel.text = Titel;
 
-        //     if(NewCount == 0)
-        //     {
-        //         NewLabel.SetActive(true);
-        //         NewCount++;
-        //     }
-        //     else
-        //     {
-        //         NewLabel.SetActive(false);
-        //     }
-            
-        // }
     }
 
     // Update is called once per frame
@@ -48,13 +34,30 @@ public class SkinController : MonoBehaviour
             {
                 unlocked = true;
             }
+
+            
             
 
             if(unlocked == true) {
                 SkinImage.sprite = UnlockedSkin;
                 TMP_Titel.text = Titel;
+
+                
+            if(PlayerPrefs.GetInt("NewSkin"+SkinNumber) != 1)
+                {
+                    NewLabel.SetActive(true);
+                    NewCount = PlayerPrefs.GetInt("NewSkin"+SkinNumber);
+                    PlayerPrefs.SetInt("NewSkin"+SkinNumber, 1);
+                    
+                }
+            else
+            {
+                NewLabel.SetActive(false);
+            }
+                
             }
 
         }
+
     }
 }

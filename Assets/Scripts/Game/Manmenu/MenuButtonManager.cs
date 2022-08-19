@@ -32,6 +32,8 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject SkinMenu;
 
     public GameObject Tutorial;
+    public GameObject NightPopUp;
+    public bool NightPopUpBool;
 
 
     public Animator MenuTransition;
@@ -181,20 +183,34 @@ public class MenuButtonManager : MonoBehaviour
 
     public void ToShadowOne()
     {
+        if(StarController.NightButtonShine == true)
+        {
+            StarController.NightButtonShine = false;
+        }
         StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowOne));
     }
     public void ToShadowTwo()
     {
+        if(StarController.NightButtonShine == true)
+        {
+            StarController.NightButtonShine = false;
+        }
         StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowTwo));
     }
     public void ToShadowThree()
     {
+        if(StarController.NightButtonShine == true)
+        {
+            StarController.NightButtonShine = false;
+        }
         StartCoroutine(MenuTransitioning(WorldThree,WorldTwo, WorldOne, ShadowThree));
     }
 
     public void SwitchToNightOne()
     {
         StartCoroutine(ShadowOneTransition());
+
+        
         
         
         //ShadowOne.SetActive(true);

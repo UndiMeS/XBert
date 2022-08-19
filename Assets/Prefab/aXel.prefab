@@ -245,6 +245,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 0184a8a897f87489bbbe9437925efe89, type: 2}
   - {fileID: 22100000, guid: 1783dd33553f34ab9bf536c866f85722, type: 2}
   - {fileID: 22100000, guid: afd9e3f2cf5584f2280c6c74aaf3725e, type: 2}
+  - {fileID: 22100000, guid: 7034a4b0b519541b39c6167a935321e3, type: 2}
   SelectedSkin: 0
 --- !u!95 &5296981633928198733
 Animator:

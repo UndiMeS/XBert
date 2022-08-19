@@ -37,6 +37,9 @@ public class PauseScript : MonoBehaviour
     public Button NextLevelButton;
 
     public LevelLoader lvlLoader;
+
+
+
     // Start is called before the first frame update
 
 

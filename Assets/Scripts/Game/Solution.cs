@@ -26,9 +26,9 @@ public class Solution : MonoBehaviour
 
     public int StarScore = 0;
 
-    public SpriteRenderer StarOne;
-    public SpriteRenderer StarTwo;
-    public SpriteRenderer StarThree;
+    public GameObject StarOne;
+    public GameObject StarTwo;
+    public GameObject StarThree;
     public Sprite YellowStar;
 
     public TMP_Text EatenCounter;
@@ -87,10 +87,10 @@ public class Solution : MonoBehaviour
     public int LevelFinishedCount;
     public bool Loaded;
 
-    List<PlayerData> datas = new List<PlayerData>();
-    List<GameDatas> Gamedatas = new List<GameDatas>();
+    public List<PlayerData> datas = new List<PlayerData>();
+    public List<GameDatas> Gamedatas = new List<GameDatas>();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
         Gamedatas = FileHandler.ReadFromJSONP<GameDatas>(filename);
@@ -211,19 +211,19 @@ public class Solution : MonoBehaviour
         { 
             if(EatenNumberCounter <= FirstStar)
             {
-                StarOne.sprite = YellowStar;
+                //StarOne.sprite = YellowStar;
                 StarScore = 1;
             }
 
             if(EatenNumberCounter <= SecondStar)
             {
-                StarTwo.sprite = YellowStar;
+                //StarTwo.sprite = YellowStar;
                 StarScore = 2;
             }
 
             if(EatenNumberCounter <= ThirdStar)
             {
-                StarThree.sprite = YellowStar;
+                //StarThree.sprite = YellowStar;
                 Debug.Log("3 star"+ EatenNumberCounter + " " + ThirdStar);
                 StarScore = 3;
             }
@@ -233,7 +233,9 @@ public class Solution : MonoBehaviour
         {
             if(EatenNumberCounter <= SecondStar)
             {
-                StarTwo.sprite = YellowStar;
+                StarOne.SetActive(false);
+                StarThree.SetActive(false);
+                //StarTwo.sprite = YellowStar;
                 StarScore = 1;
             }
         }
@@ -452,7 +454,7 @@ public class Solution : MonoBehaviour
                 }
 
 
-                if(ThreeStarCount >= 1 && firstThreeStars != 2)
+                if(ThreeStarCount >= 1 && firstThreeStars < 2)
                 {
                     //SecondAchievement.SetActive(true);
                     firstThreeStars = 1;

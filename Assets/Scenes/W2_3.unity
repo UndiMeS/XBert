@@ -9821,6 +9821,11 @@ PrefabInstance:
       objectReference: {fileID: 8968911167192804045}
     - target: {fileID: 7184923918855078978, guid: 975f52171f82e4ab794117fb0aa5ba1b,
         type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184923918855078978, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
       propertyPath: BiggerAs
       value: 1
       objectReference: {fileID: 0}

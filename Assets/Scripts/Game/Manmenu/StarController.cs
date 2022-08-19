@@ -26,6 +26,7 @@ public class StarController : MonoBehaviour
     public GameObject[] StarOutputs;
     public GameObject FirstAchievement;
     public GameObject SecondAchievement;
+    public GameObject SecondAchievementTwo;
     public GameObject ThirdAchievement;
     public GameObject FourthAchievement;
     public int ThreeStarCount;
@@ -39,6 +40,9 @@ public class StarController : MonoBehaviour
     public int gameComplete;
     public int datalength;
     public int LevelFinishedCount;
+
+    public GameObject[] NightButtons;
+    public static bool NightButtonShine = false;
     // Start is called before the first frame update
 
     void awake()
@@ -117,6 +121,62 @@ public class StarController : MonoBehaviour
         {
             FourthAchievement.SetActive(true);
         }
+        if(firstThreeStars == 3)
+        {
+            SecondAchievementTwo.SetActive(true);
+        }
+
+
+        if(NightButtonShine == false && firstThreeStars == 1)
+        {
+            foreach(GameObject NightButton in NightButtons)
+            {
+                LeanTween.scale(NightButton, new Vector3(1.2f, 1.2f, 1.0f), 1f).setEase(LeanTweenType.easeInOutCirc).setLoopPingPong();
+            }
+                NightButtonShine = true;
+            
+        }
+    }
+
+    public void SecondAchievementInNight()
+    {
+        if(firstThreeStars == 2)
+        {
+            Gamedatas = FileHandler.ReadFromJSONP<GameDatas> (filename);
+        firstThreeStars = 3;
+
+        Gamedatas[0].FirstThreeStars = firstThreeStars;
+
+
+
+        Gamedatas[0] = new GameDatas(oneLevelSuccess, firstThreeStars, gameFinished, gameComplete);
+        FileHandler.SaveToJSONP<PlayerData> (datas, Gamedatas, filename);
+        }
+    }
+    public void CloseSecondAchievmentTwo()
+    {
+        if(firstThreeStars == 3)
+        {
+            Gamedatas = FileHandler.ReadFromJSONP<GameDatas> (filename);
+        firstThreeStars = 4;
+
+        Gamedatas[0].FirstThreeStars = firstThreeStars;
+
+
+
+        Gamedatas[0] = new GameDatas(oneLevelSuccess, firstThreeStars, gameFinished, gameComplete);
+        FileHandler.SaveToJSONP<PlayerData> (datas, Gamedatas, filename);
+        }
+        
+    }
+
+    public void StopNightButtonShine()
+    {
+        foreach(GameObject NightButton in NightButtons)
+        {
+            NightButton.gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            LeanTween.cancel(NightButton);
+        }
     }
 
 
@@ -135,6 +195,7 @@ public class StarController : MonoBehaviour
 
     public void CloseSecondAchievment()
     {
+        
 
         Gamedatas = FileHandler.ReadFromJSONP<GameDatas> (filename);
         firstThreeStars = 2;
