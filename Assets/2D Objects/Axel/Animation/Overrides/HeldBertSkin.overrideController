@@ -6,13 +6,13 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DarkFlowerSkin
+  m_Name: HeldBertSkin
   m_Controller: {fileID: 9100000, guid: c6956cf049fcaf248a935023f141b324, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: c81c864b8b63f0b49bd478ed6a9f5921, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: e2fae83b6d6354f1295231c09b81c316, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 496b6abf0efaf419aa1c6f3cfc765306, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 972dfbfbb9904af499d04caeb250632f, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: f53ed836d13e14bacae9d1f04235f3a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1b389373ad66b483cb9f12b65e080d05, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 89f9e421bdccfdf4a86f0ad9a0b47c2e, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 89f9e421bdccfdf4a86f0ad9a0b47c2e, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 6c0ee0377495cd643bb66bd227d9e7ba, type: 2}
