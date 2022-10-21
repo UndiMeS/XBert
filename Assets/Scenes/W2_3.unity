@@ -9831,6 +9831,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184923918855078978, guid: 975f52171f82e4ab794117fb0aa5ba1b,
         type: 3}
+      propertyPath: ThirdStar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184923918855078978, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
+      propertyPath: SecondStar
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184923918855078978, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
       propertyPath: BiggerAndEqualAs
       value: 0
       objectReference: {fileID: 0}
