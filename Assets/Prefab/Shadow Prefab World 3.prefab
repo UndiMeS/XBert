@@ -478,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 3727408698691148430, guid: daec3f87694b740a58d1ffcfdbb93e95,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextLevel
+      value: NextShadowLevelButton
       objectReference: {fileID: 0}
     - target: {fileID: 3727408698691148430, guid: daec3f87694b740a58d1ffcfdbb93e95,
         type: 3}

@@ -31,7 +31,7 @@ public class InLevelStarCount : MonoBehaviour
             if(solution.datas[x].world == solution.world)
             {
                 
-                if(solution.datas[x].level == 7)
+                if(solution.datas[x].level == 7 && solution.shadow == false)
                 {
                     //Debug.Log("World "+solution.world + "Level " + solution.level + "score " + solution.datas[solution.level-1].score);
                     
