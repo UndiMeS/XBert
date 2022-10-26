@@ -9714,6 +9714,11 @@ PrefabInstance:
       propertyPath: Level
       value: 
       objectReference: {fileID: 8968911167192804045}
+    - target: {fileID: 4939877395816177655, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5526202838339839342, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: Level
@@ -9727,22 +9732,22 @@ PrefabInstance:
     - target: {fileID: 7656421324505428854, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7656421324881944624, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7656421326186442788, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7656421326198424918, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7723854720874267078, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}

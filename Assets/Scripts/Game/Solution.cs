@@ -94,6 +94,9 @@ public class Solution : MonoBehaviour
     {
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
         Gamedatas = FileHandler.ReadFromJSONP<GameDatas>(filename);
+        print("data score" + datas[0].score);
+        print("data world" + datas[0].world);
+        print("data level" + datas[0].level);
 
         
     }

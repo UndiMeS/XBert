@@ -58,7 +58,7 @@ public class LoadStars : MonoBehaviour
 
     void awake()
     {
-
+        print(Application.persistentDataPath);
     }
 
 

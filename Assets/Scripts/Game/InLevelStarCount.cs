@@ -26,6 +26,12 @@ public class InLevelStarCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        print("Star data score " + solution.datas[0].score);
+        print("Star data world " + solution.datas[0].world);
+        print("Star data level " + solution.datas[0].level);
+
+        
        for(int x = 0; x < solution.datas.Count; x++)
        {
             if(solution.datas[x].world == solution.world)
@@ -43,8 +49,10 @@ public class InLevelStarCount : MonoBehaviour
 
        for(int x = 0; x < solution.datas.Count; x++)
        {
-            if( WorldDone == true && solution.datas[x].world == solution.world && solution.datas[x].level == solution.level)
+            if( WorldDone == true && solution.datas[x].world == solution.world && solution.datas[x].level == solution.level && solution.datas[x].shadow == false)
             {
+                print(x + " Star data score in Loop " + solution.datas[x].score);
+
                 StarsDone = solution.datas[x].score;
             }
        }
