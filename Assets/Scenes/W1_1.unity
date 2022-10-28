@@ -9709,6 +9709,16 @@ PrefabInstance:
       propertyPath: EatenCounter
       value: 
       objectReference: {fileID: 4748793135770846725}
+    - target: {fileID: 4432996048138194872, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432996048138194872, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4436295350503963005, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: Level

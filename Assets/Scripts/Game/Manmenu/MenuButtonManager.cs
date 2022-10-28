@@ -79,6 +79,8 @@ public class MenuButtonManager : MonoBehaviour
         //ShadowWorldOneTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
+
+            MenuNumber = 4;
             
             //ShadowOne.SetActive(true);
         }
@@ -98,13 +100,15 @@ public class MenuButtonManager : MonoBehaviour
             //ShadowWorldTwoTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
+            MenuNumber = 5;
         }
         else if(World == 3 && ShadowWorld == false)
         {
-            WorldTwo.SetActive(false);
+            
             WorldThree.SetActive(true);
             WorldThreeTransition.SetActive(true);
             StartMenu.SetActive(false);
+            WorldTwo.SetActive(false);
             WorldOne.SetActive(false);
             MenuNumber = 3;
         }
@@ -115,6 +119,7 @@ public class MenuButtonManager : MonoBehaviour
             ShadowWorldThreeTransition.SetActive(true);
             WorldOne.SetActive(false);
             WorldTwo.SetActive(false);
+            MenuNumber = 6;
         }
         else if(World == 0)
         {
@@ -183,6 +188,7 @@ public class MenuButtonManager : MonoBehaviour
 
     public void ToShadowOne()
     {
+        MenuNumber = 4;
         if(StarController.NightButtonShine == true)
         {
             StarController.NightButtonShine = false;
@@ -191,6 +197,7 @@ public class MenuButtonManager : MonoBehaviour
     }
     public void ToShadowTwo()
     {
+        MenuNumber = 5;
         if(StarController.NightButtonShine == true)
         {
             StarController.NightButtonShine = false;
@@ -199,6 +206,7 @@ public class MenuButtonManager : MonoBehaviour
     }
     public void ToShadowThree()
     {
+        MenuNumber = 6;
         if(StarController.NightButtonShine == true)
         {
             StarController.NightButtonShine = false;
@@ -247,7 +255,15 @@ public class MenuButtonManager : MonoBehaviour
 
     public void ToSkinMenu()
     {
-        StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,SkinMenu));
+        if(MenuNumber <= 3)
+        {
+            StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,SkinMenu));
+        }
+        else if(MenuNumber >= 4)
+        {
+            StartCoroutine(MenuTransitioning(ShadowOne,ShadowTwo,ShadowThree,SkinMenu));
+        }
+        
     }
 
     public void FromSkinMenuToWorld()
@@ -263,6 +279,18 @@ public class MenuButtonManager : MonoBehaviour
         if(MenuNumber == 3)
         {
             StartCoroutine(MenuTransitioning(SkinMenu,WorldTwo,WorldOne,WorldThree));
+        }
+        if(MenuNumber == 4)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,ShadowTwo,ShadowThree,ShadowOne));
+        }
+        if(MenuNumber == 5)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,ShadowOne,ShadowThree,ShadowTwo));
+        }
+        if(MenuNumber == 6)
+        {
+            StartCoroutine(MenuTransitioning(SkinMenu,ShadowTwo,ShadowOne,ShadowThree));
         }
     }
 

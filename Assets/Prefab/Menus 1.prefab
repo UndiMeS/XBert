@@ -6407,9 +6407,22 @@ MonoBehaviour:
   SkinSprites:
   - {fileID: 21300000, guid: c04eefb8c10464e109a96f3b85ba5b70, type: 3}
   - {fileID: 21300000, guid: 328651cf8d5754b1989a990f1da843a3, type: 3}
-  - {fileID: 21300000, guid: 6fb935e010ab24310a3ff5055a443024, type: 3}
+  - {fileID: 21300000, guid: 76da6aa32375847668832b583240ed71, type: 3}
+  - {fileID: 21300000, guid: c4d99de25a0a04fda9b874611d3a697c, type: 3}
   - {fileID: 21300000, guid: 63d9d8c928a7046f5a04c8e4c6241204, type: 3}
-  StarsToUnlock: 0300000006000000090000000c000000
+  - {fileID: 21300000, guid: ffb47fbdb76f04ce29de3ff874a80e95, type: 3}
+  - {fileID: 21300000, guid: ab0c02765b86540fd999726e823ada66, type: 3}
+  - {fileID: 21300000, guid: 8945f8b5406854693aa63ddc9fff6bdb, type: 3}
+  - {fileID: 21300000, guid: eed163f524b56459caca974f64592729, type: 3}
+  - {fileID: 21300000, guid: 6fb935e010ab24310a3ff5055a443024, type: 3}
+  - {fileID: 21300000, guid: c4c3ebe74af2c4acb8081a49cc966518, type: 3}
+  - {fileID: 21300000, guid: 00a5fe085151a491d9092e1a70a986a7, type: 3}
+  - {fileID: 21300000, guid: 13897364d47c7436b8fed3a05cab789a, type: 3}
+  - {fileID: 21300000, guid: 2c60206969b4143848c4f148e709f041, type: 3}
+  - {fileID: 21300000, guid: c9aa47f61685843ea826558b576a0f7c, type: 3}
+  - {fileID: 21300000, guid: eeb97b972815f4a9786f8819065901ad, type: 3}
+  - {fileID: 21300000, guid: b6c9816fddae346bfbff8022bb9893f0, type: 3}
+  StarsToUnlock: 03000000080000000d00000012000000170000001c00000021000000260000002b00000030000000350000003a0000003f00000044000000490000004e00000054000000
   IsActive: 0
   YellowStarOne: {fileID: 8368287446274356905}
   YellowStarTwo: {fileID: 7019642291221459736}
@@ -6804,7 +6817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5247713257d4b4c20a1a806f88433254, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9fa13211fce24108a6c7c9a9d2a4e8c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
