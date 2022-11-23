@@ -11578,7 +11578,7 @@ PrefabInstance:
     - target: {fileID: 3316168552428318383, guid: 02aeaa92e5b744116b55eb7f2416852a,
         type: 3}
       propertyPath: m_Name
-      value: WorldOneBackgroundPrefab
+      value: LevelBackgroundFramePrefab
       objectReference: {fileID: 0}
     - target: {fileID: 3711225175965622407, guid: 02aeaa92e5b744116b55eb7f2416852a,
         type: 3}
