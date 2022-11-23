@@ -9825,6 +9825,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToPause
       objectReference: {fileID: 0}
+    - target: {fileID: 8113391987910608591, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 8439144290219673516, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: YellowStarOne

@@ -202,6 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   pressed: 0
+  holding: 0
+  HoldingTime: 0
 --- !u!1 &7917445196888682526
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   pressed: 0
+  holding: 0
+  HoldingTime: 0
 --- !u!1 &7917445197006337670
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   pressed: 0
+  holding: 0
+  HoldingTime: 0
 --- !u!1 &7917445197035494427
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected: 0
   pressed: 0
+  holding: 0
+  HoldingTime: 0
 --- !u!1 &7917445197400426629
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +544,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -850, y: 36}
+  m_AnchoredPosition: {x: -900, y: 36}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
