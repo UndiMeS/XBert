@@ -12822,6 +12822,11 @@ PrefabInstance:
       propertyPath: Level
       value: 
       objectReference: {fileID: 8968911167192804045}
+    - target: {fileID: 3975327546891469564, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -535.39
+      objectReference: {fileID: 0}
     - target: {fileID: 5430437870698201679, guid: 975f52171f82e4ab794117fb0aa5ba1b,
         type: 3}
       propertyPath: m_text
@@ -12837,6 +12842,16 @@ PrefabInstance:
       propertyPath: Level
       value: 
       objectReference: {fileID: 8968911167192804045}
+    - target: {fileID: 7761052455307739780, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761052455307739780, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 975f52171f82e4ab794117fb0aa5ba1b, type: 3}
 --- !u!114 &550666602121739123

@@ -14116,6 +14116,16 @@ PrefabInstance:
       propertyPath: Level
       value: 
       objectReference: {fileID: 8968911167192804045}
+    - target: {fileID: 4738671441028459222, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738671441028459222, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5314831108465376718, guid: 98e736676700b43e6bfcc049b2d5aa30,
         type: 3}
       propertyPath: Level
