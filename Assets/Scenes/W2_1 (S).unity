@@ -14136,6 +14136,26 @@ PrefabInstance:
       propertyPath: m_text
       value: "Termwert \u2264 -15"
       objectReference: {fileID: 0}
+    - target: {fileID: 7323387768708623719, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 101.3842
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323387768708623719, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 101.3842
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323387768708623719, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7323387768708623719, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 159.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7323387768708623723, guid: 98e736676700b43e6bfcc049b2d5aa30,
         type: 3}
       propertyPath: MovePointParent

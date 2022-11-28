@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 5296981633928198732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0000021192761, z: 0}
-  m_LocalScale: {x: 636.2052, y: 636.2052, z: 5.8085537}
+  m_LocalScale: {x: 101.3842, y: 101.3842, z: 1}
   m_Children:
   - {fileID: 5296981633124048059}
   - {fileID: 5296981634862359125}
@@ -207,7 +207,7 @@ MonoBehaviour:
   UpTab: 0
   RunTimer: 0.25
   rb: {fileID: 0}
-  step: 0.908
+  step: 0.9125
   StartPosition: {x: 110.85, y: 159.6123, z: 1}
   NumbersEaten: []
   animator: {fileID: 5296981633928198733}
