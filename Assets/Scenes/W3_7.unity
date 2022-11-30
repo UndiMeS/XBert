@@ -712,6 +712,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Tag 3-7
       objectReference: {fileID: 0}
+    - target: {fileID: 2864074086684267007, guid: 1381c8027169244e79085aa0c0589252,
+        type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 8968911167192804045}
     - target: {fileID: 3093420590366987962, guid: 1381c8027169244e79085aa0c0589252,
         type: 3}
       propertyPath: m_Pivot.x

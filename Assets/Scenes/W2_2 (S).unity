@@ -5942,6 +5942,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Nacht 2-2
       objectReference: {fileID: 0}
+    - target: {fileID: 2410124482565866375, guid: 98e736676700b43e6bfcc049b2d5aa30,
+        type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 8968911167192804045}
     - target: {fileID: 3180472507139823346, guid: 98e736676700b43e6bfcc049b2d5aa30,
         type: 3}
       propertyPath: m_Pivot.x

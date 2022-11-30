@@ -13,6 +13,9 @@ public class aXelNumber : MonoBehaviour
     public float value;
     public float variable;
 
+    float tweenTime = 1.2f;
+    float tweenSize = 1.2f;
+
     
 
     CultureInfo culture;
@@ -113,11 +116,37 @@ public class aXelNumber : MonoBehaviour
                 {
                     GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += -value;
+
+                    TweenNumber(GameObject.Find("Term_Right"));
+                    TweenNumber(GameObject.Find("Solution"));
+
                 }
                 else
                 {
-                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "+(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
+                    //GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#000000>"+ GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + "</color>";
+
+                    if(GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length >= 1)
+                    {
+                        // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Remove(0,15);
+                        // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Substring(0,GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length-8);
+                        // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#000000>"+GameObject.Find("Term_Right").GetComponent<TMP_Text>().text  + "</color>" + "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                    
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("FFC100", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                    
+                    }
+                    else
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                    }
+                    
+
+
+                    
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += +value;
+
+                    TweenNumber(GameObject.Find("Term_Right"));
+                    TweenNumber(GameObject.Find("Solution"));
                 }
 
                 
@@ -141,6 +170,9 @@ public class aXelNumber : MonoBehaviour
 
                 GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
                 GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution *= value;
+
+                TweenNumber(GameObject.Find("Term_Right"));
+                    TweenNumber(GameObject.Find("Solution"));
             }
 
             if(this.gameObject.tag == "Divide")
@@ -156,6 +188,9 @@ public class aXelNumber : MonoBehaviour
 
                 GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
                 GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution /= value;
+
+                TweenNumber(GameObject.Find("Term_Right"));
+                    TweenNumber(GameObject.Find("Solution"));
             }
 
 
@@ -204,6 +239,15 @@ void OnTriggerStay2D(Collider2D col)
         Subtract = true;
     }
 }
+
+void TweenNumber(GameObject Number)
+{
+    LeanTween.cancel(Number);
+    transform.localScale = Vector3.one;
+
+    LeanTween.scale(Number, Vector3.one * tweenSize,tweenTime).setEasePunch();
+}
+
 
 
 }

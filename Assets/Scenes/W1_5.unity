@@ -2909,7 +2909,7 @@ PrefabInstance:
     - target: {fileID: 9147878834642957160, guid: 02aeaa92e5b744116b55eb7f2416852a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9147878834642957167, guid: 02aeaa92e5b744116b55eb7f2416852a,
         type: 3}
@@ -6470,6 +6470,11 @@ PrefabInstance:
       propertyPath: NextScene
       value: W1_6
       objectReference: {fileID: 0}
+    - target: {fileID: 6100773588023769610, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
+        type: 3}
+      propertyPath: Level
+      value: 
+      objectReference: {fileID: 8968911167192804045}
     - target: {fileID: 7174852869308633922, guid: 30a1adc70b2ac49cd82e1e41e8c17aa3,
         type: 3}
       propertyPath: m_text
@@ -8174,7 +8179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 04a63c7e488d2b844bc959d1a6bc5da7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

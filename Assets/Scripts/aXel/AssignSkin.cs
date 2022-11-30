@@ -12,6 +12,11 @@ public class AssignSkin : MonoBehaviour
 
     void Awake()
     {
+        SkinAssign();
+    }
+
+    public void SkinAssign()
+    {
         SelectedSkin = PlayerPrefs.GetInt("SkinNumber");
         XBertAnim.runtimeAnimatorController = XBertSkin[SelectedSkin] as RuntimeAnimatorController;
     }

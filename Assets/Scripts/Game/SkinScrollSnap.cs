@@ -43,7 +43,9 @@ public class SkinScrollSnap : MonoBehaviour
     private bool dragging = false;
     private int contentDistance;
     private int minContentNum;
-
+    public int ContentNumber;
+    public SkinManager skinmanager;
+    public int SelectedNumber;
     public Vector3 initialScale;
     // Start is called before the first frame update
     void Start()
@@ -54,11 +56,15 @@ public class SkinScrollSnap : MonoBehaviour
         initialScale = SkinImages[0].transform.localScale;
 
         contentDistance = (int)Mathf.Abs(contents[1].GetComponent<RectTransform>().anchoredPosition.x - contents[0].GetComponent<RectTransform>().anchoredPosition.x);
+
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        ContentNumber = minContentNum;
         for(int i = 0; i < contents.Length; i++)
         {
             distReposition[i] = center.GetComponent<RectTransform>().position.x - contents[i].GetComponent<RectTransform>().position.x;
@@ -215,5 +221,14 @@ public class SkinScrollSnap : MonoBehaviour
         backpressed = true;
 
         
+    }
+
+    public void SkinMenuStart()
+    {
+        SelectedNumber = PlayerPrefs.GetInt("SkinNumber");
+
+        Vector2 startPosition = new Vector2 (SelectedNumber * - 500.0f, panel.anchoredPosition.y);
+
+        panel.anchoredPosition = startPosition;
     }
 }
