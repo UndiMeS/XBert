@@ -8,6 +8,7 @@ using System.IO;
 public class NewWinController : MonoBehaviour
 {
     public GameObject NewSkin;
+    public GameObject NewSkinGlow;
     public Image SkinImage;
     public Sprite[] SkinSprites;
     public int[] StarsToUnlock;
@@ -49,7 +50,7 @@ public class NewWinController : MonoBehaviour
     void Update()
     {
 
-        
+        NewSkinGlow.transform.Rotate(Vector3.forward, Time.deltaTime * 20);
 
         if(this.gameObject.activeInHierarchy == true && IsActive == false)
         {
@@ -123,6 +124,9 @@ public class NewWinController : MonoBehaviour
                         SkinImage.sprite = SkinSprites[i];
                         LeanTween.scale(NewSkin, new Vector3(1.5f,1.5f,1.5f), 2f).setDelay(0.25f).setEase(LeanTweenType.easeOutElastic);
                         PlayerPrefs.SetInt("SkinUnlock"+(i+1),1);
+
+
+                        NewSkinGlow.transform.Rotate(Vector3.up, Time.deltaTime * 5.0f);
                     }
                 }
 

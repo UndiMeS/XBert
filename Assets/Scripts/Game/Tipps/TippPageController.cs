@@ -8,14 +8,17 @@ public class TippPageController : MonoBehaviour
     public Image PageNumberOne;
     public Image PageNumberTwo;
     public Image PageNumberThree;
+    public Image PageNumberFour;
 
     public Sprite PageOneSelected;
     public Sprite PageTwoSelected;
     public Sprite PageThreeSelected;
+    public Sprite PageFourSelected;
 
     public Sprite PageOneNotSelected;
     public Sprite PageTwoNotSelected;
     public Sprite PageThreeNotSelected;
+    public Sprite PageFourNotSelected;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,5 +50,12 @@ public class TippPageController : MonoBehaviour
     {
         PageNumberThree.sprite = PageThreeSelected;
         PageNumberTwo.sprite = PageTwoNotSelected;
+        PageNumberFour.sprite = PageFourNotSelected;
+    }
+
+    public void PageFour()
+    {
+        PageNumberThree.sprite = PageThreeNotSelected;
+        PageNumberFour.sprite = PageFourSelected;
     }
 }
