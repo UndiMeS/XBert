@@ -62,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject MovePointParent;
 
+    public float timer;
+
 
 
     
@@ -152,11 +154,20 @@ public class PlayerMovement : MonoBehaviour
         DownMove = Down.GetComponent<ControllerClick>().selected;
         LeftMove = Left.GetComponent<ControllerClick>().selected;
 
+        UpRun = Up.GetComponent<ControllerClick>().runPress;
+        RightRun = Right.GetComponent<ControllerClick>().runPress;
+        DownRun = Down.GetComponent<ControllerClick>().runPress;
+        LeftRun = Left.GetComponent<ControllerClick>().runPress;
+        
+
         if (UpPress == true)
         {
             RightPress = false;
             DownPress = false;
             LeftPress = false;
+
+
+           
 
             //UpRun = false;
 
@@ -188,22 +199,22 @@ public class PlayerMovement : MonoBehaviour
         }
         if (UpPress == false)
         {
-            UpRun = false;
+            //UpRun = false;
             FirstUpTwo = false;
         }
         if (DownPress == false)
         {
-            DownRun = false;
+            //DownRun = false;
             //FirstDown = false;
         }
         if (RightPress == false)
         {
-            RightRun = false;
+            //RightRun = false;
             //FirstRight = false;
         }
         if (LeftPress == false)
         {
-            LeftRun = false;
+            //LeftRun = false;
             //FirstLeft = false;
         }
         //move ();
@@ -229,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
 
-            StartCoroutine(move());
+            move();
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
@@ -239,9 +250,17 @@ public class PlayerMovement : MonoBehaviour
                 smash = true;
             }
         }
+        // if(UpPress == true)
+        // {
+        //     if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f && Time.time - timer < RunTimer)
+        //         {
+        //             moving = true;
+        //             UpRun = true;
+        //         }
+        // }
     }
 
-    public IEnumerator move()
+    public void move()
     {
         if (UpPress == true)
         {
@@ -250,12 +269,13 @@ public class PlayerMovement : MonoBehaviour
             if (UpRun == false && FirstUp == true)
             {
                 moving = false;
-                yield return new WaitForSeconds(RunTimer);
-                if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
+                //yield return new WaitForSeconds(RunTimer);
+                 if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
                 {
                     moving = true;
-                    UpRun = true;
+                    //UpRun = true;
                 }
+                
             }
 
             if (
@@ -308,25 +328,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(0.0f, step, 0.0f);
             }
-            // else if (
-            //     Physics2D.OverlapCircle(
-            //         movePoint.position + new Vector3(0.0f, step, 0.0f),
-            //         .2f,
-            //         BreakingWall
-            //     )
-            //     && Drill == true
-            //     && UpMove == true
-            // )
-            // {
-            //     animator.SetBool("drill", false);
-
-            // }
-
-          
-
-
-
-
 
             Up.GetComponent<ControllerClick>().selected = false;
         }
@@ -341,11 +342,11 @@ public class PlayerMovement : MonoBehaviour
             if (RightRun == false && FirstRight == true)
             {
                 moving = false;
-                yield return new WaitForSeconds(RunTimer);
+                //yield return new WaitForSeconds(RunTimer);
                 if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
                 {
                     moving = true;
-                    RightRun = true;
+                    //RightRun = true;
                 }
             }
 
@@ -424,11 +425,11 @@ public class PlayerMovement : MonoBehaviour
             if (LeftRun == false && FirstLeft == true)
             {
                 moving = false;
-                yield return new WaitForSeconds(RunTimer);
+                //yield return new WaitForSeconds(RunTimer);
                 if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
                 {
                     moving = true;
-                    LeftRun = true;
+                    //LeftRun = true;
                 }
             }
 
@@ -480,19 +481,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(-step, 0.0f, 0.0f);
             }
-            // else if (
-            //     Physics2D.OverlapCircle(
-            //         movePoint.position + new Vector3(-step, 0.0f, 0.0f),
-            //         .2f,
-            //         BreakingWall
-            //     )
-            //     && Drill == true
-            //     && LeftMove == true
-            // )
-            // {
-            //     animator.SetBool("drill", false);
-            //     //Drill = false;
-            // }
 
             Left.GetComponent<ControllerClick>().selected = false;
         }
@@ -507,11 +495,11 @@ public class PlayerMovement : MonoBehaviour
             if (DownRun == false && FirstDown == true)
             {
                 moving = false;
-                yield return new WaitForSeconds(RunTimer);
+                //yield return new WaitForSeconds(RunTimer);
                 if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
                 {
                     moving = true;
-                    DownRun = true;
+                    //DownRun = true;
                 }
             }
 
@@ -562,18 +550,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 movePoint.position += new Vector3(0.0f, -step, 0.0f);
             }
-            // else if (
-            //     Physics2D.OverlapCircle(
-            //         movePoint.position + new Vector3(0.0f, -step, 0.0f),
-            //         .2f,
-            //         BreakingWall
-            //     )
-            //     && Drill == true
-            //     && DownMove == true
-            // )
-            // {
-            //     animator.SetBool("drill", false);
-            // }
 
             Down.GetComponent<ControllerClick>().selected = false;
         }

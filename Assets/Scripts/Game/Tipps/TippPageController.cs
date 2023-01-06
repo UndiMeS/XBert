@@ -50,6 +50,7 @@ public class TippPageController : MonoBehaviour
     {
         PageNumberThree.sprite = PageThreeSelected;
         PageNumberTwo.sprite = PageTwoNotSelected;
+        if(PageNumberFour)
         PageNumberFour.sprite = PageFourNotSelected;
     }
 

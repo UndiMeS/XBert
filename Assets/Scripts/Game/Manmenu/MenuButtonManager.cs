@@ -8,6 +8,8 @@ public class MenuButtonManager : MonoBehaviour
 {
 
     public GameObject StartMenu;
+    public GameObject Intro;
+    public int IntroBool;
     public GameObject WorldOne;
     public GameObject WorldTwo;
     public GameObject WorldThree;
@@ -49,6 +51,7 @@ public class MenuButtonManager : MonoBehaviour
         if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))
         {
             StartPopUps.SetActive(true);
+            PlayerPrefs.SetInt("intro", 0);
         }
     }
 
@@ -134,6 +137,10 @@ public class MenuButtonManager : MonoBehaviour
         World = 0;
         ShadowWorld = false;
     }
+    public void ToIntro()
+    {
+
+    }
 
 
     public void ToWorldOne()
@@ -142,17 +149,30 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(true);
         // WorldTwoTransition.SetActive(false);
         //StartCoroutine(WorldTwoToWorldOne());
+        IntroBool = PlayerPrefs.GetInt("intro");
+
+        if(IntroBool == 0)
+        {
+            //StartCoroutine(MenuTransitioning(WorldOne,StartMenu,ShadowOne,Intro));
+            StartCoroutine(ToIntroTransition());
+            Tutorial.SetActive(true);
+            PlayerPrefs.SetInt("intro", 1);
+        }
+        else
+        {
+            StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
+
+            if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))
+            {
+                Tutorial.SetActive(true);
+            }
+        }
 
         MenuNumber = 1;
 
         
 
-        StartCoroutine(MenuTransitioning(WorldTwo,StartMenu,ShadowOne,WorldOne));
-
-        if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))
-        {
-            Tutorial.SetActive(true);
-        }
+        
         
         // WorldTwo.SetActive(false);
         // WorldOne.SetActive(true);
@@ -265,6 +285,15 @@ public class MenuButtonManager : MonoBehaviour
         }
         
     }
+    public void FromIntroToWorldOne()
+    {
+        StartCoroutine(ToWorldOneTransition());
+    }
+
+    public void ToIntroButton()
+    {
+        StartCoroutine(ToIntroTransition());
+    }
 
     public void FromSkinMenuToWorld()
     {
@@ -300,6 +329,13 @@ public class MenuButtonManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void HardResetGame(){
+        File.Delete (Application.persistentDataPath + "/XBertDataFile.json");
+        PlayerPrefs.DeleteAll();
+        UnityEditor.AssetDatabase.Refresh();
+        SceneManager.LoadScene ("XBert_MainMenu");
+    }
+
     IEnumerator ShadowOneTransition()
     {
         WorldOnetransition.SetTrigger("start");
@@ -327,9 +363,18 @@ public class MenuButtonManager : MonoBehaviour
         WorldOnetransition.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         WorldOnetransition.SetTrigger("end");
+        Intro.SetActive(false);
         StartMenu.SetActive(false);
         WorldOne.SetActive(true);
         World = 1;
+    }
+    IEnumerator ToIntroTransition()
+    {
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOnetransition.SetTrigger("end");
+        StartMenu.SetActive(false);
+        Intro.SetActive(true);
     }
 
 

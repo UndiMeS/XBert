@@ -8,6 +8,8 @@ public class ControllerClick : MonoBehaviour {
     public bool pressed;
     public bool holding;
     public float HoldingTime;
+    public float starttime;
+    public bool runPress;
     // Start is called before the first frame update
     void Start () {
 
@@ -39,17 +41,23 @@ public class ControllerClick : MonoBehaviour {
             {
                 selected = true;
                 pressed = true;
+
+                runPress = false;
+                starttime = Time.time;
             }
 
             if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp("s"))
             {
                 selected = false;
                 pressed = false;
+                runPress = false;
             }
-            // if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey("s"))
-            // {
-            //     StartCoroutine(HoldingTimer());
-            // }
+            
+            if(Input.GetKey(KeyCode.DownArrow) && Time.time - starttime > HoldingTime || Input.GetKey("s") && Time.time - starttime > HoldingTime)
+            {
+                runPress = true;
+                starttime = 0.0f;
+            }
         }
         if(this.gameObject.name == "ButtonUp")
         {
@@ -58,12 +66,23 @@ public class ControllerClick : MonoBehaviour {
             {
                 pressed = true;
                 selected = true;
+
+                runPress = false;
+                starttime = Time.time;
             }
 
             if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp("w"))
             {
                 pressed = false;
                 selected = false;
+                runPress = false;
+            }
+
+
+            if(Input.GetKey(KeyCode.UpArrow) && Time.time - starttime > HoldingTime || Input.GetKey("w") && Time.time - starttime > HoldingTime)
+            {
+                runPress = true;
+                starttime = 0.0f;
             }
         }
 
@@ -73,12 +92,22 @@ public class ControllerClick : MonoBehaviour {
             {
                 pressed = true;
                 selected = true;
+
+                runPress = false;
+                starttime = Time.time;
             }
 
             if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp("d"))
             {
                 pressed = false;
                 selected = false;
+                runPress = false;
+            }
+
+            if(Input.GetKey(KeyCode.RightArrow) && Time.time - starttime > HoldingTime || Input.GetKey("d") && Time.time - starttime > HoldingTime)
+            {
+                runPress = true;
+                starttime = 0.0f;
             }
 
         }
@@ -89,12 +118,22 @@ public class ControllerClick : MonoBehaviour {
             {
                 pressed = true;
                 selected = true;
+
+                runPress = false;
+                starttime = Time.time;
             }
 
             if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp("a"))
             {
                 pressed = false;
                 selected = false;
+                runPress = false;
+            }
+
+            if(Input.GetKey(KeyCode.LeftArrow) && Time.time - starttime > HoldingTime || Input.GetKey("a") && Time.time - starttime > HoldingTime)
+            {
+                runPress = true;
+                starttime = 0.0f;
             }
         }
 
@@ -105,18 +144,28 @@ public class ControllerClick : MonoBehaviour {
 
     void OnMouseOver () {
 
-                if (Input.GetMouseButtonDown (0)) {
+        if (Input.GetMouseButtonDown (0)) {
 
-             selected = true;
-             pressed = true;
+            selected = true;
+            pressed = true;
+
+            runPress = false;
+            starttime = Time.time;
         
 
         }
         if (Input.GetMouseButtonUp (0)) {
             
             selected = false;
+            runPress = false;
             //pressed = false;
 
+        }
+
+        if(Input.GetMouseButton(0) && Time.time - starttime > HoldingTime)
+        {
+            runPress = true;
+            starttime = 0.0f;
         }
 
 

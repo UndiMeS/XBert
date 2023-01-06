@@ -227,6 +227,7 @@ MonoBehaviour:
   smash: 0
   mve: 0
   MovePointParent: {fileID: 0}
+  timer: 0
 --- !u!114 &845447645443514582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +257,8 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 4ff2317b3ac0f49c3bb2dcbade1b9d59, type: 2}
   - {fileID: 22100000, guid: 22fbd47c855164ea8a55a5a31a967901, type: 2}
   - {fileID: 22100000, guid: 3afba2287576c4c309e4fc43d32c266e, type: 2}
-  - {fileID: 22100000, guid: 94577e67c9af24418a5c4580316b56e5, type: 2}
   - {fileID: 22100000, guid: b53f26a1e9d26410fa2bb1663ecc7225, type: 2}
+  - {fileID: 22100000, guid: 94577e67c9af24418a5c4580316b56e5, type: 2}
   - {fileID: 22100000, guid: a5332e4ed9609486b936187b03fd8332, type: 2}
   SelectedSkin: 0
 --- !u!95 &5296981633928198733
@@ -270,7 +271,7 @@ Animator:
   m_GameObject: {fileID: 5296981633928198732}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 3b9de42204f0d478689676eda280e719, type: 2}
+  m_Controller: {fileID: 22100000, guid: b53f26a1e9d26410fa2bb1663ecc7225, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -24,10 +24,11 @@ public class PauseScript : MonoBehaviour
     public GameObject StartScreen;
 
     public Button PauseButton;
+    public Button PauseWeiterButton;
 
     AudioSource BackgroundMusic;
 
-    public bool SpaceBool;
+    public bool SpaceBool = true;
 
     public float startVolume;
     public bool ShadowNextLevel;
@@ -71,13 +72,24 @@ public class PauseScript : MonoBehaviour
         if(SpaceBool == true && LevelComplete.activeSelf == false){
                 if (Input.GetKeyDown("space"))
             {
+                
                 PauseButton.onClick.Invoke();
+                SpaceBool = false;
+            }
+        }
+
+        if(SpaceBool == false && LevelComplete.activeSelf == false){
+                if (Input.GetKeyDown("space"))
+            {
+                
+                PauseWeiterButton.onClick.Invoke();
+                SpaceBool = true;
             }
         }
 
         if(LevelComplete.activeSelf == true)
         {
-            if(Input.GetKeyDown("space"))
+            if(Input.GetKeyDown("space") || Input.GetKeyDown("return"))
             {
                 NextLevelButton.onClick.Invoke();
             }

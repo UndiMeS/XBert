@@ -15,6 +15,7 @@ public class aXelNumber : MonoBehaviour
 
     float tweenTime = 1.2f;
     float tweenSize = 1.2f;
+    public string TempText;
 
     
 
@@ -23,6 +24,15 @@ public class aXelNumber : MonoBehaviour
     float result;
 
     public bool Subtract;
+
+    public Vector3 StartScaleTerm;
+    public Vector3 StartScaleSolution;
+
+    void Awake()
+    {
+        StartScaleTerm = GameObject.Find("Term_Right").transform.localScale;
+        StartScaleTerm = GameObject.Find("Solution").transform.localScale;
+    }
     
 
     // Start is called before the first frame update
@@ -114,9 +124,28 @@ public class aXelNumber : MonoBehaviour
 
                 if(Subtract == true)
                 {
-                    GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
+
+
+                    if(GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length >= 1)
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("BF0000", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("385723", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#BF0000>-(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                    
+                    }
+                    else
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#BF0000>-(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                    }
+
+
+
+                    //GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "-(" + this.gameObject.GetComponent<TMP_Text>().text + ")";
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += -value;
 
+                    LeanTween.cancel(GameObject.Find("Term_Right"));
+                    GameObject.Find("Term_Right").transform.localScale = StartScaleTerm;
+                    GameObject.Find("Solution").transform.localScale = StartScaleTerm;
                     TweenNumber(GameObject.Find("Term_Right"));
                     TweenNumber(GameObject.Find("Solution"));
 
@@ -124,20 +153,30 @@ public class aXelNumber : MonoBehaviour
                 else
                 {
                     //GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#000000>"+ GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + "</color>";
+                    
 
                     if(GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length >= 1)
+
+                    
                     {
                         // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Remove(0,15);
                         // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Substring(0,GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length-8);
                         // GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#000000>"+GameObject.Find("Term_Right").GetComponent<TMP_Text>().text  + "</color>" + "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
                     
-                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("FFC100", "000000");
-                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("385723", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("BF0000", "000000");
+
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#385723>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+
+                        //GameObject.Find("Term_Right").GetComponent<TMP_Text>().outlineWidth = 2.0f;
+                        // string text = "Hello <o=2>World</o>!";
+
+                        // GameObject.Find("Term_Right").GetComponent<TextMeshProUGUI>().SetText(text);
                     
                     }
                     else
                     {
-                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#FFC100>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text += "<color=#385723>+(" + this.gameObject.GetComponent<TMP_Text>().text + ")</color>";
                     }
                     
 
@@ -145,6 +184,9 @@ public class aXelNumber : MonoBehaviour
                     
                     GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution += +value;
 
+                    LeanTween.cancel(GameObject.Find("Term_Right"));
+                    GameObject.Find("Term_Right").transform.localScale = StartScaleTerm;
+                    GameObject.Find("Solution").transform.localScale = StartScaleTerm;
                     TweenNumber(GameObject.Find("Term_Right"));
                     TweenNumber(GameObject.Find("Solution"));
                 }
@@ -168,9 +210,25 @@ public class aXelNumber : MonoBehaviour
                     GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "0";
                 }
 
-                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
+
+                if(GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length >= 1)
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("385723", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("BF0000", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#385723>(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ")" + this.gameObject.GetComponent<TMP_Text>().text + "</color>";
+                    
+                    }
+                    else
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#385723>(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ")" + this.gameObject.GetComponent<TMP_Text>().text + "</color>";
+                    }
+
+                //GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
                 GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution *= value;
 
+                LeanTween.cancel(GameObject.Find("Term_Right"));
+                GameObject.Find("Term_Right").transform.localScale = StartScaleTerm;
+                GameObject.Find("Solution").transform.localScale = StartScaleTerm;
                 TweenNumber(GameObject.Find("Term_Right"));
                     TweenNumber(GameObject.Find("Solution"));
             }
@@ -186,11 +244,27 @@ public class aXelNumber : MonoBehaviour
                 }
 
 
-                GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
+                if(GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Length >= 1)
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("385723", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = GameObject.Find("Term_Right").GetComponent<TMP_Text>().text.Replace("BF0000", "000000");
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#BF0000>(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ")" + this.gameObject.GetComponent<TMP_Text>().text + "</color>";
+                    
+                    }
+                    else
+                    {
+                        GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "<color=#BF0000>(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ")" + this.gameObject.GetComponent<TMP_Text>().text + "</color>";
+                    }
+
+
+                //GameObject.Find("Term_Right").GetComponent<TMP_Text>().text = "(" + GameObject.Find("Term_Right").GetComponent<TMP_Text>().text + ") " + this.gameObject.GetComponent<TMP_Text>().text;
                 GameObject.Find("Solution").GetComponent<Solution>().NumbersSolution /= value;
 
+                LeanTween.cancel(GameObject.Find("Term_Right"));
+                GameObject.Find("Term_Right").transform.localScale = StartScaleTerm;
+                GameObject.Find("Solution").transform.localScale = StartScaleTerm;
                 TweenNumber(GameObject.Find("Term_Right"));
-                    TweenNumber(GameObject.Find("Solution"));
+                TweenNumber(GameObject.Find("Solution"));
             }
 
 
@@ -244,8 +318,8 @@ void TweenNumber(GameObject Number)
 {
     LeanTween.cancel(Number);
     transform.localScale = Vector3.one;
-
     LeanTween.scale(Number, Vector3.one * tweenSize,tweenTime).setEasePunch();
+    
 }
 
 
