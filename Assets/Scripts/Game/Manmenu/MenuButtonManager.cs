@@ -332,7 +332,7 @@ public class MenuButtonManager : MonoBehaviour
     public void HardResetGame(){
         File.Delete (Application.persistentDataPath + "/XBertDataFile.json");
         PlayerPrefs.DeleteAll();
-        UnityEditor.AssetDatabase.Refresh();
+        //UnityEditor.AssetDatabase.Refresh();
         SceneManager.LoadScene ("XBert_MainMenu");
     }
 

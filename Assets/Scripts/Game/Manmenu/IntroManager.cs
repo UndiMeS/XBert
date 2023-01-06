@@ -362,7 +362,7 @@ public class IntroManager : MonoBehaviour
     public IEnumerator IntroScreenOneAnimation()
     {
 
-            SpeedWaitMultiplier = 1.0f;
+            SpeedWaitMultiplier = 0.6f;
 
             yield return new WaitForSeconds(1.5f * SpeedWaitMultiplier);
             dialogueManager.PlayDialogue1();
