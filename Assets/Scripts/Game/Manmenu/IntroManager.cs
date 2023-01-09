@@ -450,7 +450,7 @@ public class IntroManager : MonoBehaviour
 
         dialogueManager.PlayDialogue6();
         if(dialogueManager.finishedAnimating[5] == false)
-        yield return new WaitForSeconds(1.2f * SpeedWaitMultiplier);
+        yield return new WaitForSeconds(0.7f * SpeedWaitMultiplier);
 
         LeanTween.scale(ScreenFourCloudOne, new Vector3(0.65f, 0.65f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
         if(dialogueManager.finishedAnimating[6] == false)
@@ -466,8 +466,8 @@ public class IntroManager : MonoBehaviour
 
         LeanTween.scale(ScreenFourCloudFour, new Vector3(0.65f, 0.65f, 1.0f), 1.0f).setEase(LeanTweenType.easeInOutCirc);
         if(dialogueManager.finishedAnimating[9] == false)
-        yield return new WaitForSeconds(0.75f * SpeedWaitMultiplier);
-        LeanTween.value( gameObject, setSpriteAlpha, 0f, 1f, 1f );
+        yield return new WaitForSeconds(0.6f * SpeedWaitMultiplier);
+        LeanTween.value( gameObject, setCakeSpriteAlpha, 0f, 1f, 1f );
 
     }
     public IEnumerator IntroScreenFiveAnimation()
@@ -478,14 +478,14 @@ public class IntroManager : MonoBehaviour
         ScreenFivePiBertBlack.color = new Color(1f,1f,1f,0f);
 
         dialogueManager.PlayDialogue7();
-        if(dialogueManager.finishedAnimating[8] == false)
-        yield return new WaitForSeconds(2.5f * SpeedWaitMultiplier);
-        LeanTween.value( gameObject, setSpriteAlpha, 0f, 1f, 1f );
+        //if(dialogueManager.finishedAnimating[8] == false)
+        yield return new WaitForSeconds(1.75f * SpeedWaitMultiplier);
+        LeanTween.value( gameObject, setPiBertSpriteAlpha, 0f, 1f, 1f );
         yield return new WaitForSeconds(1.0f * SpeedWaitMultiplier);
         LeanTween.scale(ScreenFiveTextOne, new Vector3(0.62f, 0.62f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
         yield return new WaitForSeconds(0.5f * SpeedWaitMultiplier);
         dialogueManager.PlayDialogue8();
-        yield return new WaitForSeconds(1.5f * SpeedWaitMultiplier);
+        yield return new WaitForSeconds(0.75f * SpeedWaitMultiplier);
         LeanTween.scale(ScreenFiveTextTwo, new Vector3(0.62f, 0.62f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
         yield return new WaitForSeconds(0.5f * SpeedWaitMultiplier);
         dialogueManager.PlayDialogue9();
@@ -497,7 +497,7 @@ public class IntroManager : MonoBehaviour
 
 
         dialogueManager.PlayDialogue10();
-        yield return new WaitForSeconds(1.3f * SpeedWaitMultiplier);
+        yield return new WaitForSeconds(0.75f * SpeedWaitMultiplier);
         LeanTween.scale(ScreenSixTextOne, new Vector3(0.62f, 0.62f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
         yield return new WaitForSeconds(0.5f * SpeedWaitMultiplier);
         dialogueManager.PlayDialogue11();
@@ -637,9 +637,12 @@ public class IntroManager : MonoBehaviour
         dialogueManager.PlayDialogue22();
     }
 
-    public void setSpriteAlpha( float val )
+    public void setPiBertSpriteAlpha( float val )
     {
         ScreenFivePiBertBlack.color = new Color(1f,1f,1f,val);
+    }
+    public void setCakeSpriteAlpha( float val )
+    {
         ScreenFourCake.color = new Color(1f,1f,1f,val);
         
     }
