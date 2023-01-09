@@ -479,7 +479,7 @@ public class IntroManager : MonoBehaviour
 
         dialogueManager.PlayDialogue7();
         if(dialogueManager.finishedAnimating[8] == false)
-        yield return new WaitForSeconds(3.3f * SpeedWaitMultiplier);
+        yield return new WaitForSeconds(2.5f * SpeedWaitMultiplier);
         LeanTween.value( gameObject, setSpriteAlpha, 0f, 1f, 1f );
         yield return new WaitForSeconds(1.0f * SpeedWaitMultiplier);
         LeanTween.scale(ScreenFiveTextOne, new Vector3(0.62f, 0.62f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
