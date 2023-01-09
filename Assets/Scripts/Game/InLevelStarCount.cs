@@ -27,9 +27,9 @@ public class InLevelStarCount : MonoBehaviour
     void Start()
     {
 
-        print("Star data score " + solution.datas[0].score);
-        print("Star data world " + solution.datas[0].world);
-        print("Star data level " + solution.datas[0].level);
+        // print("Star data score " + solution.datas[0].score);
+        // print("Star data world " + solution.datas[0].world);
+        // print("Star data level " + solution.datas[0].level);
 
         
        for(int x = 0; x < solution.datas.Count; x++)
