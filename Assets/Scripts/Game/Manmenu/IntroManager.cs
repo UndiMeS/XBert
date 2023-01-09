@@ -420,7 +420,7 @@ public class IntroManager : MonoBehaviour
 
             if(dialogueManager.Speedup == false)
             {
-                yield return new WaitForSeconds(2.3f);
+                yield return new WaitForSeconds(1.3f);
                 Debug.Log("Sloooooow");
             }
             else
