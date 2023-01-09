@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7b96c14ec9fff427f9ed96591b439046, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa6db6a5597694b91bb670c526abe5a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -232,8 +232,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 27cac736a4b12482d9540a7fc07f3a83, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8012efbf031455d8e65f9b2588932b, type: 3}
+  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -788,6 +788,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3180472505338572422}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2276891300099922367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3727408698322597689, guid: daec3f87694b740a58d1ffcfdbb93e95,
+    type: 3}
+  m_PrefabInstance: {fileID: 3180472505338572422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2276891298716688788 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3727408697022189330, guid: daec3f87694b740a58d1ffcfdbb93e95,
@@ -800,12 +806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2276891300099922367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3727408698322597689, guid: daec3f87694b740a58d1ffcfdbb93e95,
-    type: 3}
-  m_PrefabInstance: {fileID: 3180472505338572422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2276891299063990699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3727408697622210349, guid: daec3f87694b740a58d1ffcfdbb93e95,
