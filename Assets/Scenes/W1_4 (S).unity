@@ -1906,8 +1906,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534609339}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 163, y: 7.233, z: 0}
-  m_LocalScale: {x: 1011.7579, y: 809.68774, z: 1}
+  m_LocalPosition: {x: 162.22, y: 7.48, z: 0}
+  m_LocalScale: {x: 1015.0015, y: 811.271, z: 1}
   m_Children: []
   m_Father: {fileID: 649533584}
   m_RootOrder: 1
@@ -4312,7 +4312,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6079,6 +6079,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -53.12
       objectReference: {fileID: 0}
+    - target: {fileID: 9147878834642957167, guid: 02aeaa92e5b744116b55eb7f2416852a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 816.36414
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147878834642957167, guid: 02aeaa92e5b744116b55eb7f2416852a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 173.137
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02aeaa92e5b744116b55eb7f2416852a, type: 3}
 --- !u!224 &1288855333 stripped
@@ -7066,7 +7076,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7325,7 +7335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742490009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 317, y: -126.8, z: 0}
+  m_LocalPosition: {x: 315.8, y: -127, z: 0}
   m_LocalScale: {x: 47.82329, y: 47.82329, z: 1}
   m_Children:
   - {fileID: 208186409}
@@ -8162,7 +8172,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -8958,7 +8968,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
