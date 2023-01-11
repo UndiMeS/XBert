@@ -102,6 +102,7 @@ public class IntroManager : MonoBehaviour
         }
         if(dialogueManager.finishedAnimating[5] == true)
         {
+            if(ScreenFourCake.color == new Color(1f,1f,1f,1f))
             NextScreenButtons[3].SetActive(true);
             SpeedUpButtons[3].SetActive(false);
         }

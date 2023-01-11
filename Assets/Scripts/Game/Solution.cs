@@ -87,6 +87,8 @@ public class Solution : MonoBehaviour
     public int LevelFinishedCount;
     public bool Loaded;
 
+    public int IntroBool;
+
     public List<PlayerData> datas = new List<PlayerData>();
     public List<GameDatas> Gamedatas = new List<GameDatas>();
     // Start is called before the first frame update
@@ -95,8 +97,15 @@ public class Solution : MonoBehaviour
         datas = FileHandler.ReadFromJSON<PlayerData>(filename);
         Gamedatas = FileHandler.ReadFromJSONP<GameDatas>(filename);
 
+        IntroBool = PlayerPrefs.GetInt("intro");
+
+        Debug.Log("IntroBool Start " + IntroBool);
+
         
-    }
+    }/// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
 
     // Update is called once per frame
     void Update()
@@ -262,6 +271,17 @@ public class Solution : MonoBehaviour
         {
             
             MenuButtonManager.World = world + 1;
+            if(level == 7 && world == 1 && shadow == false)
+            {
+                
+
+                if(IntroBool == 1)
+                {
+                    PlayerPrefs.SetInt("intro", 2);
+                    IntroBool = PlayerPrefs.GetInt("intro");
+                    Debug.Log("IntroBool" + IntroBool);
+                }
+            }
         }
         else
         {

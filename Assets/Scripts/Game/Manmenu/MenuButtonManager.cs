@@ -34,6 +34,7 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject SkinMenu;
 
     public GameObject Tutorial;
+    public GameObject TutorialTwo;
     public GameObject NightPopUp;
     public bool NightPopUpBool;
 
@@ -89,10 +90,22 @@ public class MenuButtonManager : MonoBehaviour
         }
         else if(World == 2 && ShadowWorld == false)
         {
+            IntroBool = PlayerPrefs.GetInt("intro");
+
+
             WorldTwo.SetActive(true);
             WorldTwoTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
+
+            if(IntroBool == 2)
+            {
+                TutorialTwo.SetActive(true);
+                PlayerPrefs.SetInt("intro", 3);
+
+            }
+
+
             MenuNumber = 2;
         }
         else if(World == 2 && ShadowWorld == true)
@@ -185,6 +198,11 @@ public class MenuButtonManager : MonoBehaviour
         // WorldOneTransition.SetActive(false);
 
         //StartCoroutine(WorldOneToWorldTwo());
+
+        
+
+
+
         MenuNumber = 2;
         ShadowTwo.SetActive(false);
         StartCoroutine(MenuTransitioning(WorldThree,WorldOne,ShadowTwo,WorldTwo));
