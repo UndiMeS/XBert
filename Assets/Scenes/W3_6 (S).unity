@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 267121312}
   m_Layer: 0
   m_Name: NeutralZone (1)
-  m_TagString: SubAddZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 272471247}
   m_Layer: 0
   m_Name: NeutralZone (3)
-  m_TagString: SubAddZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4727,7 +4727,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6631,7 +6631,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6723,7 +6723,7 @@ GameObject:
   - component: {fileID: 1307164921}
   m_Layer: 0
   m_Name: NeutralZone
-  m_TagString: SubAddZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7293,7 +7293,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7471,7 +7471,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7649,7 +7649,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -7892,7 +7892,7 @@ GameObject:
   - component: {fileID: 1519411119}
   m_Layer: 0
   m_Name: NeutralZone (2)
-  m_TagString: SubAddZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8171,7 +8171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555949528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 419, y: 367, z: 0}
+  m_LocalPosition: {x: 416.4, y: 363.8, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 649533584}
@@ -8204,7 +8204,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004420221, y: -0.0065875947}
+  m_Offset: {x: 0.0068992376, y: -0.0065875947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8215,7 +8215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.86997724, y: 0.8995196}
+  m_Size: {x: 0.8928162, y: 0.8995196}
   m_EdgeRadius: 0
 --- !u!212 &1555949532
 SpriteRenderer:
@@ -8850,7 +8850,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10122,7 +10122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11635,7 +11635,7 @@ GameObject:
   - component: {fileID: 2040130611}
   m_Layer: 0
   m_Name: NeutralZone (4)
-  m_TagString: SubAddZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12711,7 +12711,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.14, y: 2.14}
+    oldSize: {x: 2.1399999, y: 2.1399999}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
