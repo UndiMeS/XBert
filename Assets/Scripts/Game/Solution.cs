@@ -282,6 +282,18 @@ public class Solution : MonoBehaviour
                     Debug.Log("IntroBool" + IntroBool);
                 }
             }
+
+            if(level == 7 && world == 2 && shadow == false)
+            {
+                
+
+                if(IntroBool == 3)
+                {
+                    PlayerPrefs.SetInt("intro", 4);
+                    IntroBool = PlayerPrefs.GetInt("intro");
+                    Debug.Log("IntroBool" + IntroBool);
+                }
+            }
         }
         else
         {

@@ -119,7 +119,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         mve = PlayerMovement.moving;
-        Finished = Solution.GetComponent<Solution>().LevelFinished;
+        if(Solution != null)
+        {
+            Finished = Solution.GetComponent<Solution>().LevelFinished;
+        }
+        
 
         NumbersEaten = FindGameObjectsWithTags(
             new string[] { "Numbers", "Multiply", "Divide", "Amount", "Square" }

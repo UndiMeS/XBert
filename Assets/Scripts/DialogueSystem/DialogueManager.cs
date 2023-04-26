@@ -239,4 +239,12 @@ public class DialogueManager : MonoBehaviour
         Speedup = true;
         
     }
+
+    public void EndIntro()
+    {
+        foreach(TMP_Text TextBox in textBox)
+        {
+            TextBox.text = "";
+        }
+    }
 }

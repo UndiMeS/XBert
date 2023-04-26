@@ -74,8 +74,11 @@ public class IntroManager : MonoBehaviour
     public static float SpeedWaitMultiplier = 1.0f;
     public SpriteRenderer[] NextArrowButtons;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+
+        LeanTween.reset();
+
         LeanTween.value( gameObject, setArrowSpriteAlpha, 0f, 1f, 1f ).setEaseInOutCubic().setLoopPingPong();
         ScreenOneFunction();
     }
@@ -173,123 +176,7 @@ public class IntroManager : MonoBehaviour
         }
 
 
-        // if(ScreenOne == true)
-        // {
-        //     StartCoroutine(IntroScreenOneAnimation());
-            
-        //     ScreenOne = false;
-        // }
-
-        // if(ScreenTwo == true)
-        // {
-        //     StartCoroutine(IntroScreenTwoAnimation());
-
-        //     ScreenTwo = false;
-        // }
-        // if(ScreenThree == true)
-        // {
-        //     StartCoroutine(IntroScreenThreeAnimation());
-
-        //     ScreenThree = false;
-        // }
-
-        // if(ScreenFour == true)
-        // {
-        //     StartCoroutine(IntroScreenFourAnimation());
-
-        //     ScreenFour = false;
-        // }
-
-        // if(ScreenFive == true)
-        // {
-        //     StartCoroutine(IntroScreenFiveAnimation());
-
-        //     ScreenFive = false;
-        // }
-
-        // if(ScreenSix == true)
-        // {
-        //     StartCoroutine(IntroScreenSixAnimation());
-
-        //     ScreenSix = false;
-        // }
-
-        // if(ScreenSeven == true)
-        // {
-        //     StartCoroutine(IntroScreenSevenAnimation());
-
-        //     ScreenSeven = false;
-        // }
-
-        // if(ScreenEight == true)
-        // {
-        //     StartCoroutine(IntroScreenEightAnimation());
-
-        //     ScreenEight = false;
-        // }
-
-        // if(ScreenNine == true)
-        // {
-        //     StartCoroutine(IntroScreenNineAnimation());
-
-        //     ScreenNine = false;
-        // }
-
-        // if(ScreenTen == true)
-        // {
-        //     StartCoroutine(IntroScreenTenAnimation());
-
-        //     ScreenTen = false;
-        // }
-
-        // if(ScreenEleven == true)
-        // {
-        //     StartCoroutine(IntroScreenElevenAnimation());
-
-        //     ScreenEleven = false;
-        // }
-
-        // if(ScreenTwelve == true)
-        // {
-        //     StartCoroutine(IntroScreenTwelveAnimation());
-
-        //     ScreenTwelve = false;
-        // }
-
-        // if(ScreenThirteen == true)
-        // {
-        //     StartCoroutine(IntroScreenThirteenAnimation());
-
-        //     ScreenThirteen = false;
-        // }
-
-        // if(ScreenFourteen == true)
-        // {
-        //     StartCoroutine(IntroScreenFourteenAnimation());
-
-        //     ScreenFourteen = false;
-        // }
-
-        // if(ScreenFifteen == true)
-        // {
-        //     StartCoroutine(IntroScreenFifteenAnimation());
-
-        //     ScreenFifteen = false;
-        // }
-
-        // if(ScreenSixteen == true)
-        // {
-        //     StartCoroutine(IntroScreenSixteenAnimation());
-
-        //     ScreenSixteen = false;
-        // }
-
-        // if(ScreenSeventeen == true)
-        // {
-        //     StartCoroutine(IntroScreenSeventeenAnimation());
-
-        //     ScreenSeventeen = false;
-        // }
+        
     }
 
     public void ScreenOneFunction()
@@ -393,6 +280,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenTwoAnimation()
     {
+
             SpeedWaitMultiplier = 1.0f;
             if(dialogueManager.finishedAnimating[1] == false)
             yield return new WaitForSeconds(0.1f * SpeedWaitMultiplier);
@@ -404,6 +292,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenThreeAnimation()
     {
+
 
             SpeedWaitMultiplier = 1.0f;
 
@@ -446,6 +335,8 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenFourAnimation()
     {
+
+        
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -473,6 +364,8 @@ public class IntroManager : MonoBehaviour
     }
     public IEnumerator IntroScreenFiveAnimation()
     {
+
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -494,6 +387,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenSixAnimation()
     {
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -506,6 +400,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenSevenAnimation()
     {
+            
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -516,6 +411,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenEightAnimation()
     {
+
 
         SpeedWaitMultiplier = 1.0f;
 
@@ -536,6 +432,7 @@ public class IntroManager : MonoBehaviour
     public IEnumerator IntroScreenNineAnimation()
     {
 
+
         SpeedWaitMultiplier = 1.0f;
 
         LeanTween.scale(ScreenNineTextOne, new Vector3(0.68f, 0.68f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
@@ -545,6 +442,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenTenAnimation()
     {
+        
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -564,6 +462,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenElevenAnimation()
     {
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -603,6 +502,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenFourteenAnimation()
     {
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -613,6 +513,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenFifteenAnimation()
     {
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -622,6 +523,7 @@ public class IntroManager : MonoBehaviour
 
     public IEnumerator IntroScreenSixteenAnimation()
     {
+
         SpeedWaitMultiplier = 1.0f;
 
 
@@ -656,4 +558,7 @@ public class IntroManager : MonoBehaviour
         }
         
     }
+
+    
+
 }

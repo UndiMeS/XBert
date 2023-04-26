@@ -9,6 +9,13 @@ public class MenuButtonManager : MonoBehaviour
 
     public GameObject StartMenu;
     public GameObject Intro;
+    public GameObject IntroFirstScreen;
+    public GameObject IntroLastScreen;
+
+    public DialogueManager IntroDialogueManager;
+
+    public GameObject CutSceneOne;
+    public GameObject CutSceneTwo;
     public int IntroBool;
     public GameObject WorldOne;
     public GameObject WorldTwo;
@@ -24,6 +31,9 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject WorldOneTransition;
     public GameObject WorldThreeTransition;
     public Animator WorldThreetransition;
+
+    public GameObject WorldThreeCutsceneTransition;
+    public Animator WorldThreeCutscenetransition;
     public Animator ShadowWorldOnetransition;
     public Animator ShadowWorldTwotransition;
     public GameObject ShadowWorldOneTransition;
@@ -93,17 +103,29 @@ public class MenuButtonManager : MonoBehaviour
             IntroBool = PlayerPrefs.GetInt("intro");
 
 
-            WorldTwo.SetActive(true);
-            WorldTwoTransition.SetActive(true);
+            //WorldTwoTransition.SetActive(true);
             StartMenu.SetActive(false);
             WorldOne.SetActive(false);
+            
 
             if(IntroBool == 2)
             {
+
+                StartCoroutine(ToCutsceneOneTransition());
+
+                CutSceneOne.SetActive(true);
+                //WorldTwoTransition.SetActive(true);
                 TutorialTwo.SetActive(true);
                 PlayerPrefs.SetInt("intro", 3);
 
             }
+
+            if(IntroBool >= 3)
+            {
+                WorldTwo.SetActive(true);
+                WorldTwoTransition.SetActive(true);
+            }
+        
 
 
             MenuNumber = 2;
@@ -120,12 +142,38 @@ public class MenuButtonManager : MonoBehaviour
         }
         else if(World == 3 && ShadowWorld == false)
         {
-            
-            WorldThree.SetActive(true);
-            WorldThreeTransition.SetActive(true);
+            IntroBool = PlayerPrefs.GetInt("intro");
+
             StartMenu.SetActive(false);
-            WorldTwo.SetActive(false);
             WorldOne.SetActive(false);
+            WorldTwo.SetActive(false);
+
+            if(IntroBool == 4)
+            {
+                CutSceneTwo.SetActive(true);
+                StartCoroutine(ToCutsceneTwoTransition());
+
+                
+                //WorldTwoTransition.SetActive(true);
+                //TutorialTwo.SetActive(true);
+                PlayerPrefs.SetInt("intro", 5);
+
+                Debug.Log("IntroBool Cutscene " + IntroBool);
+
+            }
+
+            if(IntroBool >= 5)
+            {
+                WorldThree.SetActive(true);
+                WorldThreeTransition.SetActive(true);
+            }
+
+
+
+            // WorldThreeTransition.SetActive(true);
+            // StartMenu.SetActive(false);
+            // WorldTwo.SetActive(false);
+            // WorldOne.SetActive(false);
             MenuNumber = 3;
         }
         else if(World == 3 && ShadowWorld == true)
@@ -308,6 +356,21 @@ public class MenuButtonManager : MonoBehaviour
         StartCoroutine(ToWorldOneTransition());
     }
 
+    public void FromIntroToStartMenu()
+    {
+        StartCoroutine(ToStartMenuTransition());
+    }
+
+    public void FromCutsceneToWorldTwo()
+    {
+        StartCoroutine(CutsceneOneToWorldTwo());
+    }
+
+    public void FromCutsceneToWorldThree()
+    {
+        StartCoroutine(CutsceneTwoToWorldThree());
+    }
+
     public void ToIntroButton()
     {
         StartCoroutine(ToIntroTransition());
@@ -378,21 +441,77 @@ public class MenuButtonManager : MonoBehaviour
 
     IEnumerator ToWorldOneTransition()
     {
+        IntroBool = PlayerPrefs.GetInt("intro");
         WorldOnetransition.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         WorldOnetransition.SetTrigger("end");
-        Intro.SetActive(false);
-        StartMenu.SetActive(false);
-        WorldOne.SetActive(true);
-        World = 1;
+
+        IntroFirstScreen.SetActive(true);
+        IntroLastScreen.SetActive(false);
+
+        IntroDialogueManager.EndIntro();
+
+        if(IntroBool == 0)
+        {
+            Intro.SetActive(false);
+            StartMenu.SetActive(false);
+            WorldOne.SetActive(true);
+            World = 1;
+        }
+        else
+        {
+            SceneManager.LoadScene ("XBert_MainMenu");
+        }
+
+        
     }
-    IEnumerator ToIntroTransition()
+
+    IEnumerator ToStartMenuTransition()
     {
         WorldOnetransition.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         WorldOnetransition.SetTrigger("end");
-        StartMenu.SetActive(false);
-        Intro.SetActive(true);
+
+        IntroFirstScreen.SetActive(true);
+        IntroLastScreen.SetActive(false);
+
+        IntroDialogueManager.EndIntro();
+
+        Intro.SetActive(false);
+        SceneManager.LoadScene ("XBert_MainMenu");
+    }
+    IEnumerator ToIntroTransition()
+    {
+        IntroBool = PlayerPrefs.GetInt("intro");
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOnetransition.SetTrigger("end");
+        if(IntroBool == 0)
+        {
+            StartMenu.SetActive(false);
+            Intro.SetActive(true);
+        }
+        else
+        {
+            SceneManager.LoadScene ("XBert_Intro");
+        }
+        
+    }
+
+    IEnumerator ToCutsceneOneTransition()
+    {
+        WorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldTwotransition.SetTrigger("end");
+        CutSceneOne.SetActive(true);
+    }
+
+    IEnumerator ToCutsceneTwoTransition()
+    {
+        //WorldThreeCutscenetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldThreeCutscenetransition.SetTrigger("end");
+        CutSceneTwo.SetActive(true);
     }
 
 
@@ -418,6 +537,38 @@ public class MenuButtonManager : MonoBehaviour
         ShadowTwo.SetActive(false);
         WorldTwo.SetActive(true);
         
+    }
+
+    IEnumerator CutsceneOneToWorldTwo()
+    {
+        StartMenu.SetActive(false);
+        WorldTwoTransition.SetActive(true);
+        WorldTwotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldTwoTransition.SetActive(false);
+        CutSceneOne.SetActive(false);
+        WorldTwo.SetActive(true);
+        WorldTwoTransition.SetActive(true);
+        WorldTwotransition.SetTrigger("end");
+        yield return new WaitForSeconds(1f);
+        WorldTwoTransition.SetActive(false);
+        World = 2;
+    }
+
+    IEnumerator CutsceneTwoToWorldThree()
+    {
+        StartMenu.SetActive(false);
+        WorldThreeCutsceneTransition.SetActive(true);
+        WorldThreeCutscenetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldThreeCutsceneTransition.SetActive(false);
+        CutSceneTwo.SetActive(false);
+        WorldThree.SetActive(true);
+        WorldThreeTransition.SetActive(true);
+        WorldThreetransition.SetTrigger("end");
+        yield return new WaitForSeconds(1f);
+        WorldThreeTransition.SetActive(false);
+        World = 3;
     }
 
     IEnumerator WorldOneToWorldTwo()

@@ -100,16 +100,16 @@ EditorBuildSettings:
     guid: 0cc1f1b18a4ee4fab8aa57eaf276b1c2
   - enabled: 1
     path: Assets/Scenes/W3_3.unity
-    guid: 57fc37af854364a4eb26df2ca1634e78
+    guid: 920d04d2599c740a5a82c3f26a38eec2
   - enabled: 1
     path: Assets/Scenes/W3_4.unity
     guid: b43bf7ea1230449f2ac21d76d61dc759
   - enabled: 1
     path: Assets/Scenes/W3_5.unity
-    guid: 1eca818272d1e4f76b637041b6d36be9
+    guid: 006b02becf6554a28ab883daf1d476dc
   - enabled: 1
     path: Assets/Scenes/W3_6.unity
-    guid: d70e75f00f39c412ead184e2c68f698c
+    guid: b661b4e2339044624bb794ee5a024b82
   - enabled: 1
     path: Assets/Scenes/W3_7.unity
     guid: fbde8af585a1a41cebc009ccd0d2c115
@@ -121,17 +121,20 @@ EditorBuildSettings:
     guid: f62f536ddd262484daf7cf9bbc63140b
   - enabled: 1
     path: Assets/Scenes/W3_3 (S).unity
-    guid: 5f26b041c18da45e58c34b46ea1f435e
+    guid: 5e380a6ae7573454f8bcccca4d146e13
   - enabled: 1
     path: Assets/Scenes/W3_4 (S).unity
     guid: 2075507ce07b01746930f1f49156ff2f
   - enabled: 1
     path: Assets/Scenes/W3_5 (S).unity
-    guid: 6006a93a2d60a4af7b61c6ea0f871cb4
+    guid: c1012c8dea3ef4b71a5899cd22b6119f
   - enabled: 1
     path: Assets/Scenes/W3_6 (S).unity
-    guid: 8cb175ef7bd3645d8af52ec65d2ab53a
+    guid: eba5e930221094b76ac6ae74d3ed3b7a
   - enabled: 1
     path: Assets/Scenes/W3_7 (S).unity
     guid: b46e546a977634b94b2dfcb3dae93066
+  - enabled: 1
+    path: Assets/Scenes/XBert_Intro.unity
+    guid: 26a30d459389c4f149b550d6968a7c57
   m_configObjects: {}
