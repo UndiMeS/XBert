@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EatInfinityBert : MonoBehaviour
 {
-
+    public OutroManager OutroScript;
     public Animator animator;
-    public OutroManager OutroSkript;
-    public GameObject ScreenFive;
+    public bool eatingInfinity;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +25,12 @@ public class EatInfinityBert : MonoBehaviour
         if(col.transform.gameObject.name =="aXel")
         {
             animator.SetTrigger("EatTrigger");
+            OutroScript.ScreenFiveEatingInfinity();
+            eatingInfinity = true;
         }
 
     }
 
 
-    public IEnumerator EatingInfinity()
-    {
-        yield return new WaitForSeconds(0.1f);
-    }
+    
 }
