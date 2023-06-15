@@ -122,7 +122,7 @@ public class Solution : MonoBehaviour
         //this.GetComponent<TMP_Text>().text = NumbersSolution.ToString();
 
         this.GetComponent<TMP_Text>().text = (Mathf.Round(NumbersSolution * 1000) / 1000).ToString();
-        Debug.Log(NumbersSolution.ToString());
+//        Debug.Log(NumbersSolution.ToString());
 
         EatenCounter.text = EatenNumberCounter.ToString();
         NumberCounter.text = EatenNumberCounter.ToString();
@@ -294,9 +294,22 @@ public class Solution : MonoBehaviour
                     Debug.Log("IntroBool" + IntroBool);
                 }
             }
+
+            
         }
         else
         {
+            if(level == 7 && world == 3 && shadow == false)
+            {
+                
+
+                if(IntroBool == 5)
+                {
+                    PlayerPrefs.SetInt("intro", 6);
+                    IntroBool = PlayerPrefs.GetInt("intro");
+                    Debug.Log("IntroBool" + IntroBool);
+                }
+            }
             MenuButtonManager.World = world;
         }
 

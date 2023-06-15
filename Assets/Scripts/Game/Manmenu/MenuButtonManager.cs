@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class MenuButtonManager : MonoBehaviour
@@ -12,7 +13,11 @@ public class MenuButtonManager : MonoBehaviour
     public GameObject IntroFirstScreen;
     public GameObject IntroLastScreen;
 
+    public GameObject Outro;
+    public GameObject OutroTransition;
+    public Animator Outrotransition;
     public DialogueManager IntroDialogueManager;
+    public OutroDialogueManager outroDialogueManager;
 
     public GameObject CutSceneOne;
     public GameObject CutSceneTwo;
@@ -54,6 +59,15 @@ public class MenuButtonManager : MonoBehaviour
     public int worldNumber;
 
     public int MenuNumber;
+
+    public Button ClipOne;
+    public Image clipOne;
+
+    public Button ClipTwo;
+    public Image clipTwo;
+
+    public Button ClipOutro;
+    public Image clipOutro;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +77,8 @@ public class MenuButtonManager : MonoBehaviour
         {
             StartPopUps.SetActive(true);
             PlayerPrefs.SetInt("intro", 0);
+
+            File.Create(Application.persistentDataPath + "/XBertDataFile.json").Dispose();
         }
     }
 
@@ -118,6 +134,9 @@ public class MenuButtonManager : MonoBehaviour
                 TutorialTwo.SetActive(true);
                 PlayerPrefs.SetInt("intro", 3);
 
+                ClipOne.interactable = true;
+                clipOne.color = new Color(255,255,255, 255);
+
             }
 
             if(IntroBool >= 3)
@@ -160,9 +179,41 @@ public class MenuButtonManager : MonoBehaviour
 
                 Debug.Log("IntroBool Cutscene " + IntroBool);
 
+                ClipOne.interactable = true;
+                clipOne.color = new Color(255,255,255, 255);
+
+                ClipTwo.interactable = true;
+                clipTwo.color = new Color(255,255,255, 255);
+
             }
 
-            if(IntroBool >= 5)
+            if(IntroBool == 6)
+            {
+                
+                ToOutroTransition();
+
+                
+                //WorldTwoTransition.SetActive(true);
+                //TutorialTwo.SetActive(true);
+                PlayerPrefs.SetInt("intro", 7);
+
+                Debug.Log("IntroBool Outro " + IntroBool);
+                StartPopUps.SetActive(false);
+
+                ClipOne.interactable = true;
+                clipOne.color = new Color(255,255,255, 255);
+
+                ClipTwo.interactable = true;
+                clipTwo.color = new Color(255,255,255, 255);
+
+                ClipOutro.interactable = true;
+                clipOutro.color = new Color(255,255,255, 255);
+
+
+
+            }
+
+            if(IntroBool >= 5 && IntroBool != 6)
             {
                 WorldThree.SetActive(true);
                 WorldThreeTransition.SetActive(true);
@@ -356,7 +407,12 @@ public class MenuButtonManager : MonoBehaviour
         StartCoroutine(ToWorldOneTransition());
     }
 
-    public void FromIntroToStartMenu()
+    public void FromStartMenuToClip(string ClipScene)
+    {
+        StartCoroutine(ToClipTransition(ClipScene));
+    }
+
+    public void FromClipToStartMenu()
     {
         StartCoroutine(ToStartMenuTransition());
     }
@@ -374,6 +430,11 @@ public class MenuButtonManager : MonoBehaviour
     public void ToIntroButton()
     {
         StartCoroutine(ToIntroTransition());
+    }
+
+    public void FromOutroToWorldThree()
+    {
+        StartCoroutine(ToWorldThreeTransition());
     }
 
     public void FromSkinMenuToWorld()
@@ -411,8 +472,13 @@ public class MenuButtonManager : MonoBehaviour
     }
 
     public void HardResetGame(){
+        StartCoroutine(hardResetGame());
+    }
+    IEnumerator hardResetGame(){
         File.Delete (Application.persistentDataPath + "/XBertDataFile.json");
         PlayerPrefs.DeleteAll();
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
         //UnityEditor.AssetDatabase.Refresh();
         SceneManager.LoadScene ("XBert_MainMenu");
     }
@@ -466,18 +532,50 @@ public class MenuButtonManager : MonoBehaviour
         
     }
 
+    IEnumerator ToWorldThreeTransition()
+    {
+        IntroBool = PlayerPrefs.GetInt("intro");
+        OutroTransition.SetActive(true);
+        Outrotransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        
+
+        outroDialogueManager.EndIntro();
+
+        if(IntroBool == 7)
+        {
+            Outro.SetActive(false);
+            StartMenu.SetActive(false);
+            StartPopUps.SetActive(true);
+            WorldThree.SetActive(true);
+            World = 3;
+            WorldThreeTransition.SetActive(true);
+            WorldThreetransition.SetTrigger("end");
+        }
+        else
+        {
+            SceneManager.LoadScene ("XBert_MainMenu");
+        }
+
+
+
+            
+
+        
+    }
+
     IEnumerator ToStartMenuTransition()
     {
         WorldOnetransition.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         WorldOnetransition.SetTrigger("end");
 
-        IntroFirstScreen.SetActive(true);
-        IntroLastScreen.SetActive(false);
+        // IntroFirstScreen.SetActive(true);
+        // IntroLastScreen.SetActive(false);
 
-        IntroDialogueManager.EndIntro();
+        // IntroDialogueManager.EndIntro();
 
-        Intro.SetActive(false);
+        // Intro.SetActive(false);
         SceneManager.LoadScene ("XBert_MainMenu");
     }
     IEnumerator ToIntroTransition()
@@ -494,6 +592,34 @@ public class MenuButtonManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene ("XBert_Intro");
+        }
+        
+    }
+
+    IEnumerator ToClipTransition(string ClipScene)
+    {
+        
+        WorldOnetransition.SetTrigger("start");
+        yield return new WaitForSeconds(1f);
+        WorldOnetransition.SetTrigger("end");
+        SceneManager.LoadScene (ClipScene);
+        
+        
+    }
+
+    public void ToOutroTransition()
+    {
+        IntroBool = PlayerPrefs.GetInt("intro");
+        Outrotransition.SetTrigger("end");
+        if(IntroBool == 6)
+        {
+            CutSceneTwo.SetActive(false);
+            WorldThree.SetActive(false);
+            Outro.SetActive(true);
+        }
+        else
+        {
+            //SceneManager.LoadScene ("XBert_Outor");
         }
         
     }

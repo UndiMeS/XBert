@@ -43,6 +43,8 @@ public class StarController : MonoBehaviour
 
     public GameObject[] NightButtons;
     public static bool NightButtonShine = false;
+
+    public GameObject Outro;
     // Start is called before the first frame update
 
     void awake()
@@ -98,6 +100,7 @@ public class StarController : MonoBehaviour
 
         datalength = datas.Count;
         StarOutputs = GameObject.FindGameObjectsWithTag("StarCount");
+        
 
         foreach (GameObject StarOutput in StarOutputs)
         {
@@ -115,7 +118,11 @@ public class StarController : MonoBehaviour
         }
         if(gameFinished == 1)
         {
-            ThirdAchievement.SetActive(true);
+            if(Outro.active == false)
+            {
+                ThirdAchievement.SetActive(true);
+            }
+            
         }
         if(gameComplete == 1)
         {

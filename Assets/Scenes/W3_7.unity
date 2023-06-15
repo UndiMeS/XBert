@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 5696866594533803626, guid: 1381c8027169244e79085aa0c0589252,
         type: 3}
       propertyPath: TermWerte.Array.size
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5696866594533803626, guid: 1381c8027169244e79085aa0c0589252,
         type: 3}
@@ -944,6 +944,21 @@ PrefabInstance:
         type: 3}
       propertyPath: TermWerte.Array.data[12]
       value: 576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696866594533803626, guid: 1381c8027169244e79085aa0c0589252,
+        type: 3}
+      propertyPath: TermWerte.Array.data[13]
+      value: 625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696866594533803626, guid: 1381c8027169244e79085aa0c0589252,
+        type: 3}
+      propertyPath: TermWerte.Array.data[14]
+      value: 676
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696866594533803626, guid: 1381c8027169244e79085aa0c0589252,
+        type: 3}
+      propertyPath: TermWerte.Array.data[15]
+      value: 729
       objectReference: {fileID: 0}
     - target: {fileID: 7164278231770469767, guid: 1381c8027169244e79085aa0c0589252,
         type: 3}

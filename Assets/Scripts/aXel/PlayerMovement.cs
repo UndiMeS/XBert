@@ -64,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float timer;
 
+    public SecretNumber SecretSkript;
+    public bool secretFinish;
 
 
     
@@ -124,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
             Finished = Solution.GetComponent<Solution>().LevelFinished;
         }
         
+        if(SecretSkript!=null)
+        {
+            secretFinish = SecretSkript.winning;
+        }
 
         NumbersEaten = FindGameObjectsWithTags(
             new string[] { "Numbers", "Multiply", "Divide", "Amount", "Square" }
@@ -224,7 +230,16 @@ public class PlayerMovement : MonoBehaviour
         //move ();
 
 
-        if (Finished == true)
+        if (Solution != null && Finished == true)
+        {
+            UpPress = false;
+            DownPress = false;
+            RightPress = false;
+            LeftPress = false;
+
+            transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        }
+        else if(SecretSkript != null && secretFinish == true)
         {
             UpPress = false;
             DownPress = false;

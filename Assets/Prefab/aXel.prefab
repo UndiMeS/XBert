@@ -228,6 +228,8 @@ MonoBehaviour:
   mve: 0
   MovePointParent: {fileID: 0}
   timer: 0
+  SecretSkript: {fileID: 0}
+  secretFinish: 0
 --- !u!114 &845447645443514582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +246,7 @@ MonoBehaviour:
   XBertSkin:
   - {fileID: 22100000, guid: 3b9de42204f0d478689676eda280e719, type: 2}
   - {fileID: 22100000, guid: 0184a8a897f87489bbbe9437925efe89, type: 2}
+  - {fileID: 22100000, guid: 10b98694d5b014bc68cf06758051a1f3, type: 2}
   - {fileID: 22100000, guid: 1783dd33553f34ab9bf536c866f85722, type: 2}
   - {fileID: 22100000, guid: 88df812715a354442bf35beedb5a8201, type: 2}
   - {fileID: 22100000, guid: 39cae1650d92d40a6925b94e1775c51e, type: 2}
@@ -260,6 +263,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: b53f26a1e9d26410fa2bb1663ecc7225, type: 2}
   - {fileID: 22100000, guid: 94577e67c9af24418a5c4580316b56e5, type: 2}
   - {fileID: 22100000, guid: a5332e4ed9609486b936187b03fd8332, type: 2}
+  - {fileID: 22100000, guid: d07c508962db3402ebf8892700ee6721, type: 2}
   SelectedSkin: 0
 --- !u!95 &5296981633928198733
 Animator:

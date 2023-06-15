@@ -185,6 +185,12 @@ public class PauseScript : MonoBehaviour
     {
         //SceneManager.LoadScene("XBert_MainMenu");
         MenuButtonManager.World = SolutionScript.GetComponent<Solution>().world;
+
+        if(PlayerPrefs.GetInt("intro") == 2 || PlayerPrefs.GetInt("intro") == 4)
+        {
+            MenuButtonManager.World += 1;
+        }
+        
         lvlLoader.ActvateTransition();
         lvlLoader.LoadScene = "XBert_MainMenu";
     }

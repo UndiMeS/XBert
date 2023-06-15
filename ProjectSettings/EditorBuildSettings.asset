@@ -137,4 +137,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/XBert_Intro.unity
     guid: 26a30d459389c4f149b550d6968a7c57
+  - enabled: 1
+    path: Assets/Scenes/SecretLevel.unity
+    guid: dc271f54a850d44318bf0bbe70763b3a
+  - enabled: 1
+    path: Assets/Scenes/XBert_CutsceneOne.unity
+    guid: 601353fb5dcd64e20a52c3b7f2f2ed7a
+  - enabled: 1
+    path: Assets/Scenes/XBert_CutsceneTwo.unity
+    guid: 100e2fd7be67742eab60c3711c6f8f1b
+  - enabled: 1
+    path: Assets/Scenes/XBert_Outro.unity
+    guid: f8fe491549d7048b0bcad906a2acc90b
   m_configObjects: {}

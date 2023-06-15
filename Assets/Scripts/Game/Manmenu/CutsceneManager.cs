@@ -26,6 +26,9 @@ public class CutsceneManager : MonoBehaviour
     public GameObject RangerBertScreenOne;
     public GameObject NumberThreeScreenOne;
     public GameObject ShovelScreenTwo;
+    public GameObject CaggtusArmScreenTwo;
+    public GameObject NumberTwoScreenTwo;
+    public GameObject NumberFourScreenTwo;
 
 
     public GameObject[] Speedlines;
@@ -238,7 +241,9 @@ public class CutsceneManager : MonoBehaviour
     {
 
         LeanTween.moveLocalY(ShovelScreenTwo, ShovelScreenTwo.transform.localPosition.y+ 0.25f, 0.25f).setEaseInOutCubic().setLoopPingPong();
-
+        LeanTween.rotateAround(CaggtusArmScreenTwo, Vector3.forward, 20.0f, 1.2f).setEaseInOutCubic().setLoopPingPong();
+        LeanTween.rotateAround(NumberTwoScreenTwo, Vector3.forward, 7.0f, 0.3f).setEaseInOutCubic().setLoopPingPong();
+        LeanTween.rotateAround(NumberFourScreenTwo, Vector3.forward, -7.0f, 0.3f).setEaseInOutCubic().setLoopPingPong();
 
         yield return new WaitForSeconds(0.5f);
         dialogueManager.PlayDialogue7();
@@ -247,15 +252,15 @@ public class CutsceneManager : MonoBehaviour
         
 
 
-        yield return new WaitForSeconds(2.2f);
+        yield return new WaitForSeconds(1.0f);
         LeanTween.scale(CutsceneTwoScreenTwoTextTwo, new Vector3(0.6f, 0.6f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
         yield return new WaitForSeconds(1.0f);
 
         dialogueManager.PlayDialogue9();
 
 
-        LeanTween.scale(CutsceneTwoScreenTwoTextOne, new Vector3(0.52f, 0.52f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
-        yield return new WaitForSeconds(1.2f);
+        LeanTween.scale(CutsceneTwoScreenTwoTextOne, new Vector3(0.49f, 0.49f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
+        yield return new WaitForSeconds(1.0f);
         dialogueManager.PlayDialogue8();
 
 

@@ -139,11 +139,11 @@ public class CutsceneDialogueManager : MonoBehaviour
 
     public void PlayDialogue8() {
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox[7], audioSourceGroup);
-        PlayDialogue(dialogue8);
+        PlayDialogueKeepAnimation(dialogue8);
     }
     public void PlayDialogue9() {
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox[8], audioSourceGroup);
-        PlayDialogue(dialogue9);
+        PlayDialogueKeepAnimation(dialogue9);
     }
     public void PlayDialogue10() {
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox[9], audioSourceGroup);
@@ -226,6 +226,16 @@ public class CutsceneDialogueManager : MonoBehaviour
         Speedup = false;
         this.EnsureCoroutineStopped(ref typeRoutine);
         dialogueVertexAnimator.textAnimating = false;
+        List<DialogueCommand> commands = DialogueUtility.ProcessInputString(message, out string totalTextMessage);
+        typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, typingClip, null));
+
+        
+    }
+
+    void PlayDialogueKeepAnimation(string message) {
+        Speedup = false;
+        //this.EnsureCoroutineStopped(ref typeRoutine);
+        //dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands = DialogueUtility.ProcessInputString(message, out string totalTextMessage);
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, typingClip, null));
 

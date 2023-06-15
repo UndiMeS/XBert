@@ -17,6 +17,7 @@ public class SkinController : MonoBehaviour
     public bool IsActive = false;
 
     public int NewCount = 0;
+    public bool secret;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +31,22 @@ public class SkinController : MonoBehaviour
         {
             IsActive = true;
 
-            if(PlayerPrefs.GetInt("SkinUnlock"+SkinNumber) == 1)
+            if(secret == false)
             {
-                unlocked = true;
+                if(PlayerPrefs.GetInt("SkinUnlock"+SkinNumber) == 1)
+                {
+                    unlocked = true;
+                }
             }
+            else
+            {
+                if(PlayerPrefs.GetInt("SecretSkin") == 1)
+                {
+                    unlocked = true;
+                }
+            }
+
+            
 
             
             

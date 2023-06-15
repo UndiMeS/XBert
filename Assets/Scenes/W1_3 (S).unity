@@ -1827,6 +1827,7 @@ GameObject:
   - component: {fileID: 536301490}
   - component: {fileID: 536301489}
   - component: {fileID: 536301488}
+  - component: {fileID: 536301491}
   m_Layer: 0
   m_Name: Button_NotPressed
   m_TagString: Untagged
@@ -1941,6 +1942,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &536301491
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536301486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 3.78}
+  m_Size: {x: 0.84, y: 0.84}
+  m_Direction: 0
 --- !u!1 &545395875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,6 +4887,7 @@ GameObject:
   - component: {fileID: 1075068444}
   - component: {fileID: 1075068443}
   - component: {fileID: 1075068442}
+  - component: {fileID: 1075068445}
   m_Layer: 0
   m_Name: Button_NotPressed (1)
   m_TagString: Untagged
@@ -4984,6 +5002,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1075068445
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075068440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.82}
+  m_Size: {x: 0.84, y: 0.84}
+  m_Direction: 0
 --- !u!1 &1083897419
 GameObject:
   m_ObjectHideFlags: 0
