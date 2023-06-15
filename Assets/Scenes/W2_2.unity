@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1689644006}
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1586132097}
@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 723227520}
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1274856267}
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 729847979}
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 2052086174}
@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1897198654}
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 241069322}
@@ -3898,7 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1501338679}
@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1899466727}
@@ -4254,7 +4254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1843387392}
@@ -5130,7 +5130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1108685750}
@@ -5706,7 +5706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 627553031}
@@ -6102,7 +6102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 43995033}
@@ -6280,7 +6280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 2025671048}
@@ -6641,7 +6641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1191298677}
@@ -6927,7 +6927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1998975215}
@@ -7105,7 +7105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1787261008}
@@ -7289,7 +7289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1593107372}
@@ -7502,7 +7502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1269455058}
@@ -7680,7 +7680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 671524200}
@@ -7858,7 +7858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1023817342}
@@ -8036,7 +8036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 264636100}
@@ -8284,7 +8284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 433295957}
@@ -8462,7 +8462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 705544714}
@@ -8681,7 +8681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1483199942}
@@ -9150,7 +9150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 246965152}
@@ -10924,7 +10924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1324772844}
@@ -11285,7 +11285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 2036818688}
@@ -11463,7 +11463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1737007089}
@@ -11711,7 +11711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 478029787}
@@ -11889,7 +11889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1026445428}
@@ -12190,7 +12190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 48297786}
@@ -12438,7 +12438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 645516990}
@@ -12799,7 +12799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 744632446}
@@ -12977,7 +12977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 770046493}
@@ -13373,7 +13373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 567589393}
@@ -14110,7 +14110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1641250510}
@@ -14323,7 +14323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1811701549}
@@ -14684,7 +14684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 382366320}
@@ -15589,7 +15589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1328993858}
@@ -15767,7 +15767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1433468840}
@@ -15878,6 +15878,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1975717057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5752801897169919097, guid: 975f52171f82e4ab794117fb0aa5ba1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1344727250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987610736
 GameObject:
   m_ObjectHideFlags: 0
@@ -15945,7 +15951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1211817675}
@@ -16199,7 +16205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 923591852}
@@ -16703,7 +16709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 128908341}
@@ -16881,7 +16887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 1353311787}
@@ -17099,7 +17105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 658612825}
@@ -17311,7 +17317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 901973176076757529}
@@ -17337,7 +17343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b96f508e7544f74084b78f72e5530e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axel: {fileID: 0}
+  axel: {fileID: 1975717057}
   movement: {fileID: 0}
   smash: 0
   movePoint: {fileID: 8509957330619482371}

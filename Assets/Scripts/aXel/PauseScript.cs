@@ -78,7 +78,7 @@ public class PauseScript : MonoBehaviour
             }
         }
 
-        if(SpaceBool == false && LevelComplete.activeSelf == false){
+        if(SpaceBool == false && LevelComplete.activeSelf == false && PauseMenu.activeSelf == true){
                 if (Input.GetKeyDown("space"))
             {
                 
