@@ -62,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject MovePointParent;
 
+    private float screenAspect;
+
     public float timer;
 
     public SecretNumber SecretSkript;
@@ -73,36 +75,46 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        screenAspect = Screen.width/Screen.height;
+
+        if(screenAspect <= 16/9)
+        {
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
+        }
+        else
+        {
+            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+        }
 
         
 
-        #if UNITY_STANDALONE
+        // #if UNITY_STANDALONE
 
-            Debug.Log("Standalone Windows");
-            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+        //     Debug.Log("Standalone Windows");
+        //     MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
 
-        #endif
+        // #endif
 
-        #if UNITY_WEBGL
+        // #if UNITY_WEBGL
 
-            Debug.Log("Standalone Windows");
-            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+        //     Debug.Log("Standalone Windows");
+        //     MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
 
-        #endif
+        // #endif
 
-        #if UNITY_IOS
+        // #if UNITY_IOS
 
-            Debug.Log("IOS");
-            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
+        //     Debug.Log("IOS");
+        //     MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
 
-        #endif
+        // #endif
 
-        #if UNITY_ANDROID
+        // #if UNITY_ANDROID
 
-            Debug.Log("Android");
-            MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+        //     Debug.Log("Android");
+        //     MovePointParent.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
 
-        #endif
+        // #endif
 
 
 

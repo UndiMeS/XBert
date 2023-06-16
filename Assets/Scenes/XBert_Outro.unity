@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ee05c0adbd0404bac3b5d782a709b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScalingCanvas: {fileID: 332517700}
   StartMenu: {fileID: 0}
   Intro: {fileID: 0}
   IntroFirstScreen: {fileID: 0}
@@ -210,6 +211,12 @@ MonoBehaviour:
   MenuTransTime: 0
   worldNumber: 0
   MenuNumber: 0
+  ClipOne: {fileID: 0}
+  clipOne: {fileID: 0}
+  ClipTwo: {fileID: 0}
+  clipTwo: {fileID: 0}
+  ClipOutro: {fileID: 0}
+  clipOutro: {fileID: 0}
 --- !u!1 &332517700
 GameObject:
   m_ObjectHideFlags: 0

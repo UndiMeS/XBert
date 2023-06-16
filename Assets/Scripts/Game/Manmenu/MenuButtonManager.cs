@@ -8,6 +8,9 @@ using UnityEngine;
 public class MenuButtonManager : MonoBehaviour
 {
 
+    public GameObject ScalingCanvas;
+    private float screenAspect;
+
     public GameObject StartMenu;
     public GameObject Intro;
     public GameObject IntroFirstScreen;
@@ -71,6 +74,20 @@ public class MenuButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        screenAspect = Screen.width/Screen.height;
+
+
+        if(ScalingCanvas != null)
+        {
+            if(screenAspect <= 16/9)
+            {
+                ScalingCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 0;
+            }
+            else
+            {
+                ScalingCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+            }
+        }
 
 
         if(!File.Exists(Application.persistentDataPath + "/XBertDataFile.json"))

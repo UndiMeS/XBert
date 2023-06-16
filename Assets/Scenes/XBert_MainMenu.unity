@@ -5121,6 +5121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ee05c0adbd0404bac3b5d782a709b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScalingCanvas: {fileID: 332517700}
   StartMenu: {fileID: 8968911167246622910}
   Intro: {fileID: 299489294}
   IntroFirstScreen: {fileID: 1341610595}
@@ -7416,7 +7417,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
