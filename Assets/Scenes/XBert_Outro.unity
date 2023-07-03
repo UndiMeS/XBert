@@ -400,8 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointerDown: 0
   pointerDownTimer: 0
-  requiredHoldTime: 4
-  timeToShowText: 3
+  requiredHoldTime: 2.5
+  timeToShowText: 1.5
   ButtonText: {fileID: 2072362536}
   textAlpha: 0
   onLongClick: 0
@@ -506,6 +506,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1456160012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8023223621528881457, guid: cd5271f72696043c7ad7246147903e8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2072362532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1706815927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -748,6 +754,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8968911166645342140}
     m_Modifications:
+    - target: {fileID: 3134188462595923854, guid: cd5271f72696043c7ad7246147903e8c,
+        type: 3}
+      propertyPath: SkipButton
+      value: 
+      objectReference: {fileID: 1456160012}
     - target: {fileID: 3134188462772657952, guid: cd5271f72696043c7ad7246147903e8c,
         type: 3}
       propertyPath: m_Name

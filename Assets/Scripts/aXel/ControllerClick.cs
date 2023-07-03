@@ -10,8 +10,18 @@ public class ControllerClick : MonoBehaviour {
     public float HoldingTime;
     public float starttime;
     public bool runPress;
+
+    public bool ios;
+    public bool android;
     // Start is called before the first frame update
     void Start () {
+
+        #if UNITY_IPHONE
+            ios = true;
+        #endif
+        #if UNITY_ANDROID
+            android = true;
+        #endif
 
     }
 
@@ -35,7 +45,9 @@ public class ControllerClick : MonoBehaviour {
             pressed = false;
 
         }
-        if(this.gameObject.name == "ButtonDown")
+        if(ios == false && android == false)
+        {
+            if(this.gameObject.name == "ButtonDown")
         {
             if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown("s"))
             {
@@ -136,6 +148,8 @@ public class ControllerClick : MonoBehaviour {
                 starttime = 0.0f;
             }
         }
+        }
+        
 
         
         

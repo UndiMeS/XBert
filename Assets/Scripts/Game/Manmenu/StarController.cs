@@ -44,6 +44,9 @@ public class StarController : MonoBehaviour
     public GameObject[] NightButtons;
     public static bool NightButtonShine = false;
 
+    public GameObject[] SkinButtons;
+    public static bool SkinButtonShine = false;
+
     public GameObject Outro;
     // Start is called before the first frame update
 
@@ -115,6 +118,18 @@ public class StarController : MonoBehaviour
         if(oneLevelSuccess == 1)
         {
             FirstAchievement.SetActive(true);
+
+            if(SkinButtonShine == false)
+            {
+                foreach(GameObject SkinButton in SkinButtons)
+                {
+                    LeanTween.scale(SkinButton, new Vector3(1.2f, 1.2f, 1.0f), 1f).setEase(LeanTweenType.easeInOutCirc).setLoopPingPong();
+                }
+                SkinButtonShine = true;
+                
+            }
+
+
         }
         if(gameFinished == 1)
         {
@@ -183,6 +198,15 @@ public class StarController : MonoBehaviour
         {
             NightButton.gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             LeanTween.cancel(NightButton);
+        }
+    }
+
+    public void StopSkinButtonShine()
+    {
+        foreach(GameObject SkinButton in SkinButtons)
+        {
+            SkinButton.gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            LeanTween.cancel(SkinButton);
         }
     }
 

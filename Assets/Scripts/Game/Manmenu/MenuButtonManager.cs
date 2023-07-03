@@ -63,14 +63,9 @@ public class MenuButtonManager : MonoBehaviour
 
     public int MenuNumber;
 
-    public Button ClipOne;
-    public Image clipOne;
 
-    public Button ClipTwo;
-    public Image clipTwo;
 
-    public Button ClipOutro;
-    public Image clipOutro;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +98,8 @@ public class MenuButtonManager : MonoBehaviour
     void Update()
     {
         worldNumber = World;
+
+        
     }
 
     public void OnEnable()
@@ -144,6 +141,8 @@ public class MenuButtonManager : MonoBehaviour
             if(IntroBool == 2)
             {
 
+                
+
                 StartCoroutine(ToCutsceneOneTransition());
 
                 CutSceneOne.SetActive(true);
@@ -151,8 +150,8 @@ public class MenuButtonManager : MonoBehaviour
                 TutorialTwo.SetActive(true);
                 PlayerPrefs.SetInt("intro", 3);
 
-                ClipOne.interactable = true;
-                clipOne.color = new Color(255,255,255, 255);
+                // ClipOne.interactable = true;
+                // clipOne.color = new Color(255,255,255, 255);
 
             }
 
@@ -196,11 +195,11 @@ public class MenuButtonManager : MonoBehaviour
 
                 Debug.Log("IntroBool Cutscene " + IntroBool);
 
-                ClipOne.interactable = true;
-                clipOne.color = new Color(255,255,255, 255);
+                // ClipOne.interactable = true;
+                // clipOne.color = new Color(255,255,255, 255);
 
-                ClipTwo.interactable = true;
-                clipTwo.color = new Color(255,255,255, 255);
+                // ClipTwo.interactable = true;
+                // clipTwo.color = new Color(255,255,255, 255);
 
             }
 
@@ -217,14 +216,16 @@ public class MenuButtonManager : MonoBehaviour
                 Debug.Log("IntroBool Outro " + IntroBool);
                 StartPopUps.SetActive(false);
 
-                ClipOne.interactable = true;
-                clipOne.color = new Color(255,255,255, 255);
+                
 
-                ClipTwo.interactable = true;
-                clipTwo.color = new Color(255,255,255, 255);
+                // ClipOne.interactable = true;
+                // clipOne.color = new Color(255,255,255, 255);
 
-                ClipOutro.interactable = true;
-                clipOutro.color = new Color(255,255,255, 255);
+                // ClipTwo.interactable = true;
+                // clipTwo.color = new Color(255,255,255, 255);
+
+                // ClipOutro.interactable = true;
+                // clipOutro.color = new Color(255,255,255, 255);
 
 
 
@@ -343,28 +344,28 @@ public class MenuButtonManager : MonoBehaviour
     public void ToShadowOne()
     {
         MenuNumber = 4;
-        if(StarController.NightButtonShine == true)
-        {
-            StarController.NightButtonShine = false;
-        }
+        // if(StarController.NightButtonShine == true)
+        // {
+        //     StarController.NightButtonShine = false;
+        // }
         StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowOne));
     }
     public void ToShadowTwo()
     {
         MenuNumber = 5;
-        if(StarController.NightButtonShine == true)
-        {
-            StarController.NightButtonShine = false;
-        }
+        // if(StarController.NightButtonShine == true)
+        // {
+        //     StarController.NightButtonShine = false;
+        // }
         StartCoroutine(MenuTransitioning(WorldOne,WorldTwo,WorldThree,ShadowTwo));
     }
     public void ToShadowThree()
     {
         MenuNumber = 6;
-        if(StarController.NightButtonShine == true)
-        {
-            StarController.NightButtonShine = false;
-        }
+        // if(StarController.NightButtonShine == true)
+        // {
+        //     StarController.NightButtonShine = false;
+        // }
         StartCoroutine(MenuTransitioning(WorldThree,WorldTwo, WorldOne, ShadowThree));
     }
 

@@ -85,6 +85,8 @@ public class OutroManager : MonoBehaviour
     public bool speedBool;
     public static float SpeedWaitMultiplier = 1.0f;
     public SpriteRenderer[] NextArrowButtons;
+
+    public GameObject SkipButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -320,6 +322,8 @@ public class OutroManager : MonoBehaviour
             LeanTween.scale(ScreenFourTextOne, new Vector3(0.476f, 0.476f, 1.0f), 0.5f).setEase(LeanTweenType.easeInOutCirc);
             yield return new WaitForSeconds(1.0f * SpeedWaitMultiplier);
 
+            SkipButton.SetActive(false);
+
 
             dialogueManager.PlayDialogue5();
             if(dialogueManager.finishedAnimating[0] == true)
@@ -343,6 +347,8 @@ public class OutroManager : MonoBehaviour
 
     public IEnumerator OutroScreenSixAnimation()
     {
+
+        SkipButton.SetActive(true);
 
             SpeedWaitMultiplier = 0.6f;
 

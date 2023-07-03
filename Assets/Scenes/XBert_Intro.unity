@@ -338,7 +338,7 @@ PrefabInstance:
     - target: {fileID: 6822050195318697013, guid: f64f2553ba6694c459f388f19dd0d10c,
         type: 3}
       propertyPath: requiredHoldTime
-      value: 4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6822050195318697013, guid: f64f2553ba6694c459f388f19dd0d10c,
         type: 3}
