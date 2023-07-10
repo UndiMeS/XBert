@@ -49834,6 +49834,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8968911166645342140}
     m_Modifications:
+    - target: {fileID: 444248621627804717, guid: d581fca213eb54166bb13af51a945653,
+        type: 3}
+      propertyPath: dialogue19
+      value: "<sp:20>STELLST DU DICH DER ULTIMATIVEN HERAUSFORDERUNG?\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 444248622117138217, guid: d581fca213eb54166bb13af51a945653,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -10897,7 +10897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zahlen die X-Bert auf einem gr\xFCnen Feld einsammelt werden subtrahiert\r"
+  m_text: "Zahlen die X-Bert auf einem roten Feld einsammelt werden subtrahiert\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 690a1d7100124194ab3049a42c798f83, type: 2}
   m_sharedMaterial: {fileID: -7389961748875073060, guid: 690a1d7100124194ab3049a42c798f83,
@@ -18255,7 +18255,7 @@ PrefabInstance:
     - target: {fileID: 2752873007397286689, guid: be0120632054c4070b1bdd6fb9fb393d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2752873007397286689, guid: be0120632054c4070b1bdd6fb9fb393d,
         type: 3}
@@ -18546,7 +18546,7 @@ PrefabInstance:
     - target: {fileID: 4992034747080937062, guid: be0120632054c4070b1bdd6fb9fb393d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6495741593124414426, guid: be0120632054c4070b1bdd6fb9fb393d,
         type: 3}
@@ -18603,12 +18603,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 228181899921334359}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7019642291221459736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7079778745576084303, guid: be0120632054c4070b1bdd6fb9fb393d,
-    type: 3}
-  m_PrefabInstance: {fileID: 228181899921334359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6123890832379670985 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6329462374105272734, guid: be0120632054c4070b1bdd6fb9fb393d,
@@ -18621,6 +18615,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7019642291221459736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7079778745576084303, guid: be0120632054c4070b1bdd6fb9fb393d,
+    type: 3}
+  m_PrefabInstance: {fileID: 228181899921334359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &228181900111770818
 PrefabInstance:
   m_ObjectHideFlags: 0
