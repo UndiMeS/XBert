@@ -69,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
     public SecretNumber SecretSkript;
     public bool secretFinish;
 
+    public AudioSource Eatingsound;
+
 
     
 
@@ -157,9 +159,14 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    //Eatingsound.Stop();
                     animator.SetTrigger("EatTrigger");
                     //animator.SetBool("Eat", false);
+                    //Eatingsound.Play();
                 }
+
+                Eatingsound.Stop();
+                Eatingsound.Play();
 
                 NumberEaten.GetComponent<aXelNumber>().Eaten = false;
                 NumberEaten.gameObject.SetActive(false);

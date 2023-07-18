@@ -24441,6 +24441,10 @@ MonoBehaviour:
   SkinButtons:
   - {fileID: 39312006}
   Outro: {fileID: 1912378446167270298}
+  EffektMixer: {fileID: 24100000, guid: 63f27a30e7141497cabf528571ceda94, type: 2}
+  MusikMixer: {fileID: 24100000, guid: 1383d0a7569894d2bb0ad7ae0b9a54f2, type: 2}
+  EffektSlider: {fileID: 1383961778}
+  MusikSlider: {fileID: 0}
 --- !u!1 &1039808775
 GameObject:
   m_ObjectHideFlags: 0
